@@ -33,7 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Controller">
+      <HintPath>..\Controller\bin\Debug\Controller.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Model">
+      <HintPath>..\Controller\bin\Debug\Model.dll</HintPath>
+    </Reference>
     <Reference Include="ReaLTaiizor, Version=3.7.8.6, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\ReaLTaiizor.3.7.8.6\lib\net48\ReaLTaiizor.dll</HintPath>
     </Reference>
