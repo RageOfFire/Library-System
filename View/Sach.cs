@@ -32,6 +32,11 @@ namespace View
                 MessageBox.Show("Chưa nhập mã", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 maSachBoxS.Focus();
             }
+            else if (string.IsNullOrWhiteSpace(tenSachBoxS.Text))
+            {
+                MessageBox.Show("Chưa nhập tên", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tenSachBoxS.Focus();
+            }
             else if (!int.TryParse(namXuatBanBoxS.Text, out value))
             {
                 MessageBox.Show("Năm xuất bản không phải là số", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -57,6 +62,11 @@ namespace View
             {
                 MessageBox.Show("Năm xuất bản không phải là số", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 namXuatBanBoxS.Focus();
+            }
+            else if (string.IsNullOrWhiteSpace(tenSachBoxS.Text))
+            {
+                MessageBox.Show("Chưa nhập tên", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tenSachBoxS.Focus();
             }
             else
             {
@@ -112,8 +122,7 @@ namespace View
                 this.Close();
             }
         }
-
-        private void sachTab_Enter(object sender, EventArgs e)
+        private void sachTab_Layout(object sender, LayoutEventArgs e)
         {
             dt = sach.HienThiS();
             sachDataGridView.DataSource = dt;

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControllerSach.cs" />
+    <Compile Include="ControllerNXB.cs" />
     <Compile Include="ControllerTacGia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

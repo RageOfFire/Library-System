@@ -10,29 +10,30 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controller;
 
+
 namespace View
 {
     public partial class Sach : Form
     {
-    ControllerTacGia tacGia = new ControllerTacGia();
-        // Tác giả
-        private void addButtonTG_Click(object sender, EventArgs e)
+        ControllerNXB NXB = new ControllerNXB();
+        // Nhà xuất bản
+        private void addButtonNXB_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(maTacGiaBoxTG.Text))
+            if (string.IsNullOrWhiteSpace(maNXBBoxNXB.Text))
             {
                 MessageBox.Show("Chưa nhập mã", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                maTacGiaBoxTG.Focus();
+                maNXBBoxNXB.Focus();
             }
-            else if (string.IsNullOrWhiteSpace(tenTacGiaBoxTG.Text))
+            else if (string.IsNullOrWhiteSpace(tenNXBBoxNXB.Text))
             {
                 MessageBox.Show("Chưa nhập tên", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tenTacGiaBoxTG.Focus();
+                tenNXBBoxNXB.Focus();
             }
             else
             {
                 try
                 {
-                    tacGia.InsertTG(this.maTacGiaBoxTG.Text, this.tenTacGiaBoxTG.Text, this.websiteBoxTG.Text, this.noteBoxTG.Text);
+                    NXB.InsertNXB(this.maNXBBoxNXB.Text, this.tenNXBBoxNXB.Text, this.DiaChiBoxNXB.Text, this.EmailBoxNXB.Text, this.thongTinBoxNXB.Text);
                     MessageBox.Show("Thêm thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -41,32 +42,29 @@ namespace View
                 }
             }
         }
-
-        private void editButtonTG_Click(object sender, EventArgs e)
+        private void editButtonNXB_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tenTacGiaBoxTG.Text))
+            if (string.IsNullOrWhiteSpace(tenNXBBoxNXB.Text))
             {
                 MessageBox.Show("Chưa nhập tên", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tenTacGiaBoxTG.Focus();
+                tenNXBBoxNXB.Focus();
             }
             else
             {
                 try
                 {
-                    tacGia.UpdateTG(this.maTacGiaBoxTG.Text, this.tenTacGiaBoxTG.Text, this.websiteBoxTG.Text, this.noteBoxTG.Text);
+                    NXB.UpdateNXB(this.maNXBBoxNXB.Text, this.tenNXBBoxNXB.Text, this.DiaChiBoxNXB.Text, this.EmailBoxNXB.Text, this.thongTinBoxNXB.Text);
                     MessageBox.Show("Sửa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    maTacGiaBoxTG.Enabled = true;
-                    addButtonTG.Enabled = true;
+                    maNXBBoxNXB.Enabled = true;
+                    addButtonNXB.Enabled = true;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
         }
-
-        private void deleteButtonTG_Click(object sender, EventArgs e)
+        private void deleteButtonNXB_Click(object sender, EventArgs e)
         {
             try
             {
@@ -76,10 +74,10 @@ namespace View
                     DialogResult rs2 = MessageBox.Show("Bạn chắc chưa ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (rs2 == DialogResult.OK)
                     {
-                        tacGia.DeleteTG(this.maTacGiaBoxTG.Text);
+                        NXB.DeleteNXB(this.maNXBBoxNXB.Text);
                         MessageBox.Show("Xóa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        maTacGiaBoxTG.Enabled = true;
-                        addButtonTG.Enabled = true;
+                        maNXBBoxNXB.Enabled = true;
+                        addButtonNXB.Enabled = true;
                     }
                 }
             }
@@ -88,15 +86,13 @@ namespace View
                 MessageBox.Show("Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void resetButtonTG_Click(object sender, EventArgs e)
+        private void resetButtonNXB_Click(object sender, EventArgs e)
         {
-            ResetAlls(tacGiaTab);
-            maTacGiaBoxTG.Enabled = true;
-            addButtonTG.Enabled = true;
+            ResetAlls(nhaXuatBanTab);
+            maNXBBoxNXB.Enabled = true;
+            addButtonNXB.Enabled = true;
         }
-
-        private void exitButtonTG_Click(object sender, EventArgs e)
+        private void exitButtonNXB_Click(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn thoát khỏi ứng dụng ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.OK)
@@ -104,19 +100,27 @@ namespace View
                 this.Close();
             }
         }
-
-        private void searchButtonTG_Click(object sender, EventArgs e)
+        private void nhaXuatBanTab_Layout(object sender, LayoutEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(searchBoxTG.Text))
+            dt = NXB.HienThiNXB();
+            nhaXuatBanGridView.DataSource = dt;
+            for (int i = 0; i < nhaXuatBanGridView.Rows.Count; i++)
+            {
+                nhaXuatBanGridView.Rows[i].Cells[0].Value = (i + 1).ToString();
+            }
+        }
+        private void searchButtonNXB_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(searchBoxNXB.Text))
             {
                 MessageBox.Show("Chưa Nhập từ khóa để tìm kiếm ?", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                searchBoxTG.Focus();
+                searchBoxNXB.Focus();
             }
             else
             {
                 try
                 {
-                    tacGia.TimTG(this.searchBoxTG.Text);
+                    NXB.TimNXB(this.searchBoxNXB.Text);
                 }
                 catch (Exception ex)
                 {
@@ -124,27 +128,17 @@ namespace View
                 }
             }
         }
-
-        private void tacGiaGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void nhaXuatBanGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            maTacGiaBoxTG.Enabled = false;
-            addButtonTG.Enabled = false;
+            maNXBBoxNXB.Enabled = false;
+            addButtonNXB.Enabled = false;
             int i;
             i = e.RowIndex;
-            maTacGiaBoxTG.Text = sachDataGridView.Rows[i].Cells[1].Value.ToString();
-            tenTacGiaBoxTG.Text = sachDataGridView.Rows[i].Cells[2].Value.ToString();
-            websiteBoxTG.Text = sachDataGridView.Rows[i].Cells[3].Value.ToString();
-            noteBoxTG.Text = sachDataGridView.Rows[i].Cells[4].Value.ToString();
-        }
-        private void tacGiaTab_Layout(object sender, LayoutEventArgs e)
-        {
-            dt = tacGia.HienThiTG();
-            tacGiaGridView.DataSource = dt;
-            for (int i = 0; i < tacGiaGridView.Rows.Count; i++)
-            {
-                tacGiaGridView.Rows[i].Cells[0].Value = (i + 1).ToString();
-            }
+            maNXBBoxNXB.Text = nhaXuatBanGridView.Rows[i].Cells[1].Value.ToString();
+            tenNXBBoxNXB.Text = nhaXuatBanGridView.Rows[i].Cells[2].Value.ToString();
+            DiaChiBoxNXB.Text = nhaXuatBanGridView.Rows[i].Cells[3].Value.ToString();
+            EmailBoxNXB.Text = nhaXuatBanGridView.Rows[i].Cells[4].Value.ToString();
+            thongTinBoxNXB.Text = nhaXuatBanGridView.Rows[i].Cells[5].Value.ToString();
         }
     }
 }
-
