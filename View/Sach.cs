@@ -20,36 +20,6 @@ namespace View
         SqlDataReader drTL;
         SqlDataReader drNXB;
         ControllerSach sach = new ControllerSach();
-        public static void ResetAlls(TabPage page)
-        {
-            foreach (Control control in page.Controls)
-            {
-                if (control is TextBox)
-                {
-                    TextBox textBox = (TextBox)control;
-                    textBox.Text = "";
-                }
-
-                if (control is ComboBox)
-                {
-                    ComboBox comboBox = (ComboBox)control;
-                    if (comboBox.Items.Count > 0)
-                        comboBox.SelectedIndex = -1;
-                }
-
-                if (control is RadioButton)
-                {
-                    RadioButton radioButton = (RadioButton)control;
-                    radioButton.Checked = false;
-                }
-
-                if (control is DateTimePicker)
-                {
-                    DateTimePicker dateTime = (DateTimePicker)control;
-                    dateTime.Value = DateTime.UtcNow;
-                }
-            }
-        }
         public Sach()
         {
             InitializeComponent();
@@ -57,14 +27,14 @@ namespace View
         // Sách
         private void addButtonS_Click(object sender, EventArgs e)
         {
-            if (maSachBoxS.Text == "")
+            if (string.IsNullOrWhiteSpace(maSachBoxS.Text))
             {
-                MessageBox.Show("Chưa nhập mã");
+                MessageBox.Show("Chưa nhập mã", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 maSachBoxS.Focus();
             }
             else if (!int.TryParse(namXuatBanBoxS.Text, out value))
             {
-                MessageBox.Show("Năm xuất bản không phải là số");
+                MessageBox.Show("Năm xuất bản không phải là số", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 namXuatBanBoxS.Focus();
             }
             else
@@ -72,25 +42,20 @@ namespace View
                 try
                 {
                     sach.InsertS(this.maSachBoxS.Text, this.tenSachBoxS.Text, this.maTacGiaComboS.Text, this.maTheLoaiComboS.Text, this.maNhaXuatBanComboS.Text, Convert.ToInt32(this.namXuatBanBoxS.Text));
-                    MessageBox.Show("Thêm thành công");
+                    MessageBox.Show("Thêm thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error" + ex);
+                    MessageBox.Show("Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         private void editButtonS_Click(object sender, EventArgs e)
         {
-            if (maSachBoxS.Text == "")
+            if (!int.TryParse(namXuatBanBoxS.Text, out value))
             {
-                MessageBox.Show("Chưa nhập mã");
-                maSachBoxS.Focus();
-            }
-            else if (!int.TryParse(namXuatBanBoxS.Text, out value))
-            {
-                MessageBox.Show("Năm xuất bản không phải là số");
+                MessageBox.Show("Năm xuất bản không phải là số", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 namXuatBanBoxS.Focus();
             }
             else
@@ -98,13 +63,13 @@ namespace View
                 try
                 {
                     sach.UpdateS(this.maSachBoxS.Text, this.tenSachBoxS.Text, this.maTacGiaComboS.Text, this.maTheLoaiComboS.Text, this.maNhaXuatBanComboS.Text, Convert.ToInt32(this.namXuatBanBoxS.Text));
-                    MessageBox.Show("Sửa thành công");
+                    MessageBox.Show("Sửa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     maSachBoxS.Enabled = true;
                     addButtonS.Enabled = true;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error" + ex);
+                    MessageBox.Show("Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -113,14 +78,14 @@ namespace View
         {
             try
             {
-                DialogResult rs = MessageBox.Show("Bạn có thực sự muốn xóa không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult rs = MessageBox.Show("Bạn có thực sự muốn xóa không ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (rs == DialogResult.OK)
                 {
-                    DialogResult rs2 = MessageBox.Show("Bạn chắc chưa ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult rs2 = MessageBox.Show("Bạn chắc chưa ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (rs2 == DialogResult.OK)
                     {
                         sach.DeleteS(this.maSachBoxS.Text);
-                        MessageBox.Show("Xóa thành công");
+                        MessageBox.Show("Xóa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         maSachBoxS.Enabled = true;
                         addButtonS.Enabled = true;
                     }
@@ -128,7 +93,7 @@ namespace View
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error" + ex);
+                MessageBox.Show("Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -141,12 +106,16 @@ namespace View
 
         private void exitButtonS_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult rs = MessageBox.Show("Bạn có muốn thoát khỏi ứng dụng ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void sachTab_Enter(object sender, EventArgs e)
         {
-            dt = sach.HienThi();
+            dt = sach.HienThiS();
             sachDataGridView.DataSource = dt;
             for (int i = 0; i < sachDataGridView.Rows.Count; i++)
             {
@@ -171,9 +140,9 @@ namespace View
 
         private void searchButtonS_Click(object sender, EventArgs e)
         {
-            if (searchBoxS.Text == "")
+            if (string.IsNullOrWhiteSpace(searchBoxS.Text))
             {
-                MessageBox.Show("Chưa Nhập từ khóa để tìm kiếm ?");
+                MessageBox.Show("Chưa Nhập từ khóa để tìm kiếm ?", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 searchBoxS.Focus();
             }
             else
@@ -181,11 +150,10 @@ namespace View
                 try
                 {
                     sach.TimS(this.searchBoxS.Text);
-                    MessageBox.Show("Hiển thị kết quả tìm kiếm");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error" + ex);
+                    MessageBox.Show("Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK);
                 }
             }
         }
@@ -203,6 +171,6 @@ namespace View
             maNhaXuatBanComboS.Text = sachDataGridView.Rows[i].Cells[5].Value.ToString();
             namXuatBanBoxS.Text = sachDataGridView.Rows[i].Cells[6].Value.ToString();
         }
-        // Tác giả
     }
 }
+

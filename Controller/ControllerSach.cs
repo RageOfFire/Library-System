@@ -34,7 +34,7 @@ namespace Controller
             dt = db.GetTable(sql);
             return dt;
         }
-        public DataTable HienThi()
+        public DataTable HienThiS()
         {
             string sql = "SELECT * FROM Sach";
             DataTable dt = new DataTable();
