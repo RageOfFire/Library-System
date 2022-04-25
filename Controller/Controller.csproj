@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControllerTL.cs" />
     <Compile Include="ControllerSach.cs" />
     <Compile Include="ControllerNXB.cs" />
     <Compile Include="ControllerTacGia.cs" />
