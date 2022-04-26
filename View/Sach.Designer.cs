@@ -162,19 +162,21 @@
             this.searchBoxTL = new ReaLTaiizor.Controls.ForeverTextBox();
             this.foreverLabel28 = new ReaLTaiizor.Controls.ForeverLabel();
             this.CTmuontraTab = new System.Windows.Forms.TabPage();
+            this.maMuonTraComboCTMT = new ReaLTaiizor.Controls.ForeverComboBox();
+            this.maSachComboCTMT = new ReaLTaiizor.Controls.ForeverComboBox();
             this.foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
-            this.daTraRadio = new ReaLTaiizor.Controls.ForeverRadioButton();
+            this.daTraRadioCTMT = new ReaLTaiizor.Controls.ForeverRadioButton();
             this.chuaTraRadioCTMT = new ReaLTaiizor.Controls.ForeverRadioButton();
             this.ngayTraDateCTMT = new ReaLTaiizor.Controls.PoisonDateTime();
             this.ghiChuBoxCTMT = new ReaLTaiizor.Controls.ForeverTextBox();
             this.foreverLabel31 = new ReaLTaiizor.Controls.ForeverLabel();
             this.foreverLabel30 = new ReaLTaiizor.Controls.ForeverLabel();
             this.foreverLabel29 = new ReaLTaiizor.Controls.ForeverLabel();
-            this.foreverButton1 = new ReaLTaiizor.Controls.ForeverButton();
-            this.foreverButton2 = new ReaLTaiizor.Controls.ForeverButton();
-            this.foreverButton3 = new ReaLTaiizor.Controls.ForeverButton();
-            this.foreverButton4 = new ReaLTaiizor.Controls.ForeverButton();
-            this.foreverButton5 = new ReaLTaiizor.Controls.ForeverButton();
+            this.exitButtonCTMT = new ReaLTaiizor.Controls.ForeverButton();
+            this.resetButtonCTMT = new ReaLTaiizor.Controls.ForeverButton();
+            this.deleteButtonCTMT = new ReaLTaiizor.Controls.ForeverButton();
+            this.editButtonCTMT = new ReaLTaiizor.Controls.ForeverButton();
+            this.addButtonCTMT = new ReaLTaiizor.Controls.ForeverButton();
             this.foreverLabel17 = new ReaLTaiizor.Controls.ForeverLabel();
             this.airSeparator6 = new ReaLTaiizor.Controls.AirSeparator();
             this.foreverLabel25 = new ReaLTaiizor.Controls.ForeverLabel();
@@ -284,8 +286,6 @@
             this.searchButtonTTV = new ReaLTaiizor.Controls.ForeverButton();
             this.searchBoxTTV = new ReaLTaiizor.Controls.ForeverTextBox();
             this.foreverLabel46 = new ReaLTaiizor.Controls.ForeverLabel();
-            this.maSachComboCTMT = new ReaLTaiizor.Controls.ForeverComboBox();
-            this.maMuonTraBoxCTMT = new ReaLTaiizor.Controls.ForeverComboBox();
             this.SachForm.SuspendLayout();
             this.AppTab.SuspendLayout();
             this.sachTab.SuspendLayout();
@@ -1979,7 +1979,7 @@
             // CTmuontraTab
             // 
             this.CTmuontraTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.CTmuontraTab.Controls.Add(this.maMuonTraBoxCTMT);
+            this.CTmuontraTab.Controls.Add(this.maMuonTraComboCTMT);
             this.CTmuontraTab.Controls.Add(this.maSachComboCTMT);
             this.CTmuontraTab.Controls.Add(this.foreverGroupBox1);
             this.CTmuontraTab.Controls.Add(this.ngayTraDateCTMT);
@@ -1987,11 +1987,11 @@
             this.CTmuontraTab.Controls.Add(this.foreverLabel31);
             this.CTmuontraTab.Controls.Add(this.foreverLabel30);
             this.CTmuontraTab.Controls.Add(this.foreverLabel29);
-            this.CTmuontraTab.Controls.Add(this.foreverButton1);
-            this.CTmuontraTab.Controls.Add(this.foreverButton2);
-            this.CTmuontraTab.Controls.Add(this.foreverButton3);
-            this.CTmuontraTab.Controls.Add(this.foreverButton4);
-            this.CTmuontraTab.Controls.Add(this.foreverButton5);
+            this.CTmuontraTab.Controls.Add(this.exitButtonCTMT);
+            this.CTmuontraTab.Controls.Add(this.resetButtonCTMT);
+            this.CTmuontraTab.Controls.Add(this.deleteButtonCTMT);
+            this.CTmuontraTab.Controls.Add(this.editButtonCTMT);
+            this.CTmuontraTab.Controls.Add(this.addButtonCTMT);
             this.CTmuontraTab.Controls.Add(this.foreverLabel17);
             this.CTmuontraTab.Controls.Add(this.airSeparator6);
             this.CTmuontraTab.Controls.Add(this.foreverLabel25);
@@ -2004,6 +2004,43 @@
             this.CTmuontraTab.Size = new System.Drawing.Size(1128, 533);
             this.CTmuontraTab.TabIndex = 4;
             this.CTmuontraTab.Text = "Chi tiết mượn trả";
+            this.CTmuontraTab.Layout += new System.Windows.Forms.LayoutEventHandler(this.CTmuontraTab_Layout);
+            // 
+            // maMuonTraComboCTMT
+            // 
+            this.maMuonTraComboCTMT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
+            this.maMuonTraComboCTMT.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.maMuonTraComboCTMT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.maMuonTraComboCTMT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.maMuonTraComboCTMT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.maMuonTraComboCTMT.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.maMuonTraComboCTMT.ForeColor = System.Drawing.Color.White;
+            this.maMuonTraComboCTMT.FormattingEnabled = true;
+            this.maMuonTraComboCTMT.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.maMuonTraComboCTMT.HoverFontColor = System.Drawing.Color.White;
+            this.maMuonTraComboCTMT.ItemHeight = 18;
+            this.maMuonTraComboCTMT.Location = new System.Drawing.Point(166, 261);
+            this.maMuonTraComboCTMT.Name = "maMuonTraComboCTMT";
+            this.maMuonTraComboCTMT.Size = new System.Drawing.Size(370, 24);
+            this.maMuonTraComboCTMT.TabIndex = 93;
+            // 
+            // maSachComboCTMT
+            // 
+            this.maSachComboCTMT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
+            this.maSachComboCTMT.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.maSachComboCTMT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.maSachComboCTMT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.maSachComboCTMT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.maSachComboCTMT.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.maSachComboCTMT.ForeColor = System.Drawing.Color.White;
+            this.maSachComboCTMT.FormattingEnabled = true;
+            this.maSachComboCTMT.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.maSachComboCTMT.HoverFontColor = System.Drawing.Color.White;
+            this.maSachComboCTMT.ItemHeight = 18;
+            this.maSachComboCTMT.Location = new System.Drawing.Point(166, 327);
+            this.maSachComboCTMT.Name = "maSachComboCTMT";
+            this.maSachComboCTMT.Size = new System.Drawing.Size(370, 24);
+            this.maSachComboCTMT.TabIndex = 92;
             // 
             // foreverGroupBox1
             // 
@@ -2011,7 +2048,7 @@
             this.foreverGroupBox1.ArrowColorH = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.foreverGroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.foreverGroupBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverGroupBox1.Controls.Add(this.daTraRadio);
+            this.foreverGroupBox1.Controls.Add(this.daTraRadioCTMT);
             this.foreverGroupBox1.Controls.Add(this.chuaTraRadioCTMT);
             this.foreverGroupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.foreverGroupBox1.Location = new System.Drawing.Point(744, 250);
@@ -2022,28 +2059,28 @@
             this.foreverGroupBox1.TabIndex = 91;
             this.foreverGroupBox1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             // 
-            // daTraRadio
+            // daTraRadioCTMT
             // 
-            this.daTraRadio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.daTraRadio.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.daTraRadio.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.daTraRadio.Checked = false;
-            this.daTraRadio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.daTraRadio.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.daTraRadio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.daTraRadio.Location = new System.Drawing.Point(14, 20);
-            this.daTraRadio.Name = "daTraRadio";
-            this.daTraRadio.Options = ReaLTaiizor.Controls.ForeverRadioButton._Options.Style1;
-            this.daTraRadio.Size = new System.Drawing.Size(145, 22);
-            this.daTraRadio.TabIndex = 89;
-            this.daTraRadio.Text = "Đã trả";
+            this.daTraRadioCTMT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.daTraRadioCTMT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.daTraRadioCTMT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.daTraRadioCTMT.Checked = false;
+            this.daTraRadioCTMT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.daTraRadioCTMT.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.daTraRadioCTMT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.daTraRadioCTMT.Location = new System.Drawing.Point(14, 20);
+            this.daTraRadioCTMT.Name = "daTraRadioCTMT";
+            this.daTraRadioCTMT.Options = ReaLTaiizor.Controls.ForeverRadioButton._Options.Style1;
+            this.daTraRadioCTMT.Size = new System.Drawing.Size(145, 22);
+            this.daTraRadioCTMT.TabIndex = 89;
+            this.daTraRadioCTMT.Text = "Đã trả";
             // 
             // chuaTraRadioCTMT
             // 
             this.chuaTraRadioCTMT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.chuaTraRadioCTMT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.chuaTraRadioCTMT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.chuaTraRadioCTMT.Checked = false;
+            this.chuaTraRadioCTMT.Checked = true;
             this.chuaTraRadioCTMT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chuaTraRadioCTMT.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.chuaTraRadioCTMT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
@@ -2117,75 +2154,80 @@
             this.foreverLabel29.TabIndex = 82;
             this.foreverLabel29.Text = "Mã sách";
             // 
-            // foreverButton1
+            // exitButtonCTMT
             // 
-            this.foreverButton1.BackColor = System.Drawing.Color.Transparent;
-            this.foreverButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.foreverButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.foreverButton1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.foreverButton1.Location = new System.Drawing.Point(878, 474);
-            this.foreverButton1.Name = "foreverButton1";
-            this.foreverButton1.Rounded = false;
-            this.foreverButton1.Size = new System.Drawing.Size(120, 40);
-            this.foreverButton1.TabIndex = 81;
-            this.foreverButton1.Text = "Thoát";
-            this.foreverButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.exitButtonCTMT.BackColor = System.Drawing.Color.Transparent;
+            this.exitButtonCTMT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.exitButtonCTMT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitButtonCTMT.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.exitButtonCTMT.Location = new System.Drawing.Point(878, 474);
+            this.exitButtonCTMT.Name = "exitButtonCTMT";
+            this.exitButtonCTMT.Rounded = false;
+            this.exitButtonCTMT.Size = new System.Drawing.Size(120, 40);
+            this.exitButtonCTMT.TabIndex = 81;
+            this.exitButtonCTMT.Text = "Thoát";
+            this.exitButtonCTMT.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.exitButtonCTMT.Click += new System.EventHandler(this.exitButtonCTMT_Click);
             // 
-            // foreverButton2
+            // resetButtonCTMT
             // 
-            this.foreverButton2.BackColor = System.Drawing.Color.Transparent;
-            this.foreverButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.foreverButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.foreverButton2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.foreverButton2.Location = new System.Drawing.Point(691, 474);
-            this.foreverButton2.Name = "foreverButton2";
-            this.foreverButton2.Rounded = false;
-            this.foreverButton2.Size = new System.Drawing.Size(120, 40);
-            this.foreverButton2.TabIndex = 80;
-            this.foreverButton2.Text = "Khôi phục";
-            this.foreverButton2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.resetButtonCTMT.BackColor = System.Drawing.Color.Transparent;
+            this.resetButtonCTMT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.resetButtonCTMT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetButtonCTMT.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.resetButtonCTMT.Location = new System.Drawing.Point(691, 474);
+            this.resetButtonCTMT.Name = "resetButtonCTMT";
+            this.resetButtonCTMT.Rounded = false;
+            this.resetButtonCTMT.Size = new System.Drawing.Size(120, 40);
+            this.resetButtonCTMT.TabIndex = 80;
+            this.resetButtonCTMT.Text = "Khôi phục";
+            this.resetButtonCTMT.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.resetButtonCTMT.Click += new System.EventHandler(this.resetButtonCTMT_Click);
             // 
-            // foreverButton3
+            // deleteButtonCTMT
             // 
-            this.foreverButton3.BackColor = System.Drawing.Color.Transparent;
-            this.foreverButton3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.foreverButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.foreverButton3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.foreverButton3.Location = new System.Drawing.Point(501, 474);
-            this.foreverButton3.Name = "foreverButton3";
-            this.foreverButton3.Rounded = false;
-            this.foreverButton3.Size = new System.Drawing.Size(120, 40);
-            this.foreverButton3.TabIndex = 79;
-            this.foreverButton3.Text = "Xóa";
-            this.foreverButton3.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.deleteButtonCTMT.BackColor = System.Drawing.Color.Transparent;
+            this.deleteButtonCTMT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.deleteButtonCTMT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteButtonCTMT.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.deleteButtonCTMT.Location = new System.Drawing.Point(501, 474);
+            this.deleteButtonCTMT.Name = "deleteButtonCTMT";
+            this.deleteButtonCTMT.Rounded = false;
+            this.deleteButtonCTMT.Size = new System.Drawing.Size(120, 40);
+            this.deleteButtonCTMT.TabIndex = 79;
+            this.deleteButtonCTMT.Text = "Xóa";
+            this.deleteButtonCTMT.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.deleteButtonCTMT.Click += new System.EventHandler(this.deleteButtonCTMT_Click);
             // 
-            // foreverButton4
+            // editButtonCTMT
             // 
-            this.foreverButton4.BackColor = System.Drawing.Color.Transparent;
-            this.foreverButton4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.foreverButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.foreverButton4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.foreverButton4.Location = new System.Drawing.Point(317, 474);
-            this.foreverButton4.Name = "foreverButton4";
-            this.foreverButton4.Rounded = false;
-            this.foreverButton4.Size = new System.Drawing.Size(120, 40);
-            this.foreverButton4.TabIndex = 78;
-            this.foreverButton4.Text = "Sửa";
-            this.foreverButton4.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.editButtonCTMT.BackColor = System.Drawing.Color.Transparent;
+            this.editButtonCTMT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.editButtonCTMT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editButtonCTMT.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.editButtonCTMT.Location = new System.Drawing.Point(317, 474);
+            this.editButtonCTMT.Name = "editButtonCTMT";
+            this.editButtonCTMT.Rounded = false;
+            this.editButtonCTMT.Size = new System.Drawing.Size(120, 40);
+            this.editButtonCTMT.TabIndex = 78;
+            this.editButtonCTMT.Text = "Sửa";
+            this.editButtonCTMT.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.editButtonCTMT.Click += new System.EventHandler(this.editButtonCTMT_Click);
             // 
-            // foreverButton5
+            // addButtonCTMT
             // 
-            this.foreverButton5.BackColor = System.Drawing.Color.Transparent;
-            this.foreverButton5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.foreverButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.foreverButton5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.foreverButton5.Location = new System.Drawing.Point(136, 474);
-            this.foreverButton5.Name = "foreverButton5";
-            this.foreverButton5.Rounded = false;
-            this.foreverButton5.Size = new System.Drawing.Size(120, 40);
-            this.foreverButton5.TabIndex = 77;
-            this.foreverButton5.Text = "Thêm";
-            this.foreverButton5.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.addButtonCTMT.BackColor = System.Drawing.Color.Transparent;
+            this.addButtonCTMT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.addButtonCTMT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addButtonCTMT.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.addButtonCTMT.Location = new System.Drawing.Point(136, 474);
+            this.addButtonCTMT.Name = "addButtonCTMT";
+            this.addButtonCTMT.Rounded = false;
+            this.addButtonCTMT.Size = new System.Drawing.Size(120, 40);
+            this.addButtonCTMT.TabIndex = 77;
+            this.addButtonCTMT.Text = "Thêm";
+            this.addButtonCTMT.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.addButtonCTMT.Click += new System.EventHandler(this.addButtonCTMT_Click);
             // 
             // foreverLabel17
             // 
@@ -2283,6 +2325,7 @@
             this.chiTietMuonTraGridView.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
             this.chiTietMuonTraGridView.TabIndex = 71;
             this.chiTietMuonTraGridView.Theme = ReaLTaiizor.Enum.Poison.ThemeStyle.Dark;
+            this.chiTietMuonTraGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.chiTietMuonTraGridView_CellContentClick);
             // 
             // sttctmt
             // 
@@ -2338,6 +2381,7 @@
             this.searchButtonCTMT.TabIndex = 70;
             this.searchButtonCTMT.Text = "Tìm kiếm";
             this.searchButtonCTMT.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.searchButtonCTMT.Click += new System.EventHandler(this.searchButtonCTMT_Click);
             // 
             // searchBoxCTMT
             // 
@@ -2789,7 +2833,7 @@
             // ngayMuonDateMT
             // 
             this.ngayMuonDateMT.Location = new System.Drawing.Point(739, 325);
-            this.ngayMuonDateMT.MinimumSize = new System.Drawing.Size(0, 30);
+            this.ngayMuonDateMT.MinimumSize = new System.Drawing.Size(4, 30);
             this.ngayMuonDateMT.Name = "ngayMuonDateMT";
             this.ngayMuonDateMT.Size = new System.Drawing.Size(370, 30);
             this.ngayMuonDateMT.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
@@ -3793,42 +3837,6 @@
             this.foreverLabel46.TabIndex = 66;
             this.foreverLabel46.Text = "Tìm kiếm:";
             // 
-            // maSachComboCTMT
-            // 
-            this.maSachComboCTMT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-            this.maSachComboCTMT.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.maSachComboCTMT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.maSachComboCTMT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.maSachComboCTMT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.maSachComboCTMT.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.maSachComboCTMT.ForeColor = System.Drawing.Color.White;
-            this.maSachComboCTMT.FormattingEnabled = true;
-            this.maSachComboCTMT.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.maSachComboCTMT.HoverFontColor = System.Drawing.Color.White;
-            this.maSachComboCTMT.ItemHeight = 18;
-            this.maSachComboCTMT.Location = new System.Drawing.Point(166, 327);
-            this.maSachComboCTMT.Name = "maSachComboCTMT";
-            this.maSachComboCTMT.Size = new System.Drawing.Size(370, 24);
-            this.maSachComboCTMT.TabIndex = 92;
-            // 
-            // maMuonTraBoxCTMT
-            // 
-            this.maMuonTraBoxCTMT.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(29)))));
-            this.maMuonTraBoxCTMT.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.maMuonTraBoxCTMT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.maMuonTraBoxCTMT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.maMuonTraBoxCTMT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.maMuonTraBoxCTMT.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.maMuonTraBoxCTMT.ForeColor = System.Drawing.Color.White;
-            this.maMuonTraBoxCTMT.FormattingEnabled = true;
-            this.maMuonTraBoxCTMT.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.maMuonTraBoxCTMT.HoverFontColor = System.Drawing.Color.White;
-            this.maMuonTraBoxCTMT.ItemHeight = 18;
-            this.maMuonTraBoxCTMT.Location = new System.Drawing.Point(166, 261);
-            this.maMuonTraBoxCTMT.Name = "maMuonTraBoxCTMT";
-            this.maMuonTraBoxCTMT.Size = new System.Drawing.Size(370, 24);
-            this.maMuonTraBoxCTMT.TabIndex = 93;
-            // 
             // Sach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3984,11 +3992,11 @@
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel31;
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel30;
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel29;
-        private ReaLTaiizor.Controls.ForeverButton foreverButton1;
-        private ReaLTaiizor.Controls.ForeverButton foreverButton2;
-        private ReaLTaiizor.Controls.ForeverButton foreverButton3;
-        private ReaLTaiizor.Controls.ForeverButton foreverButton4;
-        private ReaLTaiizor.Controls.ForeverButton foreverButton5;
+        private ReaLTaiizor.Controls.ForeverButton exitButtonCTMT;
+        private ReaLTaiizor.Controls.ForeverButton resetButtonCTMT;
+        private ReaLTaiizor.Controls.ForeverButton deleteButtonCTMT;
+        private ReaLTaiizor.Controls.ForeverButton editButtonCTMT;
+        private ReaLTaiizor.Controls.ForeverButton addButtonCTMT;
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel17;
         private ReaLTaiizor.Controls.AirSeparator airSeparator6;
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel25;
@@ -3997,7 +4005,7 @@
         private ReaLTaiizor.Controls.ForeverTextBox searchBoxCTMT;
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel26;
         private ReaLTaiizor.Controls.ForeverRadioButton chuaTraRadioCTMT;
-        private ReaLTaiizor.Controls.ForeverRadioButton daTraRadio;
+        private ReaLTaiizor.Controls.ForeverRadioButton daTraRadioCTMT;
         private ReaLTaiizor.Controls.PoisonDateTime ngayTraDateCTMT;
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox1;
         private ReaLTaiizor.Controls.PoisonDateTime ngaySinhDateNV;
@@ -4107,6 +4115,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private ReaLTaiizor.Controls.ForeverComboBox maSachComboCTMT;
-        private ReaLTaiizor.Controls.ForeverComboBox maMuonTraBoxCTMT;
+        private ReaLTaiizor.Controls.ForeverComboBox maMuonTraComboCTMT;
     }
 }
