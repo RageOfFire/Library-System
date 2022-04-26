@@ -103,11 +103,11 @@ namespace View
             drMT = ctmt.HienthiMT_CB();
             while (drS.Read())
             {
-                maSachComboCTMT.Items.Add(drTG[0].ToString());
+                maSachComboCTMT.Items.Add(drS[0].ToString());
             }
             while (drMT.Read())
             {
-                maMuonTraComboCTMT.Items.Add(drTL[0].ToString());
+                maMuonTraComboCTMT.Items.Add(drMT[0].ToString());
             }
         }
         private void searchButtonCTMT_Click(object sender, EventArgs e)
