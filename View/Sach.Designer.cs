@@ -155,6 +155,9 @@
             this.airSeparator5 = new ReaLTaiizor.Controls.AirSeparator();
             this.foreverLabel27 = new ReaLTaiizor.Controls.ForeverLabel();
             this.theLoaiGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
+            this.stttl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maTheLoaiTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTheLoaiTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchButtonTL = new ReaLTaiizor.Controls.ForeverButton();
             this.searchBoxTL = new ReaLTaiizor.Controls.ForeverTextBox();
             this.foreverLabel28 = new ReaLTaiizor.Controls.ForeverLabel();
@@ -178,6 +181,12 @@
             this.airSeparator6 = new ReaLTaiizor.Controls.AirSeparator();
             this.foreverLabel25 = new ReaLTaiizor.Controls.ForeverLabel();
             this.chiTietMuonTraGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
+            this.sttctmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maMuonTraCTMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maSachCTMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghiChuCTMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.daTraCTMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayTraCTMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchButtonCTMT = new ReaLTaiizor.Controls.ForeverButton();
             this.searchBoxCTMT = new ReaLTaiizor.Controls.ForeverTextBox();
             this.foreverLabel26 = new ReaLTaiizor.Controls.ForeverLabel();
@@ -197,6 +206,11 @@
             this.airSeparator7 = new ReaLTaiizor.Controls.AirSeparator();
             this.foreverLabel36 = new ReaLTaiizor.Controls.ForeverLabel();
             this.nhanVienGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
+            this.sttnv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNhanVienNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaySinhNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdtNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchButtonNV = new ReaLTaiizor.Controls.ForeverButton();
             this.searchBoxNV = new ReaLTaiizor.Controls.ForeverTextBox();
             this.foreverLabel37 = new ReaLTaiizor.Controls.ForeverLabel();
@@ -272,20 +286,6 @@
             this.searchButtonTTV = new ReaLTaiizor.Controls.ForeverButton();
             this.searchBoxTTV = new ReaLTaiizor.Controls.ForeverTextBox();
             this.foreverLabel46 = new ReaLTaiizor.Controls.ForeverLabel();
-            this.stttl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maTheLoaiTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenTheLoaiTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sttctmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maMuonTraCTMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maSachCTMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ghiChuCTMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.daTraCTMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayTraCTMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sttnv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maNhanVienNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaySinhNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdtNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SachForm.SuspendLayout();
             this.AppTab.SuspendLayout();
             this.sachTab.SuspendLayout();
@@ -1911,6 +1911,29 @@
             this.theLoaiGridView.Theme = ReaLTaiizor.Enum.Poison.ThemeStyle.Dark;
             this.theLoaiGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.theLoaiGridView_CellContentClick);
             // 
+            // stttl
+            // 
+            this.stttl.HeaderText = "STT";
+            this.stttl.MinimumWidth = 6;
+            this.stttl.Name = "stttl";
+            this.stttl.ReadOnly = true;
+            // 
+            // maTheLoaiTL
+            // 
+            this.maTheLoaiTL.DataPropertyName = "Ma_the_loai";
+            this.maTheLoaiTL.HeaderText = "Mã thể loại";
+            this.maTheLoaiTL.MinimumWidth = 6;
+            this.maTheLoaiTL.Name = "maTheLoaiTL";
+            this.maTheLoaiTL.ReadOnly = true;
+            // 
+            // tenTheLoaiTL
+            // 
+            this.tenTheLoaiTL.DataPropertyName = "Ten_the_loai";
+            this.tenTheLoaiTL.HeaderText = "Tên thể loại";
+            this.tenTheLoaiTL.MinimumWidth = 6;
+            this.tenTheLoaiTL.Name = "tenTheLoaiTL";
+            this.tenTheLoaiTL.ReadOnly = true;
+            // 
             // searchButtonTL
             // 
             this.searchButtonTL.BackColor = System.Drawing.Color.Transparent;
@@ -2073,7 +2096,7 @@
             // ngayTraDateCTMT
             // 
             this.ngayTraDateCTMT.Location = new System.Drawing.Point(743, 321);
-            this.ngayTraDateCTMT.MinimumSize = new System.Drawing.Size(0, 30);
+            this.ngayTraDateCTMT.MinimumSize = new System.Drawing.Size(4, 30);
             this.ngayTraDateCTMT.Name = "ngayTraDateCTMT";
             this.ngayTraDateCTMT.Size = new System.Drawing.Size(362, 30);
             this.ngayTraDateCTMT.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
@@ -2306,6 +2329,52 @@
             this.chiTietMuonTraGridView.Theme = ReaLTaiizor.Enum.Poison.ThemeStyle.Dark;
             this.chiTietMuonTraGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.chiTietMuonTraGridView_CellContentClick);
             // 
+            // sttctmt
+            // 
+            this.sttctmt.HeaderText = "STT";
+            this.sttctmt.MinimumWidth = 6;
+            this.sttctmt.Name = "sttctmt";
+            this.sttctmt.ReadOnly = true;
+            // 
+            // maMuonTraCTMT
+            // 
+            this.maMuonTraCTMT.DataPropertyName = "Ma_muon_tra";
+            this.maMuonTraCTMT.HeaderText = "Mã mượn trả";
+            this.maMuonTraCTMT.MinimumWidth = 6;
+            this.maMuonTraCTMT.Name = "maMuonTraCTMT";
+            this.maMuonTraCTMT.ReadOnly = true;
+            // 
+            // maSachCTMT
+            // 
+            this.maSachCTMT.DataPropertyName = "Ma_sach";
+            this.maSachCTMT.HeaderText = "Mã sách";
+            this.maSachCTMT.MinimumWidth = 6;
+            this.maSachCTMT.Name = "maSachCTMT";
+            this.maSachCTMT.ReadOnly = true;
+            // 
+            // ghiChuCTMT
+            // 
+            this.ghiChuCTMT.DataPropertyName = "Ghi_chu";
+            this.ghiChuCTMT.HeaderText = "Ghi chú";
+            this.ghiChuCTMT.MinimumWidth = 6;
+            this.ghiChuCTMT.Name = "ghiChuCTMT";
+            // 
+            // daTraCTMT
+            // 
+            this.daTraCTMT.DataPropertyName = "Da_tra";
+            this.daTraCTMT.HeaderText = "Đã trả";
+            this.daTraCTMT.MinimumWidth = 6;
+            this.daTraCTMT.Name = "daTraCTMT";
+            this.daTraCTMT.ReadOnly = true;
+            // 
+            // ngayTraCTMT
+            // 
+            this.ngayTraCTMT.DataPropertyName = "Ngay_tra";
+            this.ngayTraCTMT.HeaderText = "Ngày trả";
+            this.ngayTraCTMT.MinimumWidth = 6;
+            this.ngayTraCTMT.Name = "ngayTraCTMT";
+            this.ngayTraCTMT.ReadOnly = true;
+            // 
             // searchButtonCTMT
             // 
             this.searchButtonCTMT.BackColor = System.Drawing.Color.Transparent;
@@ -2376,6 +2445,7 @@
             this.nhanVienTab.Size = new System.Drawing.Size(1128, 533);
             this.nhanVienTab.TabIndex = 5;
             this.nhanVienTab.Text = "Nhân viên";
+            this.nhanVienTab.Layout += new System.Windows.Forms.LayoutEventHandler(this.nhanVienTab_Layout);
             // 
             // sdtBoxNV
             // 
@@ -2470,6 +2540,7 @@
             this.exitButtonNV.TabIndex = 104;
             this.exitButtonNV.Text = "Thoát";
             this.exitButtonNV.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.exitButtonNV.Click += new System.EventHandler(this.exitButtonNV_Click);
             // 
             // resetButtonNV
             // 
@@ -2484,6 +2555,7 @@
             this.resetButtonNV.TabIndex = 103;
             this.resetButtonNV.Text = "Khôi phục";
             this.resetButtonNV.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.resetButtonNV.Click += new System.EventHandler(this.resetButtonNV_Click);
             // 
             // deleteButtonNV
             // 
@@ -2498,6 +2570,7 @@
             this.deleteButtonNV.TabIndex = 102;
             this.deleteButtonNV.Text = "Xóa";
             this.deleteButtonNV.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.deleteButtonNV.Click += new System.EventHandler(this.deleteButtonNV_Click);
             // 
             // editButtonNV
             // 
@@ -2512,6 +2585,7 @@
             this.editButtonNV.TabIndex = 101;
             this.editButtonNV.Text = "Sửa";
             this.editButtonNV.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.editButtonNV.Click += new System.EventHandler(this.editButtonNV_Click);
             // 
             // addButtonNV
             // 
@@ -2627,6 +2701,45 @@
             this.nhanVienGridView.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
             this.nhanVienGridView.TabIndex = 95;
             this.nhanVienGridView.Theme = ReaLTaiizor.Enum.Poison.ThemeStyle.Dark;
+            this.nhanVienGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.nhanVienGridView_CellContentClick);
+            // 
+            // sttnv
+            // 
+            this.sttnv.HeaderText = "STT";
+            this.sttnv.MinimumWidth = 6;
+            this.sttnv.Name = "sttnv";
+            this.sttnv.ReadOnly = true;
+            // 
+            // maNhanVienNV
+            // 
+            this.maNhanVienNV.DataPropertyName = "Ma_nhan_vien";
+            this.maNhanVienNV.HeaderText = "Mã nhân viên";
+            this.maNhanVienNV.MinimumWidth = 6;
+            this.maNhanVienNV.Name = "maNhanVienNV";
+            this.maNhanVienNV.ReadOnly = true;
+            // 
+            // hoTenNV
+            // 
+            this.hoTenNV.DataPropertyName = "Ho_ten";
+            this.hoTenNV.HeaderText = "Họ tên";
+            this.hoTenNV.MinimumWidth = 6;
+            this.hoTenNV.Name = "hoTenNV";
+            this.hoTenNV.ReadOnly = true;
+            // 
+            // ngaySinhNV
+            // 
+            this.ngaySinhNV.DataPropertyName = "Ngay_sinh";
+            this.ngaySinhNV.HeaderText = "Ngày sinh";
+            this.ngaySinhNV.MinimumWidth = 6;
+            this.ngaySinhNV.Name = "ngaySinhNV";
+            // 
+            // sdtNV
+            // 
+            this.sdtNV.DataPropertyName = "Sdt";
+            this.sdtNV.HeaderText = "Số điện thoại";
+            this.sdtNV.MinimumWidth = 6;
+            this.sdtNV.Name = "sdtNV";
+            this.sdtNV.ReadOnly = true;
             // 
             // searchButtonNV
             // 
@@ -2641,6 +2754,7 @@
             this.searchButtonNV.TabIndex = 94;
             this.searchButtonNV.Text = "Tìm kiếm";
             this.searchButtonNV.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.searchButtonNV.Click += new System.EventHandler(this.searchButtonNV_Click);
             // 
             // searchBoxNV
             // 
@@ -3740,113 +3854,6 @@
             this.foreverLabel46.Size = new System.Drawing.Size(112, 31);
             this.foreverLabel46.TabIndex = 66;
             this.foreverLabel46.Text = "Tìm kiếm:";
-            // 
-            // stttl
-            // 
-            this.stttl.HeaderText = "STT";
-            this.stttl.MinimumWidth = 6;
-            this.stttl.Name = "stttl";
-            this.stttl.ReadOnly = true;
-            // 
-            // maTheLoaiTL
-            // 
-            this.maTheLoaiTL.DataPropertyName = "Ma_the_loai";
-            this.maTheLoaiTL.HeaderText = "Mã thể loại";
-            this.maTheLoaiTL.MinimumWidth = 6;
-            this.maTheLoaiTL.Name = "maTheLoaiTL";
-            this.maTheLoaiTL.ReadOnly = true;
-            // 
-            // tenTheLoaiTL
-            // 
-            this.tenTheLoaiTL.DataPropertyName = "Ten_the_loai";
-            this.tenTheLoaiTL.HeaderText = "Tên thể loại";
-            this.tenTheLoaiTL.MinimumWidth = 6;
-            this.tenTheLoaiTL.Name = "tenTheLoaiTL";
-            this.tenTheLoaiTL.ReadOnly = true;
-            // 
-            // sttctmt
-            // 
-            this.sttctmt.HeaderText = "STT";
-            this.sttctmt.MinimumWidth = 6;
-            this.sttctmt.Name = "sttctmt";
-            this.sttctmt.ReadOnly = true;
-            // 
-            // maMuonTraCTMT
-            // 
-            this.maMuonTraCTMT.DataPropertyName = "Ma_muon_tra";
-            this.maMuonTraCTMT.HeaderText = "Mã mượn trả";
-            this.maMuonTraCTMT.MinimumWidth = 6;
-            this.maMuonTraCTMT.Name = "maMuonTraCTMT";
-            this.maMuonTraCTMT.ReadOnly = true;
-            // 
-            // maSachCTMT
-            // 
-            this.maSachCTMT.DataPropertyName = "Ma_sach";
-            this.maSachCTMT.HeaderText = "Mã sách";
-            this.maSachCTMT.MinimumWidth = 6;
-            this.maSachCTMT.Name = "maSachCTMT";
-            this.maSachCTMT.ReadOnly = true;
-            // 
-            // ghiChuCTMT
-            // 
-            this.ghiChuCTMT.DataPropertyName = "Ghi_chu";
-            this.ghiChuCTMT.HeaderText = "Ghi chú";
-            this.ghiChuCTMT.MinimumWidth = 6;
-            this.ghiChuCTMT.Name = "ghiChuCTMT";
-            // 
-            // daTraCTMT
-            // 
-            this.daTraCTMT.DataPropertyName = "Da_tra";
-            this.daTraCTMT.HeaderText = "Đã trả";
-            this.daTraCTMT.MinimumWidth = 6;
-            this.daTraCTMT.Name = "daTraCTMT";
-            this.daTraCTMT.ReadOnly = true;
-            // 
-            // ngayTraCTMT
-            // 
-            this.ngayTraCTMT.DataPropertyName = "Ngay_tra";
-            this.ngayTraCTMT.HeaderText = "Ngày trả";
-            this.ngayTraCTMT.MinimumWidth = 6;
-            this.ngayTraCTMT.Name = "ngayTraCTMT";
-            this.ngayTraCTMT.ReadOnly = true;
-            // 
-            // sttnv
-            // 
-            this.sttnv.HeaderText = "STT";
-            this.sttnv.MinimumWidth = 6;
-            this.sttnv.Name = "sttnv";
-            this.sttnv.ReadOnly = true;
-            // 
-            // maNhanVienNV
-            // 
-            this.maNhanVienNV.DataPropertyName = "Ma_nhan_vien";
-            this.maNhanVienNV.HeaderText = "Mã nhân viên";
-            this.maNhanVienNV.MinimumWidth = 6;
-            this.maNhanVienNV.Name = "maNhanVienNV";
-            this.maNhanVienNV.ReadOnly = true;
-            // 
-            // hoTenNV
-            // 
-            this.hoTenNV.DataPropertyName = "Ho_ten";
-            this.hoTenNV.HeaderText = "Họ tên";
-            this.hoTenNV.MinimumWidth = 6;
-            this.hoTenNV.Name = "hoTenNV";
-            this.hoTenNV.ReadOnly = true;
-            // 
-            // ngaySinhNV
-            // 
-            this.ngaySinhNV.DataPropertyName = "Ngay_sinh";
-            this.ngaySinhNV.HeaderText = "Ngày sinh";
-            this.ngaySinhNV.MinimumWidth = 6;
-            this.ngaySinhNV.Name = "ngaySinhNV";
-            // 
-            // sdtNV
-            // 
-            this.sdtNV.DataPropertyName = "Sdt";
-            this.sdtNV.HeaderText = "Số điện thoại";
-            this.sdtNV.MinimumWidth = 6;
-            this.sdtNV.Name = "sdtNV";
-            this.sdtNV.ReadOnly = true;
             // 
             // Sach
             // 
