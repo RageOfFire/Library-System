@@ -180,6 +180,8 @@ namespace View
             maNhaXuatBanComboS.Text = sachDataGridView.Rows[i].Cells[5].Value.ToString();
             namXuatBanBoxS.Text = sachDataGridView.Rows[i].Cells[6].Value.ToString();
         }
+
+
     }
 }
 

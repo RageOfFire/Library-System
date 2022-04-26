@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControllerCTMT.cs" />
+    <Compile Include="ControllerNhanVien.cs" />
     <Compile Include="ControllerTL.cs" />
     <Compile Include="ControllerSach.cs" />
     <Compile Include="ControllerNXB.cs" />

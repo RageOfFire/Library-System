@@ -66,6 +66,9 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NhaXuatBan.cs">
       <SubType>Form</SubType>
     </Compile>
