@@ -19,7 +19,7 @@ namespace Controller
         }
         public void UpdateDG(string madocgia, string tendocgia, string diachi, int sothe)
         {
-            string sql_update = "UPDATE DocGia SET Ten_doc_gia = N'" + tendocgia + "',DiaChi = N'" + diachi + "', SoThe = '" + sothe + "' WHERE Ma_tac_gia = N'" + matacgia + "'";
+            string sql_update = "UPDATE DocGia SET Ten_doc_gia = N'" + tendocgia + "',DiaChi = N'" + diachi + "', SoThe = '" + sothe + "' WHERE Ma_doc_gia = N'" + madocgia + "'";
             db.ExecuteNonQuery(sql_update);
         }
         public void DeleteDG(string madocgia)
