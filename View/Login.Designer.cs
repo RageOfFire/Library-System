@@ -82,7 +82,7 @@
             this.foreverMaximize1.DefaultLocation = true;
             this.foreverMaximize1.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.foreverMaximize1.Font = new System.Drawing.Font("Marlett", 12F);
-            this.foreverMaximize1.Location = new System.Drawing.Point(731, 16);
+            this.foreverMaximize1.Location = new System.Drawing.Point(746, 16);
             this.foreverMaximize1.Name = "foreverMaximize1";
             this.foreverMaximize1.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.foreverMaximize1.Size = new System.Drawing.Size(18, 18);
@@ -99,7 +99,7 @@
             this.foreverMinimize1.DefaultLocation = true;
             this.foreverMinimize1.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.foreverMinimize1.Font = new System.Drawing.Font("Marlett", 12F);
-            this.foreverMinimize1.Location = new System.Drawing.Point(692, 16);
+            this.foreverMinimize1.Location = new System.Drawing.Point(722, 16);
             this.foreverMinimize1.Name = "foreverMinimize1";
             this.foreverMinimize1.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.foreverMinimize1.Size = new System.Drawing.Size(18, 18);
@@ -136,6 +136,7 @@
             this.loginButton.TabIndex = 5;
             this.loginButton.Text = "Đăng nhập";
             this.loginButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // passTextbox
             // 

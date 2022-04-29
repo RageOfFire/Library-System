@@ -24,6 +24,18 @@ namespace Model
             cmd.ExecuteNonQuery();
             conn.Dispose();
         }
+        public DataTableReader Login(string sql)
+        {
+            SqlConnection conn = Connection();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sql,conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            DataTableReader sqlDataReader = dt.CreateDataReader();
+            return sqlDataReader;
+
+        }
         public DataTable GetTable(string sql)
         {
             SqlConnection conn = Connection();

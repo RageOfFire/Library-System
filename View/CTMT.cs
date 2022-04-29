@@ -103,7 +103,14 @@ namespace View
             drMT = ctmt.HienthiMT_CB();
             while (drS.Read())
             {
-                maSachComboCTMT.Items.Add(drS[0].ToString());
+                if(drS.FieldCount > 0)
+                {
+                    maSachComboCTMT.Items.Add(drS[0].ToString());
+                }
+                else
+                {
+                    maSachComboCTMT.Items.Add("Không có dữ liệu");
+                }
             }
             while (drMT.Read())
             {
