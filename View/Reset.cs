@@ -30,12 +30,6 @@ namespace View
                         comboBox.SelectedIndex = -1;
                 }
 
-                if (control is RadioButton)
-                {
-                    RadioButton radioButton = (RadioButton)control;
-                    radioButton.Checked = false;
-                }
-
                 if (control is DateTimePicker)
                 {
                     DateTimePicker dateTime = (DateTimePicker)control;

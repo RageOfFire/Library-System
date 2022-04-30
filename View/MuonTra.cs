@@ -14,11 +14,25 @@ namespace View
 {
     public partial class Sach : Form
     {
+        string radioData;
         ControllerMT mt = new ControllerMT();
         SqlDataReader drST;
         SqlDataReader drNV;
+        SqlDataReader drS;
+        public void CheckRadio()
+        {
+            if (daTraRadioMT.Checked)
+            {
+                radioData = daTraRadioMT.Text;
+            }
+            else
+            {
+                radioData = chuaTraRadioMT.Text;
+            }
+        }
         private void addButtonMT_Click(object sender, EventArgs e)
         {
+            CheckRadio();
             if (string.IsNullOrWhiteSpace(maMuonTraBoxMT.Text))
             {
                 MessageBox.Show("Chưa nhập mã", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -28,7 +42,7 @@ namespace View
             {
                 try
                 {
-                    mt.InsertMT(this.maMuonTraBoxMT.Text, Convert.ToInt32(this.soTheComboMT.Text), this.maNhanVienBoxNV.Text, this.ngayMuonDateMT.Value.ToShortDateString());
+                    mt.InsertMT(this.maMuonTraBoxMT.Text, Convert.ToInt32(this.soTheComboMT.Text), this.maSachComboMT.Text, this.maNhanVienBoxNV.Text, this.ngayMuonDateMT.Value.ToShortDateString(), this.ngayTraDateMT.Value.ToShortTimeString(), this.radioData);
                     MessageBox.Show("Thêm thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -39,17 +53,18 @@ namespace View
         }
         private void editButtonMT_Click(object sender, EventArgs e)
         {
-                try
-                {
-                    mt.UpdateMT(this.maMuonTraBoxMT.Text, Convert.ToInt32(this.soTheComboMT.Text), this.maNhanVienComboMT.Text, this.ngayMuonDateMT.Value.ToShortDateString());
-                    MessageBox.Show("Sửa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    maMuonTraBoxMT.Enabled = true;
-                    addButtonMT.Enabled = true;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            CheckRadio();
+            try
+            {
+                mt.UpdateMT(this.maMuonTraBoxMT.Text, Convert.ToInt32(this.soTheComboMT.Text), this.maSachComboMT.Text, this.maNhanVienComboMT.Text, this.ngayMuonDateMT.Value.ToShortDateString(), this.ngayTraDateMT.Value.ToShortTimeString(), this.radioData);
+                MessageBox.Show("Sửa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                maMuonTraBoxMT.Enabled = true;
+                addButtonMT.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void deleteButtonMT_Click(object sender, EventArgs e)
         {
@@ -116,13 +131,27 @@ namespace View
             }
             drST = mt.HienthiST_CB();
             drNV = mt.HienthiNV_CB();
+            drS = mt.HienThiS_CB();
             while (drST.Read())
             {
-                soTheComboMT.Items.Add(drST[0].ToString());
+                if(drST.FieldCount > 0)
+                {
+                 soTheComboMT.Items.Add(drST[0].ToString());
+                }
             }
             while (drNV.Read())
             {
-                maNhanVienComboMT.Items.Add(drNV[0].ToString());
+                if (drNV.FieldCount > 0)
+                {
+                    maNhanVienComboMT.Items.Add(drNV[0].ToString());
+                }
+            }
+            while (drS.Read())
+            {
+                if(drS.FieldCount > 0)
+                {
+                    maSachComboMT.Items.Add(drS[0].ToString());
+                }
             }
         }
         private void muonTraGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -133,8 +162,21 @@ namespace View
             i = e.RowIndex;
             maMuonTraBoxMT.Text = muonTraGridView.Rows[i].Cells[1].Value.ToString();
             soTheComboMT.Text = muonTraGridView.Rows[i].Cells[2].Value.ToString();
-            maNhanVienComboMT.Text = muonTraGridView.Rows[i].Cells[3].Value.ToString();
-            ngayMuonDateMT.Value = DateTime.ParseExact(muonTraGridView.Rows[i].Cells[4].Value.ToString(), "dd:MM:yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            maSachComboMT.Text = muonTraGridView.Rows[i].Cells[3].Value.ToString();
+            maNhanVienComboMT.Text = muonTraGridView.Rows[i].Cells[4].Value.ToString();
+            ngayMuonDateMT.Value = DateTime.ParseExact(muonTraGridView.Rows[i].Cells[5].Value.ToString(), "dd:MM:yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            ngayTraDateMT.Value = DateTime.ParseExact(muonTraGridView.Rows[i].Cells[6].Value.ToString(), "dd:MM:yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            string RadioDataGo = muonTraGridView.Rows[i].Cells[7].Value.ToString();
+            if (RadioDataGo == daTraRadioMT.Text)
+            {
+                daTraRadioMT.Checked = true;
+                chuaTraRadioMT.Checked = false;
+            }
+            else
+            {
+                chuaTraRadioMT.Checked = true;
+                daTraRadioMT.Checked = false;
+            }
         }
     }
 }

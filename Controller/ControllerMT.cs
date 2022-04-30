@@ -12,14 +12,14 @@ namespace Controller
     public class ControllerMT
     {
         Database db = new Database();
-        public void InsertMT(string maMT, int soThe, string maNhanVien, string ngayMuon)
+        public void InsertMT(string maMT, int soThe, string maNhanVien, string maSach, string ngayMuon, string ngayTra, string daTra)
         {
-            string sql_add = "INSERT INTO MuonTra VALUES('" + maMT + "','" + soThe + "','"+ maNhanVien +"','"+ ngayMuon +"')";
+            string sql_add = "INSERT INTO MuonTra VALUES('" + maMT + "','" + soThe + "','"+ maNhanVien +"','"+ maSach +"''"+ ngayMuon +"','"+ ngayTra +"','"+ daTra +"')";
             db.ExecuteNonQuery(sql_add);
         }
-        public void UpdateMT(string maMT, int soThe, string maNhanVien, string ngayMuon)
+        public void UpdateMT(string maMT, int soThe, string maNhanVien, string maSach, string ngayMuon, string ngayTra, string daTra)
         {
-            string sql_update = "UPDATE MuonTra SET Sothe = N'"+ soThe +"', Ma_nhan_vien = N'"+ maNhanVien +"', Ngay_muon = N'"+ ngayMuon +"' WHERE Ma_muon_tra = N'" + maMT + "'";
+            string sql_update = "UPDATE MuonTra SET Sothe = N'"+ soThe +"', Ma_nhan_vien = N'"+ maNhanVien +"', Ma_sach = N'"+ maSach +"', Ngay_muon = N'"+ ngayMuon +"', Ngay_tra = N'"+ ngayTra +"', Da_tra = N'"+ daTra +"' WHERE Ma_muon_tra = N'" + maMT + "'";
             db.ExecuteNonQuery(sql_update);
         }
         public void DeleteMT(string maMT)
@@ -50,7 +50,14 @@ namespace Controller
         }
         public SqlDataReader HienthiST_CB()
         {
-            string sqls_cb = "SELECT * FROM TheThuVien";
+            string sqlt_cb = "SELECT * FROM TheThuVien";
+            SqlDataReader drT;
+            drT = db.Get_DR(sqlt_cb);
+            return drT;
+        }
+        public SqlDataReader HienThiS_CB()
+        {
+            string sqls_cb = "SELECT * FROM Sach";
             SqlDataReader drS;
             drS = db.Get_DR(sqls_cb);
             return drS;

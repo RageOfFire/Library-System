@@ -22,14 +22,38 @@ namespace View
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            DataTable dt = login.Login(this.userTextbox.Text, this.passTextbox.Text);
-            if(dt.Rows.Count > 0)
+            if (string.IsNullOrWhiteSpace(userTextbox.Text))
             {
-                MessageBox.Show("Vjp", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn cần nhập tên tài khoản", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                userTextbox.Focus();
+            }
+            else if (string.IsNullOrWhiteSpace(passTextbox.Text))
+            {
+                MessageBox.Show("Bạn cần nhập mật khẩu", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Khong Vip", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    DataTable dt = login.Login(this.userTextbox.Text, this.passTextbox.Text);
+                    if (dt.Rows.Count > 0)
+                    {
+                        this.Hide();
+                        Sach sach = new Sach();
+                        sach.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đăng nhập thất bại!\nKiểm tra lại tài khoản và mật khẩu", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
     }

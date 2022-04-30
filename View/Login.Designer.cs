@@ -204,9 +204,9 @@
             this.loginlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.loginlabel.Location = new System.Drawing.Point(204, 67);
             this.loginlabel.Name = "loginlabel";
-            this.loginlabel.Size = new System.Drawing.Size(365, 54);
+            this.loginlabel.Size = new System.Drawing.Size(335, 54);
             this.loginlabel.TabIndex = 0;
-            this.loginlabel.Text = "Chào mừng trở lại";
+            this.loginlabel.Text = "Quản lý thư viện";
             // 
             // Login
             // 

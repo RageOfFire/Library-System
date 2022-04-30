@@ -135,15 +135,24 @@ namespace View
             drNXB = sach.HienthiNXB_CB();
             while (drTG.Read())
             {
-                maTacGiaComboS.Items.Add(drTG[0].ToString());
+                if(drTG.FieldCount > 0)
+                {
+                    maTacGiaComboS.Items.Add(drTG[0].ToString());
+                }
             }
             while (drTL.Read())
             {
-                maTheLoaiComboS.Items.Add(drTL[0].ToString());
+                if(drTL.FieldCount > 0)
+                {
+                    maTheLoaiComboS.Items.Add(drTL[0].ToString());
+                }
             }
             while (drNXB.Read())
             {
-                maNhaXuatBanComboS.Items.Add(drNXB[0].ToString());
+                if(drNXB.FieldCount > 0)
+                {
+                    maNhaXuatBanComboS.Items.Add(drNXB[0].ToString());
+                }
             }
         }
 

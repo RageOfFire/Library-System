@@ -129,7 +129,10 @@ namespace View
             drST2 = dg.HienthiST_CB();
             while (drST2.Read())
             {
-                soTheComboDG.Items.Add(drST2[0].ToString());
+                if(drST2.FieldCount > 0)
+                {
+                    soTheComboDG.Items.Add(drST2[0].ToString());
+                }
             }
         }
         private void docGiaGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

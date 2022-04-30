@@ -48,7 +48,6 @@
     <Compile Include="ControllerLogin.cs" />
     <Compile Include="ControllerTTV.cs" />
     <Compile Include="ControllerMT.cs" />
-    <Compile Include="ControllerCTMT.cs" />
     <Compile Include="ControllerNhanVien.cs" />
     <Compile Include="ControllerDocGia.cs" />
     <Compile Include="ControllerTL.cs" />
