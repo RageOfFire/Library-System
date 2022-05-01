@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ReaLTaiizor.Controls;
 
 namespace View
 {
@@ -24,12 +25,14 @@ namespace View
         {
             if (string.IsNullOrWhiteSpace(userTextbox.Text))
             {
-                MessageBox.Show("Bạn cần nhập tên tài khoản", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+                PoisonMessageBox.Show(this, "Bạn cần nhập tên tài khoản", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 userTextbox.Focus();
             }
             else if (string.IsNullOrWhiteSpace(passTextbox.Text))
             {
-                MessageBox.Show("Bạn cần nhập mật khẩu", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                PoisonMessageBox.Show(this, "Bạn cần nhập mật khẩu", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                passTextbox.Focus();
             }
             else
             {
@@ -45,13 +48,13 @@ namespace View
                     }
                     else
                     {
-                        MessageBox.Show("Đăng nhập thất bại!\nKiểm tra lại tài khoản và mật khẩu", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        PoisonMessageBox.Show(this, "Đăng nhập thất bại!\nKiểm tra lại tài khoản và mật khẩu", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
