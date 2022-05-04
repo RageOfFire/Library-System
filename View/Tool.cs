@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReaLTaiizor.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,12 +9,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using TabPage = System.Windows.Forms.TabPage;
 
 namespace View
 {
     public partial class Sach : Form
     {
+        // Đây là chức năng để làm mới toàn bộ TextBox,ComboBox,...
+        public static void ResetAlls(TabPage page)
+        {
+            foreach (Control control in page.Controls)
+            {
+                if (control is ReaLTaiizor.Controls.ForeverTextBox)
+                {
+                    ReaLTaiizor.Controls.ForeverTextBox textBox = (ReaLTaiizor.Controls.ForeverTextBox)control;
+                    textBox.Text = null;
+                }
+
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    if (comboBox.Items.Count > 0)
+                        comboBox.SelectedIndex = -1;
+                }
+
+                if (control is DateTimePicker)
+                {
+                    DateTimePicker dateTime = (DateTimePicker)control;
+                    dateTime.Value = DateTime.UtcNow;
+                }
+            }
+        }
+        //Chức năng xuất dữ liệu sang dạng excels
         public static void Excel(DataGridView table)
         {
             Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
@@ -34,7 +61,7 @@ namespace View
                 }
             }
             worksheet.Columns.AutoFit();
-            
+
             using (var dlg = new SaveFileDialog())
             {
                 dlg.Filter = "xlsx files (*.xlsx)|*.xlsx|xls files (*.xls)|*.xls|All files (*.*)|*.*";
@@ -45,6 +72,12 @@ namespace View
                 }
             }
             app.Quit();
+        }
+        // Chức năng messageBox
+        public DialogResult EasyMessageBox(string text, MessageBoxButtons button, MessageBoxIcon icon)
+        {
+            DialogResult rs = PoisonMessageBox.Show(this, text, "Quản lý thư viện", button, icon);
+            return rs;
         }
     }
 }

@@ -20,12 +20,12 @@ namespace View
         {
             if (string.IsNullOrWhiteSpace(soTheBoxTTV.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa nhập số thẻ", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa nhập số thẻ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 soTheBoxTTV.Focus();
             }
             else if (!int.TryParse(soTheBoxTTV.Text, out value))
             {
-                PoisonMessageBox.Show(this, "Số thẻ phải là dạng số", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Số thẻ phải là dạng số", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 soTheBoxTTV.Focus();
             }
             else
@@ -33,11 +33,11 @@ namespace View
                 try
                 {
                     ttv.InsertTTV(Convert.ToInt32(this.soTheBoxTTV.Text), this.ngayBatDauDateTTV.Value.ToShortDateString(), this.ngayHetHanDateTTV.Value.ToShortDateString(), this.ghiChuBoxTTV.Text);
-                    PoisonMessageBox.Show(this, "Thêm thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -46,27 +46,27 @@ namespace View
                 try
                 {
                     ttv.UpdateTTV(Convert.ToInt32(this.soTheBoxTTV.Text), this.ngayBatDauDateTTV.Value.ToShortDateString(), this.ngayHetHanDateTTV.Value.ToShortDateString(), this.ghiChuBoxTTV.Text);
-                    PoisonMessageBox.Show(this, "Sửa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    EasyMessageBox("Sửa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     soTheBoxTTV.Enabled = true;
                     addButtonTTV.Enabled = true;
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
         }
         private void deleteButtonTTV_Click(object sender, EventArgs e)
         {
             try
             {
-                DialogResult rs = PoisonMessageBox.Show(this, "Bạn có thực sự muốn xóa không ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (rs == DialogResult.OK)
                 {
-                    DialogResult rs2 = PoisonMessageBox.Show(this, "Bạn chắc chưa ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (rs2 == DialogResult.OK)
                     {
                         ttv.DeleteTTV(Convert.ToInt32(this.soTheBoxTTV.Text));
-                        PoisonMessageBox.Show(this, "Xóa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         soTheBoxTTV.Enabled = true;
                         addButtonTTV.Enabled = true;
                     }
@@ -74,7 +74,7 @@ namespace View
             }
             catch (Exception ex)
             {
-                PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void resetButtonTTV_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace View
         }
         private void exitButtonTTV_Click(object sender, EventArgs e)
         {
-            DialogResult rs = PoisonMessageBox.Show(this, "Bạn có muốn thoát khỏi ứng dụng ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult rs = EasyMessageBox("Bạn có muốn thoát khỏi ứng dụng ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.OK)
             {
                 this.Close();
@@ -104,7 +104,7 @@ namespace View
         {
             if (string.IsNullOrWhiteSpace(searchBoxTTV.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa Nhập từ khóa để tìm kiếm ?", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa Nhập từ khóa để tìm kiếm ?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 searchBoxTTV.Focus();
             }
             else
@@ -115,7 +115,7 @@ namespace View
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -129,6 +129,17 @@ namespace View
             ngayBatDauDateTTV.Text = docGiaGridView.Rows[i].Cells[2].Value.ToString();
             ngayHetHanDateTTV.Text = docGiaGridView.Rows[i].Cells[3].Value.ToString();
             ghiChuBoxTTV.Text = docGiaGridView.Rows[i].Cells[4].Value.ToString();
+        }
+        private void ExcelButtonTTV_Click(object sender, EventArgs e)
+        {
+            if (theThuVienGridView.Rows.Count > 0)
+            {
+                Excel(theThuVienGridView);
+            }
+            else
+            {
+                EasyMessageBox("Cần ít nhất 1 dữ liệu để xuất ra", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

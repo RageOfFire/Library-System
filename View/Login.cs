@@ -26,12 +26,12 @@ namespace View
             if (string.IsNullOrWhiteSpace(userTextbox.Text))
             {
                 
-                PoisonMessageBox.Show(this, "Bạn cần nhập tên tài khoản", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                PoisonMessageBox.Show(this, "Bạn cần nhập tên tài khoản", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 userTextbox.Focus();
             }
             else if (string.IsNullOrWhiteSpace(passTextbox.Text))
             {
-                PoisonMessageBox.Show(this, "Bạn cần nhập mật khẩu", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                PoisonMessageBox.Show(this, "Bạn cần nhập mật khẩu", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 passTextbox.Focus();
             }
             else
@@ -48,13 +48,13 @@ namespace View
                     }
                     else
                     {
-                        PoisonMessageBox.Show(this, "Đăng nhập thất bại!\nKiểm tra lại tài khoản và mật khẩu", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        PoisonMessageBox.Show(this, "Đăng nhập thất bại!\nKiểm tra lại tài khoản và mật khẩu", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    PoisonMessageBox.Show(this, "Error" + ex, "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

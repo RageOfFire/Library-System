@@ -21,12 +21,12 @@ namespace View
         {
             if (string.IsNullOrWhiteSpace(maDocGiaBoxDG.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa nhập mã", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa nhập mã", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 maDocGiaBoxDG.Focus();
             }
             else if (string.IsNullOrWhiteSpace(tenDocGiaBoxDG.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa nhập tên", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenDocGiaBoxDG.Focus();
             }
             else
@@ -34,11 +34,11 @@ namespace View
                 try
                 {
                     dg.InsertDG(this.maDocGiaBoxDG.Text, this.tenDocGiaBoxDG.Text, this.diaChiBoxDG.Text, Convert.ToInt32(this.soTheComboDG.Text));
-                    PoisonMessageBox.Show(this, "Thêm thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -46,7 +46,7 @@ namespace View
         {
             if (string.IsNullOrWhiteSpace(tenDocGiaBoxDG.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa nhập tên", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenDocGiaBoxDG.Focus();
             }
             else
@@ -54,13 +54,13 @@ namespace View
                 try
                 {
                     dg.UpdateDG(this.maDocGiaBoxDG.Text, this.tenDocGiaBoxDG.Text, this.diaChiBoxDG.Text, Convert.ToInt32(this.soTheComboDG.Text));
-                    PoisonMessageBox.Show(this, "Sửa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    EasyMessageBox("Sửa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     maDocGiaBoxDG.Enabled = true;
                     addButtonDG.Enabled = true;
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -68,14 +68,14 @@ namespace View
         {
             try
             {
-                DialogResult rs = PoisonMessageBox.Show(this, "Bạn có thực sự muốn xóa không ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (rs == DialogResult.OK)
                 {
-                    DialogResult rs2 = PoisonMessageBox.Show(this, "Bạn chắc chưa ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (rs2 == DialogResult.OK)
                     {
                         dg.DeleteDG(this.maDocGiaBoxDG.Text);
-                        PoisonMessageBox.Show(this, "Xóa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         maDocGiaBoxDG.Enabled = true;
                         addButtonDG.Enabled = true;
                     }
@@ -83,7 +83,7 @@ namespace View
             }
             catch (Exception ex)
             {
-                PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void resetButtonDG_Click(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace View
         }
         private void exitButtonDG_Click(object sender, EventArgs e)
         {
-            DialogResult rs = PoisonMessageBox.Show(this, "Bạn có muốn thoát khỏi ứng dụng ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult rs = EasyMessageBox("Bạn có muốn thoát khỏi ứng dụng ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.OK)
             {
                 this.Close();
@@ -104,7 +104,7 @@ namespace View
         {
             if (string.IsNullOrWhiteSpace(searchBoxDG.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa Nhập từ khóa để tìm kiếm ?", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa Nhập từ khóa để tìm kiếm ?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 searchBoxDG.Focus();
             }
             else
@@ -115,7 +115,7 @@ namespace View
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -149,6 +149,17 @@ namespace View
             tenDocGiaBoxDG.Text = docGiaGridView.Rows[i].Cells[2].Value.ToString();
             diaChiBoxDG.Text = docGiaGridView.Rows[i].Cells[3].Value.ToString();
             soTheComboDG.Text = docGiaGridView.Rows[i].Cells[4].Value.ToString();
+        }
+        private void ExcelButtonDG_Click(object sender, EventArgs e)
+        {
+            if (docGiaGridView.Rows.Count > 0)
+            {
+                Excel(docGiaGridView);
+            }
+            else
+            {
+                EasyMessageBox("Cần ít nhất 1 dữ liệu để xuất ra", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

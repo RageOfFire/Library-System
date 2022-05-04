@@ -21,12 +21,12 @@ namespace View
         {
             if (string.IsNullOrWhiteSpace(maTheLoaiBoxTL.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa nhập mã", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa nhập mã", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 maTheLoaiBoxTL.Focus();
             }
             else if (string.IsNullOrWhiteSpace(tenTheLoaiBoxTL.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa nhập tên", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenTheLoaiBoxTL.Focus();
             }
             else
@@ -34,11 +34,11 @@ namespace View
                 try
                 {
                     tl.InsertTL(this.maTheLoaiBoxTL.Text, this.tenTheLoaiBoxTL.Text);
-                    PoisonMessageBox.Show(this, "Thêm thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -46,7 +46,7 @@ namespace View
         {
             if (string.IsNullOrWhiteSpace(tenTheLoaiBoxTL.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa nhập tên", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenTheLoaiBoxTL.Focus();
             }
             else
@@ -54,13 +54,13 @@ namespace View
                 try
                 {
                     tl.UpdateTL(this.maTheLoaiBoxTL.Text, this.tenTheLoaiBoxTL.Text);
-                    PoisonMessageBox.Show(this, "Sửa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    EasyMessageBox("Sửa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     maTheLoaiBoxTL.Enabled = true;
                     addButtonTL.Enabled = true;
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -68,14 +68,14 @@ namespace View
         {
             try
             {
-                DialogResult rs = PoisonMessageBox.Show(this, "Bạn có thực sự muốn xóa không ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (rs == DialogResult.OK)
                 {
-                    DialogResult rs2 = PoisonMessageBox.Show(this, "Bạn chắc chưa ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (rs2 == DialogResult.OK)
                     {
                         tl.DeleteTL(this.maTheLoaiBoxTL.Text);
-                        PoisonMessageBox.Show(this, "Xóa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         maTheLoaiBoxTL.Enabled = true;
                         addButtonTL.Enabled = true;
                     }
@@ -83,7 +83,7 @@ namespace View
             }
             catch (Exception ex)
             {
-                PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void resetButtonTL_Click(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace View
         }
         private void exitButtonTL_Click(object sender, EventArgs e)
         {
-            DialogResult rs = PoisonMessageBox.Show(this, "Bạn có muốn thoát khỏi ứng dụng ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult rs = EasyMessageBox("Bạn có muốn thoát khỏi ứng dụng ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.OK)
             {
                 this.Close();
@@ -113,7 +113,7 @@ namespace View
         {
             if (string.IsNullOrWhiteSpace(searchBoxTL.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa Nhập từ khóa để tìm kiếm ?", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa Nhập từ khóa để tìm kiếm ?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 searchBoxTL.Focus();
             }
             else
@@ -124,7 +124,7 @@ namespace View
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -145,7 +145,7 @@ namespace View
             }
             else
             {
-                PoisonMessageBox.Show(this, "Cần ít nhất 1 dữ liệu để xuất ra", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                EasyMessageBox("Cần ít nhất 1 dữ liệu để xuất ra", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

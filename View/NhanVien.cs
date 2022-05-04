@@ -20,17 +20,17 @@ namespace View
         {
             if (string.IsNullOrWhiteSpace(maNhanVienBoxNV.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa nhập mã", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa nhập mã", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 maNhanVienBoxNV.Focus();
             }
             else if (string.IsNullOrWhiteSpace(tenNhanVienBoxNV.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa nhập tên", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenNhanVienBoxNV.Focus();
             }
             else if (!int.TryParse(sdtBoxNV.Text, out value))
             {
-                PoisonMessageBox.Show(this, "Năm xuất bản không phải là số", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Năm xuất bản không phải là số", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 sdtBoxNV.Focus();
             }
             else
@@ -38,11 +38,11 @@ namespace View
                 try
                 {
                     nv.InsertNV(this.maNhanVienBoxNV.Text, this.tenNhanVienBoxNV.Text, this.ngaySinhDateNV.Value.ToShortDateString(), Convert.ToInt32(this.sdtBoxNV.Text));
-                    PoisonMessageBox.Show(this, "Thêm thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -50,12 +50,12 @@ namespace View
         {
             if (!int.TryParse(sdtBoxNV.Text, out value))
             {
-                PoisonMessageBox.Show(this, "Năm xuất bản không phải là số", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Năm xuất bản không phải là số", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 sdtBoxNV.Focus();
             }
             else if (string.IsNullOrWhiteSpace(tenNhanVienBoxNV.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa nhập tên", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenNhanVienBoxNV.Focus();
             }
             else
@@ -63,13 +63,13 @@ namespace View
                 try
                 {
                     nv.UpdateNV(this.maNhanVienBoxNV.Text, this.tenNhanVienBoxNV.Text, this.ngaySinhDateNV.Value.ToShortDateString(), Convert.ToInt32(this.sdtBoxNV.Text));
-                    PoisonMessageBox.Show(this, "Sửa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    EasyMessageBox("Sửa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     maNhanVienBoxNV.Enabled = true;
                     addButtonNV.Enabled = true;
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -77,14 +77,14 @@ namespace View
         {
             try
             {
-                DialogResult rs = PoisonMessageBox.Show(this, "Bạn có thực sự muốn xóa không ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (rs == DialogResult.OK)
                 {
-                    DialogResult rs2 = PoisonMessageBox.Show(this, "Bạn chắc chưa ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (rs2 == DialogResult.OK)
                     {
                         nv.DeleteNV(this.maNhanVienBoxNV.Text);
-                        PoisonMessageBox.Show(this, "Xóa thành công", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         maNhanVienBoxNV.Enabled = true;
                         addButtonNV.Enabled = true;
                     }
@@ -92,7 +92,7 @@ namespace View
             }
             catch (Exception ex)
             {
-                PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void resetButtonNV_Click(object sender, EventArgs e)
@@ -103,7 +103,7 @@ namespace View
         }
         private void exitButtonNV_Click(object sender, EventArgs e)
         {
-            DialogResult rs = PoisonMessageBox.Show(this, "Bạn có muốn thoát khỏi ứng dụng ?", "Bùi Hồng Sơn", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult rs = EasyMessageBox("Bạn có muốn thoát khỏi ứng dụng ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.OK)
             {
                 this.Close();
@@ -122,7 +122,7 @@ namespace View
         {
             if (string.IsNullOrWhiteSpace(searchBoxNV.Text))
             {
-                PoisonMessageBox.Show(this, "Chưa Nhập từ khóa để tìm kiếm ?", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EasyMessageBox("Chưa Nhập từ khóa để tìm kiếm ?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 searchBoxNV.Focus();
             }
             else
@@ -133,7 +133,7 @@ namespace View
                 }
                 catch (Exception ex)
                 {
-                    PoisonMessageBox.Show(this, "Error" + ex, "Bùi Hồng Sơn", MessageBoxButtons.OK);
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -156,7 +156,7 @@ namespace View
             }
             else
             {
-                PoisonMessageBox.Show(this, "Cần ít nhất 1 dữ liệu để xuất ra", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                EasyMessageBox("Cần ít nhất 1 dữ liệu để xuất ra", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }
