@@ -14,12 +14,12 @@ namespace Controller
         Database db = new Database();
         public void InsertMT(string maMT, int soThe, string maNhanVien, string maSach, string ngayMuon, string ngayTra, string daTra)
         {
-            string sql_add = "INSERT INTO MuonTra VALUES('" + maMT + "','" + soThe + "','"+ maNhanVien +"','"+ maSach +"''"+ ngayMuon +"','"+ ngayTra +"','"+ daTra +"')";
+            string sql_add = "INSERT INTO MuonTra VALUES('" + maMT + "', '" + soThe + "', '" + maNhanVien + "', '" + maSach + "', '" + ngayMuon + "', '" + daTra + "', '" + ngayTra +"')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateMT(string maMT, int soThe, string maNhanVien, string maSach, string ngayMuon, string ngayTra, string daTra)
         {
-            string sql_update = "UPDATE MuonTra SET Sothe = N'"+ soThe +"', Ma_nhan_vien = N'"+ maNhanVien +"', Ma_sach = N'"+ maSach +"', Ngay_muon = N'"+ ngayMuon +"', Ngay_tra = N'"+ ngayTra +"', Da_tra = N'"+ daTra +"' WHERE Ma_muon_tra = N'" + maMT + "'";
+            string sql_update = "UPDATE MuonTra SET So_the = N'"+ soThe +"', Ma_nhan_vien = N'"+ maNhanVien +"', Ma_sach = N'"+ maSach +"', Ngay_muon = N'"+ ngayMuon + "', Da_tra = N'" + daTra + "', Ngay_tra = N'" + ngayTra +"' WHERE Ma_muon_tra = N'" + maMT + "'";
             db.ExecuteNonQuery(sql_update);
         }
         public void DeleteMT(string maMT)

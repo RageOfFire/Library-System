@@ -141,5 +141,16 @@ namespace View
             EmailBoxNXB.Text = nhaXuatBanGridView.Rows[i].Cells[4].Value.ToString();
             thongTinBoxNXB.Text = nhaXuatBanGridView.Rows[i].Cells[5].Value.ToString();
         }
+        private void ExcelButtonNXB_Click(object sender, EventArgs e)
+        {
+            if (nhaXuatBanGridView.Rows.Count > 0)
+            {
+                Excel(nhaXuatBanGridView);
+            }
+            else
+            {
+                PoisonMessageBox.Show(this, "Cần ít nhất 1 dữ liệu để xuất ra", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

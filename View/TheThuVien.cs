@@ -126,8 +126,8 @@ namespace View
             int i;
             i = e.RowIndex;
             soTheBoxTTV.Text = docGiaGridView.Rows[i].Cells[1].Value.ToString();
-            ngayBatDauDateTTV.Value = DateTime.ParseExact(docGiaGridView.Rows[i].Cells[2].Value.ToString(),"dd:MM:yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            ngayHetHanDateTTV.Value = DateTime.ParseExact(docGiaGridView.Rows[i].Cells[3].Value.ToString(), "dd:MM:yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            ngayBatDauDateTTV.Text = docGiaGridView.Rows[i].Cells[2].Value.ToString();
+            ngayHetHanDateTTV.Text = docGiaGridView.Rows[i].Cells[3].Value.ToString();
             ghiChuBoxTTV.Text = docGiaGridView.Rows[i].Cells[4].Value.ToString();
         }
     }

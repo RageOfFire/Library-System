@@ -146,6 +146,17 @@ namespace View
                 tacGiaGridView.Rows[i].Cells[0].Value = (i + 1).ToString();
             }
         }
+        private void ExcelButtonTG_Click(object sender, EventArgs e)
+        {
+            if (tacGiaGridView.Rows.Count > 0)
+            {
+                Excel(tacGiaGridView);
+            }
+            else
+            {
+                PoisonMessageBox.Show(this, "Cần ít nhất 1 dữ liệu để xuất ra", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }
 

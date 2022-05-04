@@ -138,21 +138,30 @@ namespace View
             {
                 if(drTG.FieldCount > 0)
                 {
-                    maTacGiaComboS.Items.Add(drTG[0].ToString());
+                    if(!maTacGiaComboS.Items.Contains(drTG[0].ToString()))
+                    {
+                        maTacGiaComboS.Items.Add(drTG[0].ToString());
+                    }
                 }
             }
             while (drTL.Read())
             {
                 if(drTL.FieldCount > 0)
                 {
-                    maTheLoaiComboS.Items.Add(drTL[0].ToString());
+                    if(!maTheLoaiComboS.Items.Contains(drTL[0].ToString()))
+                    {
+                        maTheLoaiComboS.Items.Add(drTL[0].ToString());
+                    }
                 }
             }
             while (drNXB.Read())
             {
                 if(drNXB.FieldCount > 0)
                 {
-                    maNhaXuatBanComboS.Items.Add(drNXB[0].ToString());
+                    if(!maNhaXuatBanComboS.Items.Contains(drNXB[0].ToString()))
+                    {
+                        maNhaXuatBanComboS.Items.Add(drNXB[0].ToString());
+                    }
                 }
             }
         }
@@ -191,7 +200,17 @@ namespace View
             namXuatBanBoxS.Text = sachDataGridView.Rows[i].Cells[6].Value.ToString();
         }
 
-
+        private void ExcelButtonS_Click(object sender, EventArgs e)
+        {
+            if (sachDataGridView.Rows.Count > 0)
+            {
+                Excel(sachDataGridView);
+            }
+            else
+            {
+                PoisonMessageBox.Show(this, "Cần ít nhất 1 dữ liệu để xuất ra", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }
 

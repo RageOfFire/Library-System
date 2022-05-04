@@ -137,5 +137,16 @@ namespace View
             maTheLoaiBoxTL.Text = theLoaiGridView.Rows[i].Cells[1].Value.ToString();
             tenTheLoaiBoxTL.Text = theLoaiGridView.Rows[i].Cells[2].Value.ToString();
         }
+        private void ExcelButtonTL_Click(object sender, EventArgs e)
+        {
+            if (theLoaiGridView.Rows.Count > 0)
+            {
+                Excel(theLoaiGridView);
+            }
+            else
+            {
+                PoisonMessageBox.Show(this, "Cần ít nhất 1 dữ liệu để xuất ra", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

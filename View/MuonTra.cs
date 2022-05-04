@@ -137,21 +137,31 @@ namespace View
             {
                 if(drST.FieldCount > 0)
                 {
-                 soTheComboMT.Items.Add(drST[0].ToString());
+                    if(!soTheComboMT.Items.Contains(drST[0].ToString()))
+                    {
+                        soTheComboMT.Items.Add(drST[0].ToString());
+                    }
                 }
             }
             while (drNV.Read())
             {
                 if (drNV.FieldCount > 0)
                 {
-                    maNhanVienComboMT.Items.Add(drNV[0].ToString());
+                    if(!maNhanVienComboMT.Items.Contains(drNV[0].ToString()))
+                    {
+                        maNhanVienComboMT.Items.Add(drNV[0].ToString());
+                    }
+                    
                 }
             }
             while (drS.Read())
             {
                 if(drS.FieldCount > 0)
                 {
-                    maSachComboMT.Items.Add(drS[0].ToString());
+                    if(!maSachComboMT.Items.Contains(drS[0].ToString()))
+                    {
+                        maSachComboMT.Items.Add(drS[0].ToString());
+                    }  
                 }
             }
         }
@@ -163,11 +173,10 @@ namespace View
             i = e.RowIndex;
             maMuonTraBoxMT.Text = muonTraGridView.Rows[i].Cells[1].Value.ToString();
             soTheComboMT.Text = muonTraGridView.Rows[i].Cells[2].Value.ToString();
-            maSachComboMT.Text = muonTraGridView.Rows[i].Cells[3].Value.ToString();
-            maNhanVienComboMT.Text = muonTraGridView.Rows[i].Cells[4].Value.ToString();
-            ngayMuonDateMT.Value = DateTime.ParseExact(muonTraGridView.Rows[i].Cells[5].Value.ToString(), "dd:MM:yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            ngayTraDateMT.Value = DateTime.ParseExact(muonTraGridView.Rows[i].Cells[6].Value.ToString(), "dd:MM:yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            string RadioDataGo = muonTraGridView.Rows[i].Cells[7].Value.ToString();
+            maNhanVienComboMT.Text = muonTraGridView.Rows[i].Cells[3].Value.ToString();
+            maSachComboMT.Text = muonTraGridView.Rows[i].Cells[4].Value.ToString();
+            ngayMuonDateMT.Text = muonTraGridView.Rows[i].Cells[5].Value.ToString();
+            string RadioDataGo = muonTraGridView.Rows[i].Cells[6].Value.ToString();
             if (RadioDataGo == daTraRadioMT.Text)
             {
                 daTraRadioMT.Checked = true;
@@ -177,6 +186,18 @@ namespace View
             {
                 chuaTraRadioMT.Checked = true;
                 daTraRadioMT.Checked = false;
+            }
+            ngayTraDateMT.Text = muonTraGridView.Rows[i].Cells[7].Value.ToString();
+        }
+        private void ExcelButtonMT_Click(object sender, EventArgs e)
+        {
+            if(muonTraGridView.Rows.Count > 0)
+            {
+                Excel(muonTraGridView);
+            }
+            else
+            {
+                PoisonMessageBox.Show(this, "Cần ít nhất 1 dữ liệu để xuất ra", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

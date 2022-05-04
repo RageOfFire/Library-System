@@ -132,7 +132,10 @@ namespace View
             {
                 if(drST2.FieldCount > 0)
                 {
-                    soTheComboDG.Items.Add(drST2[0].ToString());
+                    if(!soTheComboDG.Items.Contains(drST2[0].ToString()))
+                    {
+                        soTheComboDG.Items.Add(drST2[0].ToString());
+                    }
                 }
             }
         }

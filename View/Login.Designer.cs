@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.LoginForm = new ReaLTaiizor.Forms.ForeverForm();
+            this.foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
+            this.userlabel = new ReaLTaiizor.Controls.ForeverLabel();
+            this.userTextbox = new ReaLTaiizor.Controls.ForeverTextBox();
+            this.passTextbox = new ReaLTaiizor.Controls.ForeverTextBox();
+            this.passlabel = new ReaLTaiizor.Controls.ForeverLabel();
+            this.loginButton = new ReaLTaiizor.Controls.ForeverButton();
+            this.parrotPictureBox1 = new ReaLTaiizor.Controls.ParrotPictureBox();
             this.foreverMaximize1 = new ReaLTaiizor.Controls.ForeverMaximize();
             this.foreverMinimize1 = new ReaLTaiizor.Controls.ForeverMinimize();
             this.closeButton = new ReaLTaiizor.Controls.ForeverClose();
-            this.loginButton = new ReaLTaiizor.Controls.ForeverButton();
-            this.passTextbox = new ReaLTaiizor.Controls.ForeverTextBox();
-            this.userTextbox = new ReaLTaiizor.Controls.ForeverTextBox();
-            this.passlabel = new ReaLTaiizor.Controls.ForeverLabel();
-            this.userlabel = new ReaLTaiizor.Controls.ForeverLabel();
             this.loginlabel = new ReaLTaiizor.Controls.ForeverLabel();
-            this.parrotPictureBox1 = new ReaLTaiizor.Controls.ParrotPictureBox();
-            this.foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
             this.LoginForm.SuspendLayout();
             this.foreverGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +73,120 @@
             this.LoginForm.Text = "Login";
             this.LoginForm.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.LoginForm.TextLight = System.Drawing.Color.SeaGreen;
+            // 
+            // foreverGroupBox1
+            // 
+            this.foreverGroupBox1.ArrowColorF = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverGroupBox1.ArrowColorH = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.foreverGroupBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverGroupBox1.Controls.Add(this.userlabel);
+            this.foreverGroupBox1.Controls.Add(this.userTextbox);
+            this.foreverGroupBox1.Controls.Add(this.passTextbox);
+            this.foreverGroupBox1.Controls.Add(this.passlabel);
+            this.foreverGroupBox1.Controls.Add(this.loginButton);
+            this.foreverGroupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.foreverGroupBox1.Location = new System.Drawing.Point(454, 124);
+            this.foreverGroupBox1.Name = "foreverGroupBox1";
+            this.foreverGroupBox1.ShowArrow = true;
+            this.foreverGroupBox1.ShowText = true;
+            this.foreverGroupBox1.Size = new System.Drawing.Size(342, 288);
+            this.foreverGroupBox1.TabIndex = 10;
+            this.foreverGroupBox1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            // 
+            // userlabel
+            // 
+            this.userlabel.AutoSize = true;
+            this.userlabel.BackColor = System.Drawing.Color.Transparent;
+            this.userlabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.userlabel.Location = new System.Drawing.Point(3, 20);
+            this.userlabel.Name = "userlabel";
+            this.userlabel.Size = new System.Drawing.Size(114, 31);
+            this.userlabel.TabIndex = 1;
+            this.userlabel.Text = "Tài khoản:";
+            // 
+            // userTextbox
+            // 
+            this.userTextbox.BackColor = System.Drawing.Color.Transparent;
+            this.userTextbox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.userTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.userTextbox.FocusOnHover = false;
+            this.userTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.userTextbox.Location = new System.Drawing.Point(9, 67);
+            this.userTextbox.MaxLength = 32767;
+            this.userTextbox.Multiline = false;
+            this.userTextbox.Name = "userTextbox";
+            this.userTextbox.ReadOnly = false;
+            this.userTextbox.Size = new System.Drawing.Size(315, 34);
+            this.userTextbox.TabIndex = 3;
+            this.userTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.userTextbox.UseSystemPasswordChar = false;
+            // 
+            // passTextbox
+            // 
+            this.passTextbox.BackColor = System.Drawing.Color.Transparent;
+            this.passTextbox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.passTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.passTextbox.FocusOnHover = false;
+            this.passTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.passTextbox.Location = new System.Drawing.Point(9, 159);
+            this.passTextbox.MaxLength = 32767;
+            this.passTextbox.Multiline = false;
+            this.passTextbox.Name = "passTextbox";
+            this.passTextbox.ReadOnly = false;
+            this.passTextbox.Size = new System.Drawing.Size(315, 34);
+            this.passTextbox.TabIndex = 4;
+            this.passTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.passTextbox.UseSystemPasswordChar = true;
+            // 
+            // passlabel
+            // 
+            this.passlabel.AutoSize = true;
+            this.passlabel.BackColor = System.Drawing.Color.Transparent;
+            this.passlabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.passlabel.Location = new System.Drawing.Point(3, 113);
+            this.passlabel.Name = "passlabel";
+            this.passlabel.Size = new System.Drawing.Size(115, 31);
+            this.passlabel.TabIndex = 2;
+            this.passlabel.Text = "Mật khẩu:";
+            // 
+            // loginButton
+            // 
+            this.loginButton.BackColor = System.Drawing.Color.Transparent;
+            this.loginButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.loginButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.loginButton.Location = new System.Drawing.Point(96, 223);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Rounded = false;
+            this.loginButton.Size = new System.Drawing.Size(120, 40);
+            this.loginButton.TabIndex = 5;
+            this.loginButton.Text = "Đăng nhập";
+            this.loginButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
+            // parrotPictureBox1
+            // 
+            this.parrotPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.parrotPictureBox1.ColorLeft = System.Drawing.Color.RosyBrown;
+            this.parrotPictureBox1.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.parrotPictureBox1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotPictureBox1.FilterAlpha = 200;
+            this.parrotPictureBox1.FilterEnabled = true;
+            this.parrotPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("parrotPictureBox1.Image")));
+            this.parrotPictureBox1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.parrotPictureBox1.IsElipse = true;
+            this.parrotPictureBox1.IsParallax = false;
+            this.parrotPictureBox1.Location = new System.Drawing.Point(79, 144);
+            this.parrotPictureBox1.Name = "parrotPictureBox1";
+            this.parrotPictureBox1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotPictureBox1.Size = new System.Drawing.Size(288, 248);
+            this.parrotPictureBox1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.parrotPictureBox1.TabIndex = 9;
+            this.parrotPictureBox1.Text = "parrotPictureBox1";
+            this.parrotPictureBox1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             // 
             // foreverMaximize1
             // 
@@ -124,79 +238,6 @@
             this.closeButton.TabIndex = 6;
             this.closeButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
-            // loginButton
-            // 
-            this.loginButton.BackColor = System.Drawing.Color.Transparent;
-            this.loginButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loginButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.loginButton.Location = new System.Drawing.Point(96, 223);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Rounded = false;
-            this.loginButton.Size = new System.Drawing.Size(120, 40);
-            this.loginButton.TabIndex = 5;
-            this.loginButton.Text = "Đăng nhập";
-            this.loginButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
-            // 
-            // passTextbox
-            // 
-            this.passTextbox.BackColor = System.Drawing.Color.Transparent;
-            this.passTextbox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.passTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.passTextbox.FocusOnHover = false;
-            this.passTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.passTextbox.Location = new System.Drawing.Point(9, 159);
-            this.passTextbox.MaxLength = 32767;
-            this.passTextbox.Multiline = false;
-            this.passTextbox.Name = "passTextbox";
-            this.passTextbox.ReadOnly = false;
-            this.passTextbox.Size = new System.Drawing.Size(315, 34);
-            this.passTextbox.TabIndex = 4;
-            this.passTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.passTextbox.UseSystemPasswordChar = true;
-            // 
-            // userTextbox
-            // 
-            this.userTextbox.BackColor = System.Drawing.Color.Transparent;
-            this.userTextbox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.userTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.userTextbox.FocusOnHover = false;
-            this.userTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.userTextbox.Location = new System.Drawing.Point(9, 67);
-            this.userTextbox.MaxLength = 32767;
-            this.userTextbox.Multiline = false;
-            this.userTextbox.Name = "userTextbox";
-            this.userTextbox.ReadOnly = false;
-            this.userTextbox.Size = new System.Drawing.Size(315, 34);
-            this.userTextbox.TabIndex = 3;
-            this.userTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.userTextbox.UseSystemPasswordChar = false;
-            // 
-            // passlabel
-            // 
-            this.passlabel.AutoSize = true;
-            this.passlabel.BackColor = System.Drawing.Color.Transparent;
-            this.passlabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.passlabel.Location = new System.Drawing.Point(3, 113);
-            this.passlabel.Name = "passlabel";
-            this.passlabel.Size = new System.Drawing.Size(115, 31);
-            this.passlabel.TabIndex = 2;
-            this.passlabel.Text = "Mật khẩu:";
-            // 
-            // userlabel
-            // 
-            this.userlabel.AutoSize = true;
-            this.userlabel.BackColor = System.Drawing.Color.Transparent;
-            this.userlabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.userlabel.Location = new System.Drawing.Point(3, 20);
-            this.userlabel.Name = "userlabel";
-            this.userlabel.Size = new System.Drawing.Size(114, 31);
-            this.userlabel.TabIndex = 1;
-            this.userlabel.Text = "Tài khoản:";
-            // 
             // loginlabel
             // 
             this.loginlabel.AutoSize = true;
@@ -208,47 +249,6 @@
             this.loginlabel.Size = new System.Drawing.Size(335, 54);
             this.loginlabel.TabIndex = 0;
             this.loginlabel.Text = "Quản lý thư viện";
-            // 
-            // parrotPictureBox1
-            // 
-            this.parrotPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.parrotPictureBox1.ColorLeft = System.Drawing.Color.RosyBrown;
-            this.parrotPictureBox1.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.parrotPictureBox1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.parrotPictureBox1.FilterAlpha = 200;
-            this.parrotPictureBox1.FilterEnabled = true;
-            this.parrotPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("parrotPictureBox1.Image")));
-            this.parrotPictureBox1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            this.parrotPictureBox1.IsElipse = true;
-            this.parrotPictureBox1.IsParallax = false;
-            this.parrotPictureBox1.Location = new System.Drawing.Point(79, 144);
-            this.parrotPictureBox1.Name = "parrotPictureBox1";
-            this.parrotPictureBox1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.parrotPictureBox1.Size = new System.Drawing.Size(288, 248);
-            this.parrotPictureBox1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.parrotPictureBox1.TabIndex = 9;
-            this.parrotPictureBox1.Text = "parrotPictureBox1";
-            this.parrotPictureBox1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // foreverGroupBox1
-            // 
-            this.foreverGroupBox1.ArrowColorF = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverGroupBox1.ArrowColorH = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.foreverGroupBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverGroupBox1.Controls.Add(this.userlabel);
-            this.foreverGroupBox1.Controls.Add(this.userTextbox);
-            this.foreverGroupBox1.Controls.Add(this.passTextbox);
-            this.foreverGroupBox1.Controls.Add(this.passlabel);
-            this.foreverGroupBox1.Controls.Add(this.loginButton);
-            this.foreverGroupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.foreverGroupBox1.Location = new System.Drawing.Point(454, 124);
-            this.foreverGroupBox1.Name = "foreverGroupBox1";
-            this.foreverGroupBox1.ShowArrow = true;
-            this.foreverGroupBox1.ShowText = true;
-            this.foreverGroupBox1.Size = new System.Drawing.Size(342, 288);
-            this.foreverGroupBox1.TabIndex = 10;
-            this.foreverGroupBox1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             // 
             // Login
             // 

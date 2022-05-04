@@ -145,8 +145,19 @@ namespace View
             i = e.RowIndex;
             maNhanVienBoxNV.Text = nhanVienGridView.Rows[i].Cells[1].Value.ToString();
             tenNhanVienBoxNV.Text = nhanVienGridView.Rows[i].Cells[2].Value.ToString();
-            ngaySinhDateNV.Value = DateTime.ParseExact(nhanVienGridView.Rows[i].Cells[3].Value.ToString(),"dd:MM:yyyy",System.Globalization.CultureInfo.InvariantCulture);
+            ngaySinhDateNV.Text = nhanVienGridView.Rows[i].Cells[3].Value.ToString();
             sdtBoxNV.Text = nhanVienGridView.Rows[i].Cells[4].Value.ToString();
+        }
+        private void ExcelButtonNV_Click(object sender, EventArgs e)
+        {
+            if (nhanVienGridView.Rows.Count > 0)
+            {
+                Excel(nhanVienGridView);
+            }
+            else
+            {
+                PoisonMessageBox.Show(this, "Cần ít nhất 1 dữ liệu để xuất ra", "Bùi Hồng Sơn", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }
