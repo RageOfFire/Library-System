@@ -13,7 +13,7 @@ namespace Controller
         Database db = new Database();
         public void InsertTG(string matacgia, string tentacgia, string website, string ghichu)
         {
-            string sql_add = "INSERT INTO TacGia VALUES('" + matacgia + "','" + tentacgia + "','" + website + "','" + ghichu + "')";
+            string sql_add = "INSERT INTO TacGia VALUES(N'" + matacgia + "',N'" + tentacgia + "',N'" + website + "',N'" + ghichu + "')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateTG(string matacgia, string tentacgia, string website, string ghichu)

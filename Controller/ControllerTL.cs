@@ -13,7 +13,7 @@ namespace Controller
         Database db = new Database();
         public void InsertTL(string maTL, string tenTL)
         {
-            string sql_add = "INSERT INTO TheLoai VALUES('" + maTL + "','" + tenTL + "')";
+            string sql_add = "INSERT INTO TheLoai VALUES(N'" + maTL + "',N'" + tenTL + "')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateTL(string maTL, string tenTL)

@@ -73,7 +73,7 @@ namespace View
             {
                 try
                 {
-                    sach.UpdateS(this.maSachBoxS.Text, this.tenSachBoxS.Text, this.maTacGiaComboS.Text, this.maTheLoaiComboS.Text, this.maNhaXuatBanComboS.Text, Convert.ToInt32(this.namXuatBanBoxS.Text));
+                    sach.UpdateS(this.maSachBoxS.Text, this.tenSachBoxS.Text, this.maTacGiaComboS.Text, this.maTheLoaiComboS.Text, this.maNhaXuatBanComboS.SelectedValue.ToString(), Convert.ToInt32(this.namXuatBanBoxS.Text));
                     EasyMessageBox("Sửa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     maSachBoxS.Enabled = true;
                     addButtonS.Enabled = true;

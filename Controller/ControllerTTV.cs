@@ -14,7 +14,7 @@ namespace Controller
         Database db = new Database();
         public void InsertTTV(int sothe, string ngayBatDau, string ngayHetHan, string ghiChu)
         {
-            string sql_add = "INSERT INTO TheThuVien VALUES('" + sothe + "','" + ngayBatDau + "','" + ngayHetHan + "','" + ghiChu + "')";
+            string sql_add = "INSERT INTO TheThuVien VALUES(N'" + sothe + "',N'" + ngayBatDau + "',N'" + ngayHetHan + "',N'" + ghiChu + "')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateTTV(int sothe, string ngayBatDau, string ngayHetHan, string ghiChu)

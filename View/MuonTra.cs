@@ -43,7 +43,7 @@ namespace View
             {
                 try
                 {
-                    mt.InsertMT(this.maMuonTraBoxMT.Text, Convert.ToInt32(this.soTheComboMT.Text), this.maSachComboMT.Text, this.maNhanVienBoxNV.Text, this.ngayMuonDateMT.Value.ToShortDateString(), this.ngayTraDateMT.Value.ToShortTimeString(), this.radioData);
+                    mt.InsertMT(this.maMuonTraBoxMT.Text, Convert.ToInt32(this.soTheComboMT.Text), this.maNhanVienComboMT.Text, this.maSachComboMT.Text, this.ngayMuonDateMT.Value.ToShortDateString(), this.ngayTraDateMT.Value.ToShortTimeString(), this.radioData);
                     EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

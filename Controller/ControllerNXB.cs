@@ -13,7 +13,7 @@ namespace Controller
         Database db = new Database();
         public void InsertNXB(string maNXB, string tenNXB, string diachi, string email, string thongtin)
         {
-            string sql_add = "INSERT INTO NhaXuatBan VALUES('" + maNXB + "','" + tenNXB + "','" + diachi + "','" + email + "','"+ thongtin +"')";
+            string sql_add = "INSERT INTO NhaXuatBan VALUES(N'" + maNXB + "',N'" + tenNXB + "',N'" + diachi + "',N'" + email + "',N'"+ thongtin +"')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateNXB(string maNXB, string tenNXB, string diachi, string email, string thongtin)

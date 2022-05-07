@@ -14,7 +14,7 @@ namespace Controller
         Database db = new Database();
         public void InsertS(string masach, string tensach, string matacgia, string matheloai, string maNXB, int namXB)
         {
-            string sql_add = "INSERT INTO Sach VALUES('" + masach + "','" + tensach + "','" + matacgia + "','" + matheloai + "','" + maNXB + "','" + namXB + "')";
+            string sql_add = "INSERT INTO Sach VALUES(N'" + masach + "',N'" + tensach + "',N'" + matacgia + "',N'" + matheloai + "',N'" + maNXB + "',N'" + namXB + "')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateS(string masach, string tensach, string matacgia, string matheloai, string maNXB, int namXB)

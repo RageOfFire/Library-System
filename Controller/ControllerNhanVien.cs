@@ -13,7 +13,7 @@ namespace Controller
         Database db = new Database();
         public void InsertNV(string manv, string tennv, string ngaysinh, int sdt)
         {
-            string sql_add = "INSERT INTO NhanVien VALUES('" + manv + "','" + tennv + "','" + ngaysinh + "','" + sdt + "')";
+            string sql_add = "INSERT INTO NhanVien VALUES(N'" + manv + "',N'" + tennv + "',N'" + ngaysinh + "',N'" + sdt + "')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateNV(string manv, string tennv, string ngaysinh, int sdt)

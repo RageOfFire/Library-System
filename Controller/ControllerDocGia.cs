@@ -14,7 +14,7 @@ namespace Controller
         Database db = new Database();
         public void InsertDG(string madocgia, string tendocgia, string diachi, int sothe)
         {
-            string sql_add = "INSERT INTO DocGia VALUES('" + madocgia + "','" + tendocgia + "','" + diachi + "','" + sothe + "')";
+            string sql_add = "INSERT INTO DocGia VALUES(N'" + madocgia + "',N'" + tendocgia + "',N'" + diachi + "',N'" + sothe + "')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateDG(string madocgia, string tendocgia, string diachi, int sothe)

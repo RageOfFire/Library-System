@@ -14,7 +14,7 @@ namespace Controller
         Database db = new Database();
         public void InsertMT(string maMT, int soThe, string maNhanVien, string maSach, string ngayMuon, string ngayTra, string daTra)
         {
-            string sql_add = "INSERT INTO MuonTra VALUES('" + maMT + "', '" + soThe + "', '" + maNhanVien + "', '" + maSach + "', '" + ngayMuon + "', '" + daTra + "', '" + ngayTra +"')";
+            string sql_add = "INSERT INTO MuonTra VALUES ('" + maMT + "', '" + soThe + "', '" + maNhanVien + "', '" + maSach + "', '" + ngayMuon + "', N'" + daTra + "', '" + ngayTra +"')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateMT(string maMT, int soThe, string maNhanVien, string maSach, string ngayMuon, string ngayTra, string daTra)
