@@ -32,6 +32,8 @@
             this.LoginForm = new ReaLTaiizor.Forms.ForeverForm();
             this.LoginTab = new ReaLTaiizor.Controls.ForeverTabPage();
             this.DangKy = new System.Windows.Forms.TabPage();
+            this.parrotPictureBox2 = new ReaLTaiizor.Controls.ParrotPictureBox();
+            this.foreverLabel3 = new ReaLTaiizor.Controls.ForeverLabel();
             this.foreverGroupBox2 = new ReaLTaiizor.Controls.ForeverGroupBox();
             this.RePassReg = new ReaLTaiizor.Controls.ForeverTextBox();
             this.foreverLabel4 = new ReaLTaiizor.Controls.ForeverLabel();
@@ -40,8 +42,6 @@
             this.PassRegBox = new ReaLTaiizor.Controls.ForeverTextBox();
             this.foreverLabel2 = new ReaLTaiizor.Controls.ForeverLabel();
             this.RegButton = new ReaLTaiizor.Controls.ForeverButton();
-            this.parrotPictureBox2 = new ReaLTaiizor.Controls.ParrotPictureBox();
-            this.foreverLabel3 = new ReaLTaiizor.Controls.ForeverLabel();
             this.DangNhap = new System.Windows.Forms.TabPage();
             this.foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
             this.userlabel = new ReaLTaiizor.Controls.ForeverLabel();
@@ -98,12 +98,13 @@
             this.LoginTab.Controls.Add(this.DangKy);
             this.LoginTab.Controls.Add(this.DangNhap);
             this.LoginTab.DeactiveFontColor = System.Drawing.Color.White;
+            this.LoginTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoginTab.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.LoginTab.ItemSize = new System.Drawing.Size(120, 40);
-            this.LoginTab.Location = new System.Drawing.Point(4, 54);
+            this.LoginTab.Location = new System.Drawing.Point(1, 51);
             this.LoginTab.Name = "LoginTab";
             this.LoginTab.SelectedIndex = 0;
-            this.LoginTab.Size = new System.Drawing.Size(792, 584);
+            this.LoginTab.Size = new System.Drawing.Size(798, 590);
             this.LoginTab.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.LoginTab.TabIndex = 9;
             // 
@@ -116,9 +117,42 @@
             this.DangKy.Location = new System.Drawing.Point(4, 44);
             this.DangKy.Name = "DangKy";
             this.DangKy.Padding = new System.Windows.Forms.Padding(3);
-            this.DangKy.Size = new System.Drawing.Size(784, 536);
+            this.DangKy.Size = new System.Drawing.Size(790, 542);
             this.DangKy.TabIndex = 0;
             this.DangKy.Text = "Đăng ký";
+            // 
+            // parrotPictureBox2
+            // 
+            this.parrotPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.parrotPictureBox2.ColorLeft = System.Drawing.Color.RosyBrown;
+            this.parrotPictureBox2.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.parrotPictureBox2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            this.parrotPictureBox2.FilterAlpha = 200;
+            this.parrotPictureBox2.FilterEnabled = true;
+            this.parrotPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("parrotPictureBox2.Image")));
+            this.parrotPictureBox2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            this.parrotPictureBox2.IsElipse = true;
+            this.parrotPictureBox2.IsParallax = false;
+            this.parrotPictureBox2.Location = new System.Drawing.Point(32, 124);
+            this.parrotPictureBox2.Name = "parrotPictureBox2";
+            this.parrotPictureBox2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            this.parrotPictureBox2.Size = new System.Drawing.Size(288, 248);
+            this.parrotPictureBox2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.parrotPictureBox2.TabIndex = 15;
+            this.parrotPictureBox2.Text = "parrotPictureBox2";
+            this.parrotPictureBox2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            // 
+            // foreverLabel3
+            // 
+            this.foreverLabel3.AutoSize = true;
+            this.foreverLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.foreverLabel3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.foreverLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.foreverLabel3.Location = new System.Drawing.Point(223, 21);
+            this.foreverLabel3.Name = "foreverLabel3";
+            this.foreverLabel3.Size = new System.Drawing.Size(335, 54);
+            this.foreverLabel3.TabIndex = 14;
+            this.foreverLabel3.Text = "Quản lý thư viện";
             // 
             // foreverGroupBox2
             // 
@@ -243,39 +277,6 @@
             this.RegButton.Text = "Đăng ký";
             this.RegButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.RegButton.Click += new System.EventHandler(this.RegButton_Click);
-            // 
-            // parrotPictureBox2
-            // 
-            this.parrotPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.parrotPictureBox2.ColorLeft = System.Drawing.Color.RosyBrown;
-            this.parrotPictureBox2.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.parrotPictureBox2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            this.parrotPictureBox2.FilterAlpha = 200;
-            this.parrotPictureBox2.FilterEnabled = true;
-            this.parrotPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("parrotPictureBox2.Image")));
-            this.parrotPictureBox2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            this.parrotPictureBox2.IsElipse = true;
-            this.parrotPictureBox2.IsParallax = false;
-            this.parrotPictureBox2.Location = new System.Drawing.Point(32, 124);
-            this.parrotPictureBox2.Name = "parrotPictureBox2";
-            this.parrotPictureBox2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            this.parrotPictureBox2.Size = new System.Drawing.Size(288, 248);
-            this.parrotPictureBox2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.parrotPictureBox2.TabIndex = 15;
-            this.parrotPictureBox2.Text = "parrotPictureBox2";
-            this.parrotPictureBox2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // 
-            // foreverLabel3
-            // 
-            this.foreverLabel3.AutoSize = true;
-            this.foreverLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foreverLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel3.Location = new System.Drawing.Point(223, 21);
-            this.foreverLabel3.Name = "foreverLabel3";
-            this.foreverLabel3.Size = new System.Drawing.Size(335, 54);
-            this.foreverLabel3.TabIndex = 14;
-            this.foreverLabel3.Text = "Quản lý thư viện";
             // 
             // DangNhap
             // 

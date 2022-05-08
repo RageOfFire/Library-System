@@ -32,17 +32,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.UserThuVien = new ReaLTaiizor.Forms.ForeverForm();
-            this.foreverStatusBar1 = new ReaLTaiizor.Controls.ForeverStatusBar();
+            this.userStatus = new ReaLTaiizor.Controls.ForeverStatusBar();
             this.foreverNotification1 = new ReaLTaiizor.Controls.ForeverNotification();
             this.MuonTraUserGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
-            this.foreverMaximize1 = new ReaLTaiizor.Controls.ForeverMaximize();
-            this.foreverMinimize1 = new ReaLTaiizor.Controls.ForeverMinimize();
-            this.closeButton = new ReaLTaiizor.Controls.ForeverClose();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foreverMaximize1 = new ReaLTaiizor.Controls.ForeverMaximize();
+            this.foreverMinimize1 = new ReaLTaiizor.Controls.ForeverMinimize();
+            this.closeButton = new ReaLTaiizor.Controls.ForeverClose();
             this.UserThuVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MuonTraUserGridView)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.UserThuVien.BackColor = System.Drawing.Color.White;
             this.UserThuVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.UserThuVien.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.UserThuVien.Controls.Add(this.foreverStatusBar1);
+            this.UserThuVien.Controls.Add(this.userStatus);
             this.UserThuVien.Controls.Add(this.foreverNotification1);
             this.UserThuVien.Controls.Add(this.MuonTraUserGridView);
             this.UserThuVien.Controls.Add(this.foreverMaximize1);
@@ -77,22 +77,22 @@
             this.UserThuVien.TextLight = System.Drawing.Color.SeaGreen;
             this.UserThuVien.Layout += new System.Windows.Forms.LayoutEventHandler(this.UserThuVien_Layout);
             // 
-            // foreverStatusBar1
+            // userStatus
             // 
-            this.foreverStatusBar1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.foreverStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.foreverStatusBar1.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.foreverStatusBar1.ForeColor = System.Drawing.Color.White;
-            this.foreverStatusBar1.Location = new System.Drawing.Point(1, 693);
-            this.foreverStatusBar1.Name = "foreverStatusBar1";
-            this.foreverStatusBar1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.foreverStatusBar1.ShowTimeDate = true;
-            this.foreverStatusBar1.Size = new System.Drawing.Size(798, 23);
-            this.foreverStatusBar1.TabIndex = 14;
-            this.foreverStatusBar1.Text = "Chào mừng";
-            this.foreverStatusBar1.TextColor = System.Drawing.Color.White;
-            this.foreverStatusBar1.TimeColor = System.Drawing.Color.White;
-            this.foreverStatusBar1.TimeFormat = "dd.MM.yyyy";
+            this.userStatus.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.userStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.userStatus.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.userStatus.ForeColor = System.Drawing.Color.White;
+            this.userStatus.Location = new System.Drawing.Point(1, 693);
+            this.userStatus.Name = "userStatus";
+            this.userStatus.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.userStatus.ShowTimeDate = true;
+            this.userStatus.Size = new System.Drawing.Size(798, 23);
+            this.userStatus.TabIndex = 14;
+            this.userStatus.Text = "Chào mừng";
+            this.userStatus.TextColor = System.Drawing.Color.White;
+            this.userStatus.TimeColor = System.Drawing.Color.White;
+            this.userStatus.TimeFormat = "dd.MM.yyyy";
             // 
             // foreverNotification1
             // 
@@ -155,14 +155,50 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.MuonTraUserGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.MuonTraUserGridView.RowHeadersVisible = false;
             this.MuonTraUserGridView.RowHeadersWidth = 51;
             this.MuonTraUserGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.MuonTraUserGridView.RowTemplate.Height = 24;
             this.MuonTraUserGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.MuonTraUserGridView.Size = new System.Drawing.Size(793, 485);
+            this.MuonTraUserGridView.Size = new System.Drawing.Size(793, 578);
             this.MuonTraUserGridView.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
             this.MuonTraUserGridView.TabIndex = 12;
             this.MuonTraUserGridView.Theme = ReaLTaiizor.Enum.Poison.ThemeStyle.Dark;
+            this.MuonTraUserGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MuonTraUserGridView_CellContentClick);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "Ten_sach";
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.MinimumWidth = 6;
+            this.TenSach.Name = "TenSach";
+            // 
+            // TheLoai
+            // 
+            this.TheLoai.DataPropertyName = "Ten_the_loai";
+            this.TheLoai.HeaderText = "Thể loại";
+            this.TheLoai.MinimumWidth = 6;
+            this.TheLoai.Name = "TheLoai";
+            // 
+            // TacGia
+            // 
+            this.TacGia.DataPropertyName = "Ten_tac_gia";
+            this.TacGia.HeaderText = "Tác giả";
+            this.TacGia.MinimumWidth = 6;
+            this.TacGia.Name = "TacGia";
+            // 
+            // NXB
+            // 
+            this.NXB.DataPropertyName = "Ten_NXB";
+            this.NXB.HeaderText = "Nhà xuất bản";
+            this.NXB.MinimumWidth = 6;
+            this.NXB.Name = "NXB";
             // 
             // foreverMaximize1
             // 
@@ -214,45 +250,6 @@
             this.closeButton.TabIndex = 9;
             this.closeButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            // 
-            // TenSach
-            // 
-            this.TenSach.DataPropertyName = "Ten_sach";
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.MinimumWidth = 6;
-            this.TenSach.Name = "TenSach";
-            this.TenSach.ReadOnly = true;
-            // 
-            // TheLoai
-            // 
-            this.TheLoai.DataPropertyName = "Ten_the_loai";
-            this.TheLoai.HeaderText = "Thể loại";
-            this.TheLoai.MinimumWidth = 6;
-            this.TheLoai.Name = "TheLoai";
-            this.TheLoai.ReadOnly = true;
-            // 
-            // TacGia
-            // 
-            this.TacGia.DataPropertyName = "Ten_tac_gia";
-            this.TacGia.HeaderText = "Tác giả";
-            this.TacGia.MinimumWidth = 6;
-            this.TacGia.Name = "TacGia";
-            this.TacGia.ReadOnly = true;
-            // 
-            // NXB
-            // 
-            this.NXB.DataPropertyName = "Ten_NXB";
-            this.NXB.HeaderText = "Nhà xuất bản";
-            this.NXB.MinimumWidth = 6;
-            this.NXB.Name = "NXB";
-            this.NXB.ReadOnly = true;
-            // 
             // UserMuonTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -278,7 +275,7 @@
         private ReaLTaiizor.Controls.ForeverMaximize foreverMaximize1;
         private ReaLTaiizor.Controls.ForeverMinimize foreverMinimize1;
         private ReaLTaiizor.Controls.ForeverClose closeButton;
-        private ReaLTaiizor.Controls.ForeverStatusBar foreverStatusBar1;
+        private ReaLTaiizor.Controls.ForeverStatusBar userStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TheLoai;

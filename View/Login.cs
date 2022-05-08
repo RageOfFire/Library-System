@@ -16,6 +16,8 @@ namespace View
     public partial class Login : System.Windows.Forms.Form
     {
         ControllerLogin login = new ControllerLogin();
+        SqlDataReader drc;
+        string check;
         public Login()
         {
             InitializeComponent();
@@ -41,11 +43,28 @@ namespace View
                     DataTable dt = login.Login(this.userTextbox.Text, this.passTextbox.Text);
                     if (dt.Rows.Count > 0)
                     {
+                        drc = login.CheckUser(this.userTextbox.Text, this.passTextbox.Text);
                         PoisonMessageBox.Show(this, "Đăng nhập thành công", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        Sach sach = new Sach(this.userTextbox.Text);
-                        sach.ShowDialog();
-                        this.Close();
+                        if (drc.Read())
+                        {
+                            check = drc["Nhan_vien"].ToString();
+                            if (check == "1")
+                            {
+                                this.Hide();
+                                Sach sach = new Sach(this.userTextbox.Text);
+                                sach.ShowDialog();
+                                this.Close();
+                            }
+                            else
+                            {
+                                this.Hide();
+                                UserMuonTra user = new UserMuonTra(this.userTextbox.Text);
+                                user.ShowDialog();
+                                this.Close();
+                            }
+                        }
+
+
                     }
                     else
                     {
@@ -83,9 +102,19 @@ namespace View
             {
                 try
                 {
-                    login.InsertREG(this.UserRegBox.Text, this.PassRegBox.Text);
-                    PoisonMessageBox.Show(this, "Đăng ký tài khoản thành công\nGiờ bạn có thể đăng nhập vào hệ thống", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoginTab.SelectedIndex = 1;
+                    DataTable dt = login.Login(this.userTextbox.Text, this.passTextbox.Text);
+                    if (dt.Rows.Count == 0)
+                    {
+                        login.InsertREG(this.UserRegBox.Text, this.PassRegBox.Text);
+                        PoisonMessageBox.Show(this, "Đăng ký tài khoản thành công\nGiờ bạn có thể đăng nhập vào hệ thống", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoginTab.SelectedIndex = 1;
+                        
+                    }
+                    else
+                    {
+                        PoisonMessageBox.Show(this, "Người dùng đã tồn tại trong hệ thống", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
                 }
                 catch (Exception ex)
                 {

@@ -2096,7 +2096,7 @@
             // ngaySinhDateNV
             // 
             this.ngaySinhDateNV.Location = new System.Drawing.Point(737, 264);
-            this.ngaySinhDateNV.MinimumSize = new System.Drawing.Size(0, 30);
+            this.ngaySinhDateNV.MinimumSize = new System.Drawing.Size(4, 30);
             this.ngaySinhDateNV.Name = "ngaySinhDateNV";
             this.ngaySinhDateNV.Size = new System.Drawing.Size(370, 30);
             this.ngaySinhDateNV.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
@@ -3372,7 +3372,7 @@
             // ngayHetHanDateTTV
             // 
             this.ngayHetHanDateTTV.Location = new System.Drawing.Point(743, 261);
-            this.ngayHetHanDateTTV.MinimumSize = new System.Drawing.Size(0, 30);
+            this.ngayHetHanDateTTV.MinimumSize = new System.Drawing.Size(4, 30);
             this.ngayHetHanDateTTV.Name = "ngayHetHanDateTTV";
             this.ngayHetHanDateTTV.Size = new System.Drawing.Size(370, 30);
             this.ngayHetHanDateTTV.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
@@ -3382,7 +3382,7 @@
             // ngayBatDauDateTTV
             // 
             this.ngayBatDauDateTTV.Location = new System.Drawing.Point(175, 320);
-            this.ngayBatDauDateTTV.MinimumSize = new System.Drawing.Size(0, 30);
+            this.ngayBatDauDateTTV.MinimumSize = new System.Drawing.Size(4, 30);
             this.ngayBatDauDateTTV.Name = "ngayBatDauDateTTV";
             this.ngayBatDauDateTTV.Size = new System.Drawing.Size(370, 30);
             this.ngayBatDauDateTTV.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;

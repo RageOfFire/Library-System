@@ -24,5 +24,12 @@ namespace Controller
             dt = db.GetTable(sql_login);
             return dt;
         }
+        public SqlDataReader CheckUser(string username, string password)
+        {
+            string sqlmt_ck = "SELECT Nhan_vien FROM NguoiDung WHERE Ten_nguoi_dung = N'" + username + "' AND Mat_khau = N'" + password + "'";
+            SqlDataReader dr;
+            dr = db.Get_DR(sqlmt_ck);
+            return dr;
+        }
     }
 }
