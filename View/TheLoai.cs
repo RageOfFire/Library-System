@@ -120,7 +120,8 @@ namespace View
             {
                 try
                 {
-                    tl.TimTL(this.searchBoxTL.Text);
+                    dt = tl.TimTL(this.searchBoxTL.Text);
+                    theLoaiGridView.DataSource = dt;
                 }
                 catch (Exception ex)
                 {

@@ -111,7 +111,8 @@ namespace View
             {
                 try
                 {
-                    dg.TimDG(this.searchBoxDG.Text);
+                    dt = dg.TimDG(this.searchBoxDG.Text);
+                    docGiaGridView.DataSource = dt;
                 }
                 catch (Exception ex)
                 {

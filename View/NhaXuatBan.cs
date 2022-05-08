@@ -121,7 +121,8 @@ namespace View
             {
                 try
                 {
-                    NXB.TimNXB(this.searchBoxNXB.Text);
+                    dt = NXB.TimNXB(this.searchBoxNXB.Text);
+                    nhaXuatBanGridView.DataSource = dt;
                 }
                 catch (Exception ex)
                 {

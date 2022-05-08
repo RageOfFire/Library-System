@@ -114,7 +114,8 @@ namespace View
             {
                 try
                 {
-                    mt.TimMT(this.searchBoxMT.Text);
+                    dt = mt.TimMT(this.searchBoxMT.Text);
+                    muonTraGridView.DataSource = dt;
                 }
                 catch (Exception ex)
                 {

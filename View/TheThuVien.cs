@@ -111,7 +111,8 @@ namespace View
             {
                 try
                 {
-                    ttv.TimTTV(this.searchBoxTTV.Text);
+                    dt = ttv.TimTTV(this.searchBoxTTV.Text);
+                    theThuVienGridView.DataSource = dt;
                 }
                 catch (Exception ex)
                 {

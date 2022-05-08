@@ -182,7 +182,8 @@ namespace View
             {
                 try
                 {
-                    sach.TimS(this.searchBoxS.Text);
+                    dt = sach.TimS(this.searchBoxS.Text);
+                    sachDataGridView.DataSource = dt;
                 }
                 catch (Exception ex)
                 {

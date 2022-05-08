@@ -129,7 +129,8 @@ namespace View
             {
                 try
                 {
-                    nv.TimNV(this.searchBoxNV.Text);
+                    dt = nv.TimNV(this.searchBoxNV.Text);
+                    nhanVienGridView.DataSource = dt;
                 }
                 catch (Exception ex)
                 {

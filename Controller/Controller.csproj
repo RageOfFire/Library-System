@@ -55,6 +55,7 @@
     <Compile Include="ControllerNXB.cs" />
     <Compile Include="ControllerTacGia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserMuonTraController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

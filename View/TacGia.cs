@@ -117,7 +117,8 @@ namespace View
             {
                 try
                 {
-                    tacGia.TimTG(this.searchBoxTG.Text);
+                    dt = tacGia.TimTG(this.searchBoxTG.Text);
+                    tacGiaGridView.DataSource = dt;
                 }
                 catch (Exception ex)
                 {
