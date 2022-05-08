@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserMuonTra));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -64,7 +65,7 @@
             this.UserThuVien.HeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.UserThuVien.HeaderMaximize = false;
             this.UserThuVien.HeaderTextFont = new System.Drawing.Font("Segoe UI", 12F);
-            this.UserThuVien.Image = null;
+            this.UserThuVien.Image = ((System.Drawing.Image)(resources.GetObject("UserThuVien.Image")));
             this.UserThuVien.Location = new System.Drawing.Point(0, 0);
             this.UserThuVien.MinimumSize = new System.Drawing.Size(210, 50);
             this.UserThuVien.Name = "UserThuVien";
@@ -97,16 +98,15 @@
             // foreverNotification1
             // 
             this.foreverNotification1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverNotification1.Close = true;
+            this.foreverNotification1.Close = false;
             this.foreverNotification1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.foreverNotification1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.foreverNotification1.Kind = ReaLTaiizor.Controls.ForeverNotification._Kind.Success;
-            this.foreverNotification1.Location = new System.Drawing.Point(12, 54);
+            this.foreverNotification1.Location = new System.Drawing.Point(12, 72);
             this.foreverNotification1.Name = "foreverNotification1";
             this.foreverNotification1.Size = new System.Drawing.Size(778, 42);
             this.foreverNotification1.TabIndex = 13;
             this.foreverNotification1.Text = "Ấn vào sách cần mượn";
-            this.foreverNotification1.Visible = false;
             // 
             // MuonTraUserGridView
             // 
@@ -114,6 +114,7 @@
             this.MuonTraUserGridView.AllowUserToDeleteRows = false;
             this.MuonTraUserGridView.AllowUserToResizeRows = false;
             this.MuonTraUserGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.MuonTraUserGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.MuonTraUserGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.MuonTraUserGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MuonTraUserGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -133,6 +134,7 @@
             this.TheLoai,
             this.TacGia,
             this.NXB});
+            this.MuonTraUserGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -144,7 +146,7 @@
             this.MuonTraUserGridView.EnableHeadersVisualStyles = false;
             this.MuonTraUserGridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MuonTraUserGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.MuonTraUserGridView.Location = new System.Drawing.Point(6, 109);
+            this.MuonTraUserGridView.Location = new System.Drawing.Point(6, 142);
             this.MuonTraUserGridView.Name = "MuonTraUserGridView";
             this.MuonTraUserGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -160,7 +162,7 @@
             this.MuonTraUserGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.MuonTraUserGridView.RowTemplate.Height = 24;
             this.MuonTraUserGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.MuonTraUserGridView.Size = new System.Drawing.Size(793, 578);
+            this.MuonTraUserGridView.Size = new System.Drawing.Size(793, 545);
             this.MuonTraUserGridView.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
             this.MuonTraUserGridView.TabIndex = 12;
             this.MuonTraUserGridView.Theme = ReaLTaiizor.Enum.Poison.ThemeStyle.Dark;

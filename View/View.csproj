@@ -60,12 +60,6 @@
     <Compile Include="DocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HoaDon.Designer.cs">
-      <DependentUpon>HoaDon.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,9 +101,6 @@
     <Compile Include="UserMuonTra.Designer.cs">
       <DependentUpon>UserMuonTra.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="HoaDon.resx">
-      <DependentUpon>HoaDon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

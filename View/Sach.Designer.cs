@@ -2534,7 +2534,7 @@
             // ngayTraDateMT
             // 
             this.ngayTraDateMT.Location = new System.Drawing.Point(739, 379);
-            this.ngayTraDateMT.MinimumSize = new System.Drawing.Size(0, 30);
+            this.ngayTraDateMT.MinimumSize = new System.Drawing.Size(4, 30);
             this.ngayTraDateMT.Name = "ngayTraDateMT";
             this.ngayTraDateMT.Size = new System.Drawing.Size(370, 30);
             this.ngayTraDateMT.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
@@ -2604,7 +2604,7 @@
             // ngayMuonDateMT
             // 
             this.ngayMuonDateMT.Location = new System.Drawing.Point(739, 325);
-            this.ngayMuonDateMT.MinimumSize = new System.Drawing.Size(0, 30);
+            this.ngayMuonDateMT.MinimumSize = new System.Drawing.Size(4, 30);
             this.ngayMuonDateMT.Name = "ngayMuonDateMT";
             this.ngayMuonDateMT.Size = new System.Drawing.Size(370, 30);
             this.ngayMuonDateMT.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;

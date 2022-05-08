@@ -77,7 +77,7 @@
             this.LoginForm.HeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.LoginForm.HeaderMaximize = false;
             this.LoginForm.HeaderTextFont = new System.Drawing.Font("Segoe UI", 12F);
-            this.LoginForm.Image = null;
+            this.LoginForm.Image = ((System.Drawing.Image)(resources.GetObject("LoginForm.Image")));
             this.LoginForm.Location = new System.Drawing.Point(0, 0);
             this.LoginForm.MinimumSize = new System.Drawing.Size(210, 50);
             this.LoginForm.Name = "LoginForm";
@@ -287,7 +287,7 @@
             this.DangNhap.Location = new System.Drawing.Point(4, 44);
             this.DangNhap.Name = "DangNhap";
             this.DangNhap.Padding = new System.Windows.Forms.Padding(3);
-            this.DangNhap.Size = new System.Drawing.Size(784, 536);
+            this.DangNhap.Size = new System.Drawing.Size(790, 542);
             this.DangNhap.TabIndex = 1;
             this.DangNhap.Text = "Đăng nhập";
             // 
