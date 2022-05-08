@@ -21,9 +21,14 @@ namespace View
         SqlDataReader drTL;
         SqlDataReader drNXB;
         ControllerSach sach = new ControllerSach();
-        public Sach()
+        public Sach(string username)
         {
             InitializeComponent();
+            if(!string.IsNullOrEmpty(username))
+            {
+            SachForm.Text = "Chào mừng trở lại " + username;
+            SachStatus.Text = "Chào mừng trở lại " + username;
+            }
         }
         // Sách
         private void addButtonS_Click(object sender, EventArgs e)

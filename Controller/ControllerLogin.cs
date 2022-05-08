@@ -12,6 +12,11 @@ namespace Controller
     public class ControllerLogin
     {
         Database db = new Database();
+        public void InsertREG(string username, string password)
+        {
+            string sql_add = "INSERT INTO NguoiDung (Ten_nguoi_dung, Mat_khau) VALUES ('" + username + "', '" + password + "')";
+            db.ExecuteNonQuery(sql_add);
+        }
         public DataTable Login(string username, string password)
         {
             string sql_login = "SELECT * FROM NguoiDung WHERE Ten_nguoi_dung = N'" + username + "' AND Mat_khau = N'" + password + "'";

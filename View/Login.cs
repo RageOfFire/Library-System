@@ -41,8 +41,9 @@ namespace View
                     DataTable dt = login.Login(this.userTextbox.Text, this.passTextbox.Text);
                     if (dt.Rows.Count > 0)
                     {
+                        PoisonMessageBox.Show(this, "Đăng nhập thành công", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
-                        Sach sach = new Sach();
+                        Sach sach = new Sach(this.userTextbox.Text);
                         sach.ShowDialog();
                         this.Close();
                     }
@@ -51,6 +52,40 @@ namespace View
                         PoisonMessageBox.Show(this, "Đăng nhập thất bại!\nKiểm tra lại tài khoản và mật khẩu", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
+                }
+                catch (Exception ex)
+                {
+                    PoisonMessageBox.Show(this, "Error" + ex, "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void RegButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(UserRegBox.Text))
+            {
+
+                PoisonMessageBox.Show(this, "Bạn cần nhập tên tài khoản", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                UserRegBox.Focus();
+            }
+            else if (string.IsNullOrWhiteSpace(PassRegBox.Text))
+            {
+                PoisonMessageBox.Show(this, "Bạn cần nhập mật khẩu", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                PassRegBox.Focus();
+            }
+            else if(PassRegBox.Text != RePassReg.Text)
+            {
+                PoisonMessageBox.Show(this, "Mật khẩu nhập lại không trùng nhau", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                RePassReg.Focus();
+            }
+            else
+            {
+                try
+                {
+                    login.InsertREG(this.UserRegBox.Text, this.PassRegBox.Text);
+                    PoisonMessageBox.Show(this, "Đăng ký tài khoản thành công\nGiờ bạn có thể đăng nhập vào hệ thống", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoginTab.SelectedIndex = 1;
                 }
                 catch (Exception ex)
                 {
