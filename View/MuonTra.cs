@@ -34,16 +34,9 @@ namespace View
         private void addButtonMT_Click(object sender, EventArgs e)
         {
             CheckRadio();
-            if (string.IsNullOrWhiteSpace(maMuonTraBoxMT.Text))
-            {
-                EasyMessageBox("Chưa nhập mã", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                maMuonTraBoxMT.Focus();
-            }
-            else
-            {
                 try
                 {
-                    mt.InsertMT(this.maMuonTraBoxMT.Text, Convert.ToInt32(this.soTheComboMT.Text), this.maNhanVienComboMT.Text, this.maSachComboMT.Text, this.ngayMuonDateMT.Value.ToShortDateString(), this.ngayTraDateMT.Value.ToShortTimeString(), this.radioData);
+                    mt.InsertMT(Convert.ToInt32(this.soTheComboMT.Text), this.maNhanVienComboMT.Text, this.maSachComboMT.Text, this.ngayMuonDateMT.Value.ToShortDateString(), this.ngayTraDateMT.Value.ToShortTimeString(), this.radioData);
                     EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -51,7 +44,6 @@ namespace View
                     EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
         private void editButtonMT_Click(object sender, EventArgs e)
         {
             CheckRadio();

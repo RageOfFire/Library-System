@@ -33,12 +33,7 @@ namespace View
         // Sách
         private void addButtonS_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(maSachBoxS.Text))
-            {
-                EasyMessageBox("Chưa nhập mã", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                maSachBoxS.Focus();
-            }
-            else if (string.IsNullOrWhiteSpace(tenSachBoxS.Text))
+            if (string.IsNullOrWhiteSpace(tenSachBoxS.Text))
             {
                 EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenSachBoxS.Focus();
@@ -52,7 +47,7 @@ namespace View
             {
                 try
                 {
-                    sach.InsertS(this.maSachBoxS.Text, this.tenSachBoxS.Text, this.maTacGiaComboS.Text, this.maTheLoaiComboS.Text, this.maNhaXuatBanComboS.Text, Convert.ToInt32(this.namXuatBanBoxS.Text));
+                    sach.InsertS(this.tenSachBoxS.Text, this.maTacGiaComboS.Text, this.maTheLoaiComboS.Text, this.maNhaXuatBanComboS.Text, Convert.ToInt32(this.namXuatBanBoxS.Text));
                     EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

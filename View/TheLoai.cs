@@ -19,12 +19,7 @@ namespace View
         // Thể loại
         private void addButtonTL_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(maTheLoaiBoxTL.Text))
-            {
-                EasyMessageBox("Chưa nhập mã", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                maTheLoaiBoxTL.Focus();
-            }
-            else if (string.IsNullOrWhiteSpace(tenTheLoaiBoxTL.Text))
+            if (string.IsNullOrWhiteSpace(tenTheLoaiBoxTL.Text))
             {
                 EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenTheLoaiBoxTL.Focus();
@@ -33,7 +28,7 @@ namespace View
             {
                 try
                 {
-                    tl.InsertTL(this.maTheLoaiBoxTL.Text, this.tenTheLoaiBoxTL.Text);
+                    tl.InsertTL(this.tenTheLoaiBoxTL.Text);
                     EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

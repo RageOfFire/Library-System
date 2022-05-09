@@ -20,12 +20,7 @@ namespace View
         // Nhà xuất bản
         private void addButtonNXB_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(maNXBBoxNXB.Text))
-            {
-                EasyMessageBox("Chưa nhập mã", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                maNXBBoxNXB.Focus();
-            }
-            else if (string.IsNullOrWhiteSpace(tenNXBBoxNXB.Text))
+            if (string.IsNullOrWhiteSpace(tenNXBBoxNXB.Text))
             {
                 EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenNXBBoxNXB.Focus();
@@ -34,7 +29,7 @@ namespace View
             {
                 try
                 {
-                    NXB.InsertNXB(this.maNXBBoxNXB.Text, this.tenNXBBoxNXB.Text, this.DiaChiBoxNXB.Text, this.EmailBoxNXB.Text, this.thongTinBoxNXB.Text);
+                    NXB.InsertNXB(this.tenNXBBoxNXB.Text, this.DiaChiBoxNXB.Text, this.EmailBoxNXB.Text, this.thongTinBoxNXB.Text);
                     EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

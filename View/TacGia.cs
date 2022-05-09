@@ -19,12 +19,7 @@ namespace View
         // Tác giả
         private void addButtonTG_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(maTacGiaBoxTG.Text))
-            {
-                EasyMessageBox("Chưa nhập mã", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                maTacGiaBoxTG.Focus();
-            }
-            else if (string.IsNullOrWhiteSpace(tenTacGiaBoxTG.Text))
+            if (string.IsNullOrWhiteSpace(tenTacGiaBoxTG.Text))
             {
                 EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenTacGiaBoxTG.Focus();
@@ -33,7 +28,7 @@ namespace View
             {
                 try
                 {
-                    tacGia.InsertTG(this.maTacGiaBoxTG.Text, this.tenTacGiaBoxTG.Text, this.websiteBoxTG.Text, this.noteBoxTG.Text);
+                    tacGia.InsertTG(this.tenTacGiaBoxTG.Text, this.websiteBoxTG.Text, this.noteBoxTG.Text);
                     EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

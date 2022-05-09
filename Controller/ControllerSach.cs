@@ -12,9 +12,9 @@ namespace Controller
     public class ControllerSach
     {
         Database db = new Database();
-        public void InsertS(string masach, string tensach, string matacgia, string matheloai, string maNXB, int namXB)
+        public void InsertS(string tensach, string matacgia, string matheloai, string maNXB, int namXB)
         {
-            string sql_add = "INSERT INTO Sach VALUES(N'" + masach + "',N'" + tensach + "',N'" + matacgia + "',N'" + matheloai + "',N'" + maNXB + "',N'" + namXB + "')";
+            string sql_add = "INSERT INTO Sach (Ten_sach, Ma_tac_gia, Ma_the_loai, Ma_NXB, Nam_XB) VALUES(N'" + tensach + "',N'" + matacgia + "',N'" + matheloai + "',N'" + maNXB + "',N'" + namXB + "')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateS(string masach, string tensach, string matacgia, string matheloai, string maNXB, int namXB)

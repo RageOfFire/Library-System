@@ -11,9 +11,9 @@ namespace Controller
     public class ControllerTacGia
     {
         Database db = new Database();
-        public void InsertTG(string matacgia, string tentacgia, string website, string ghichu)
+        public void InsertTG(string tentacgia, string website, string ghichu)
         {
-            string sql_add = "INSERT INTO TacGia VALUES(N'" + matacgia + "',N'" + tentacgia + "',N'" + website + "',N'" + ghichu + "')";
+            string sql_add = "INSERT INTO TacGia (Ten_tac_gia, website, Ghi_chu) VALUES(N'" + tentacgia + "',N'" + website + "',N'" + ghichu + "')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateTG(string matacgia, string tentacgia, string website, string ghichu)

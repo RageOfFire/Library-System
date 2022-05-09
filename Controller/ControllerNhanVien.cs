@@ -11,9 +11,9 @@ namespace Controller
     public class ControllerNhanVien
     {
         Database db = new Database();
-        public void InsertNV(string manv, string tennv, string ngaysinh, int sdt)
+        public void InsertNV(string tennv, string ngaysinh, int sdt)
         {
-            string sql_add = "INSERT INTO NhanVien VALUES(N'" + manv + "',N'" + tennv + "',N'" + ngaysinh + "',N'" + sdt + "')";
+            string sql_add = "INSERT INTO NhanVien (Ho_ten,Ngay_sinh,Sdt) VALUES(N'" + tennv + "',N'" + ngaysinh + "',N'" + sdt + "')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateNV(string manv, string tennv, string ngaysinh, int sdt)

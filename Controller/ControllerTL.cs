@@ -11,9 +11,9 @@ namespace Controller
     public class ControllerTL
     {
         Database db = new Database();
-        public void InsertTL(string maTL, string tenTL)
+        public void InsertTL(string tenTL)
         {
-            string sql_add = "INSERT INTO TheLoai VALUES(N'" + maTL + "',N'" + tenTL + "')";
+            string sql_add = "INSERT INTO TheLoai (Ten_the_loai) VALUES(N'" + tenTL + "')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateTL(string maTL, string tenTL)

@@ -33,7 +33,7 @@ namespace View
             {
                 try
                 {
-                    dg.InsertDG(this.maDocGiaBoxDG.Text, this.tenDocGiaBoxDG.Text, this.diaChiBoxDG.Text, Convert.ToInt32(this.soTheComboDG.Text));
+                    dg.InsertDG(this.tenDocGiaBoxDG.Text, this.diaChiBoxDG.Text, Convert.ToInt32(this.soTheComboDG.Text));
                     EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

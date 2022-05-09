@@ -18,12 +18,7 @@ namespace View
         ControllerNhanVien nv = new ControllerNhanVien();
         private void addButtonNV_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(maNhanVienBoxNV.Text))
-            {
-                EasyMessageBox("Chưa nhập mã", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                maNhanVienBoxNV.Focus();
-            }
-            else if (string.IsNullOrWhiteSpace(tenNhanVienBoxNV.Text))
+            if (string.IsNullOrWhiteSpace(tenNhanVienBoxNV.Text))
             {
                 EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenNhanVienBoxNV.Focus();
@@ -37,7 +32,7 @@ namespace View
             {
                 try
                 {
-                    nv.InsertNV(this.maNhanVienBoxNV.Text, this.tenNhanVienBoxNV.Text, this.ngaySinhDateNV.Value.ToShortDateString(), Convert.ToInt32(this.sdtBoxNV.Text));
+                    nv.InsertNV(this.tenNhanVienBoxNV.Text, this.ngaySinhDateNV.Value.ToShortDateString(), Convert.ToInt32(this.sdtBoxNV.Text));
                     EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

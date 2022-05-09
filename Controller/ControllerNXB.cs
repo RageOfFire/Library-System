@@ -11,9 +11,9 @@ namespace Controller
     public class ControllerNXB
     {
         Database db = new Database();
-        public void InsertNXB(string maNXB, string tenNXB, string diachi, string email, string thongtin)
+        public void InsertNXB(string tenNXB, string diachi, string email, string thongtin)
         {
-            string sql_add = "INSERT INTO NhaXuatBan VALUES(N'" + maNXB + "',N'" + tenNXB + "',N'" + diachi + "',N'" + email + "',N'"+ thongtin +"')";
+            string sql_add = "INSERT INTO NhaXuatBan (Ten_NXB, DiaChi, email, ThongTin) VALUES(N'" + tenNXB + "',N'" + diachi + "',N'" + email + "',N'"+ thongtin +"')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateNXB(string maNXB, string tenNXB, string diachi, string email, string thongtin)

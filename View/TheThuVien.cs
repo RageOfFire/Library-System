@@ -18,12 +18,7 @@ namespace View
         ControllerTTV ttv = new ControllerTTV();
         private void addButtonTTV_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(soTheBoxTTV.Text))
-            {
-                EasyMessageBox("Chưa nhập số thẻ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                soTheBoxTTV.Focus();
-            }
-            else if (!int.TryParse(soTheBoxTTV.Text, out value))
+            if (!int.TryParse(soTheBoxTTV.Text, out value))
             {
                 EasyMessageBox("Số thẻ phải là dạng số", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 soTheBoxTTV.Focus();
@@ -32,7 +27,7 @@ namespace View
             {
                 try
                 {
-                    ttv.InsertTTV(Convert.ToInt32(this.soTheBoxTTV.Text), this.ngayBatDauDateTTV.Value.ToShortDateString(), this.ngayHetHanDateTTV.Value.ToShortDateString(), this.ghiChuBoxTTV.Text);
+                    ttv.InsertTTV(this.ngayBatDauDateTTV.Value.ToShortDateString(), this.ngayHetHanDateTTV.Value.ToShortDateString(), this.ghiChuBoxTTV.Text);
                     EasyMessageBox("Thêm thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

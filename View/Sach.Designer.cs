@@ -79,7 +79,6 @@
             this.foreverLabel2 = new ReaLTaiizor.Controls.ForeverLabel();
             this.maSachBoxS = new ReaLTaiizor.Controls.ForeverTextBox();
             this.airSeparator1 = new ReaLTaiizor.Controls.AirSeparator();
-            this.foreverLabel1 = new ReaLTaiizor.Controls.ForeverLabel();
             this.sachDataGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.stts = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maSachS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,7 +105,6 @@
             this.foreverLabel14 = new ReaLTaiizor.Controls.ForeverLabel();
             this.maTacGiaBoxTG = new ReaLTaiizor.Controls.ForeverTextBox();
             this.airSeparator3 = new ReaLTaiizor.Controls.AirSeparator();
-            this.foreverLabel15 = new ReaLTaiizor.Controls.ForeverLabel();
             this.tacGiaGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.STTTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maTacGiaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -133,7 +131,6 @@
             this.foreverLabel21 = new ReaLTaiizor.Controls.ForeverLabel();
             this.maNXBBoxNXB = new ReaLTaiizor.Controls.ForeverTextBox();
             this.airSeparator4 = new ReaLTaiizor.Controls.AirSeparator();
-            this.foreverLabel22 = new ReaLTaiizor.Controls.ForeverLabel();
             this.nhaXuatBanGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.sttnxb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNXBNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -155,7 +152,6 @@
             this.foreverLabel24 = new ReaLTaiizor.Controls.ForeverLabel();
             this.maTheLoaiBoxTL = new ReaLTaiizor.Controls.ForeverTextBox();
             this.airSeparator5 = new ReaLTaiizor.Controls.AirSeparator();
-            this.foreverLabel27 = new ReaLTaiizor.Controls.ForeverLabel();
             this.theLoaiGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.stttl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maTheLoaiTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -178,7 +174,6 @@
             this.addButtonNV = new ReaLTaiizor.Controls.ForeverButton();
             this.maNhanVienBoxNV = new ReaLTaiizor.Controls.ForeverTextBox();
             this.airSeparator7 = new ReaLTaiizor.Controls.AirSeparator();
-            this.foreverLabel36 = new ReaLTaiizor.Controls.ForeverLabel();
             this.nhanVienGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.sttnv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNhanVienNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -210,16 +205,7 @@
             this.addButtonMT = new ReaLTaiizor.Controls.ForeverButton();
             this.maMuonTraBoxMT = new ReaLTaiizor.Controls.ForeverTextBox();
             this.airSeparator8 = new ReaLTaiizor.Controls.AirSeparator();
-            this.foreverLabel40 = new ReaLTaiizor.Controls.ForeverLabel();
             this.muonTraGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
-            this.sttmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maMuonTraMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soTheMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maNhanVienMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maSachMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayMuonMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayTraMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.daTraMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchButtonMT = new ReaLTaiizor.Controls.ForeverButton();
             this.searchBoxMT = new ReaLTaiizor.Controls.ForeverTextBox();
             this.foreverLabel41 = new ReaLTaiizor.Controls.ForeverLabel();
@@ -238,7 +224,6 @@
             this.foreverLabel11 = new ReaLTaiizor.Controls.ForeverLabel();
             this.maDocGiaBoxDG = new ReaLTaiizor.Controls.ForeverTextBox();
             this.airSeparator2 = new ReaLTaiizor.Controls.AirSeparator();
-            this.foreverLabel12 = new ReaLTaiizor.Controls.ForeverLabel();
             this.docGiaGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.sttdg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maDocGiaDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -263,7 +248,6 @@
             this.foreverLabel44 = new ReaLTaiizor.Controls.ForeverLabel();
             this.soTheBoxTTV = new ReaLTaiizor.Controls.ForeverTextBox();
             this.airSeparator9 = new ReaLTaiizor.Controls.AirSeparator();
-            this.foreverLabel45 = new ReaLTaiizor.Controls.ForeverLabel();
             this.theThuVienGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
             this.sttttv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -273,6 +257,14 @@
             this.searchButtonTTV = new ReaLTaiizor.Controls.ForeverButton();
             this.searchBoxTTV = new ReaLTaiizor.Controls.ForeverTextBox();
             this.foreverLabel46 = new ReaLTaiizor.Controls.ForeverLabel();
+            this.sttmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maMuonTraMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soTheMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNhanVienMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maSachMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayMuonMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayTraMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.daTraMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SachForm.SuspendLayout();
             this.AppTab.SuspendLayout();
             this.sachTab.SuspendLayout();
@@ -439,7 +431,6 @@
             this.sachTab.Controls.Add(this.foreverLabel2);
             this.sachTab.Controls.Add(this.maSachBoxS);
             this.sachTab.Controls.Add(this.airSeparator1);
-            this.sachTab.Controls.Add(this.foreverLabel1);
             this.sachTab.Controls.Add(this.sachDataGridView);
             this.sachTab.Controls.Add(this.searchButtonS);
             this.sachTab.Controls.Add(this.searchBoxS);
@@ -474,7 +465,7 @@
             this.namXuatBanBoxS.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.namXuatBanBoxS.FocusOnHover = false;
             this.namXuatBanBoxS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.namXuatBanBoxS.Location = new System.Drawing.Point(743, 377);
+            this.namXuatBanBoxS.Location = new System.Drawing.Point(743, 378);
             this.namXuatBanBoxS.MaxLength = 32767;
             this.namXuatBanBoxS.Multiline = false;
             this.namXuatBanBoxS.Name = "namXuatBanBoxS";
@@ -533,7 +524,7 @@
             this.maTacGiaComboS.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.maTacGiaComboS.HoverFontColor = System.Drawing.Color.White;
             this.maTacGiaComboS.ItemHeight = 18;
-            this.maTacGiaComboS.Location = new System.Drawing.Point(136, 388);
+            this.maTacGiaComboS.Location = new System.Drawing.Point(138, 323);
             this.maTacGiaComboS.Name = "maTacGiaComboS";
             this.maTacGiaComboS.Size = new System.Drawing.Size(370, 24);
             this.maTacGiaComboS.TabIndex = 27;
@@ -619,7 +610,7 @@
             this.foreverLabel6.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel6.Location = new System.Drawing.Point(540, 380);
+            this.foreverLabel6.Location = new System.Drawing.Point(540, 381);
             this.foreverLabel6.Name = "foreverLabel6";
             this.foreverLabel6.Size = new System.Drawing.Size(158, 31);
             this.foreverLabel6.TabIndex = 19;
@@ -655,7 +646,7 @@
             this.foreverLabel3.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel3.Location = new System.Drawing.Point(6, 383);
+            this.foreverLabel3.Location = new System.Drawing.Point(8, 318);
             this.foreverLabel3.Name = "foreverLabel3";
             this.foreverLabel3.Size = new System.Drawing.Size(122, 31);
             this.foreverLabel3.TabIndex = 13;
@@ -668,7 +659,7 @@
             this.tenSachBoxS.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.tenSachBoxS.FocusOnHover = false;
             this.tenSachBoxS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tenSachBoxS.Location = new System.Drawing.Point(136, 318);
+            this.tenSachBoxS.Location = new System.Drawing.Point(138, 253);
             this.tenSachBoxS.MaxLength = 32767;
             this.tenSachBoxS.Multiline = false;
             this.tenSachBoxS.Name = "tenSachBoxS";
@@ -684,7 +675,7 @@
             this.foreverLabel2.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel2.Location = new System.Drawing.Point(6, 318);
+            this.foreverLabel2.Location = new System.Drawing.Point(8, 253);
             this.foreverLabel2.Name = "foreverLabel2";
             this.foreverLabel2.Size = new System.Drawing.Size(101, 31);
             this.foreverLabel2.TabIndex = 11;
@@ -697,7 +688,7 @@
             this.maSachBoxS.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.maSachBoxS.FocusOnHover = false;
             this.maSachBoxS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.maSachBoxS.Location = new System.Drawing.Point(136, 260);
+            this.maSachBoxS.Location = new System.Drawing.Point(138, 381);
             this.maSachBoxS.MaxLength = 32767;
             this.maSachBoxS.Multiline = false;
             this.maSachBoxS.Name = "maSachBoxS";
@@ -706,6 +697,7 @@
             this.maSachBoxS.TabIndex = 10;
             this.maSachBoxS.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.maSachBoxS.UseSystemPasswordChar = false;
+            this.maSachBoxS.Visible = false;
             // 
             // airSeparator1
             // 
@@ -721,18 +713,6 @@
             this.airSeparator1.TabIndex = 9;
             this.airSeparator1.Text = "airSeparator1";
             this.airSeparator1.Transparent = false;
-            // 
-            // foreverLabel1
-            // 
-            this.foreverLabel1.AutoSize = true;
-            this.foreverLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foreverLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel1.Location = new System.Drawing.Point(6, 260);
-            this.foreverLabel1.Name = "foreverLabel1";
-            this.foreverLabel1.Size = new System.Drawing.Size(99, 31);
-            this.foreverLabel1.TabIndex = 8;
-            this.foreverLabel1.Text = "Mã sách";
             // 
             // sachDataGridView
             // 
@@ -913,7 +893,6 @@
             this.tacGiaTab.Controls.Add(this.foreverLabel14);
             this.tacGiaTab.Controls.Add(this.maTacGiaBoxTG);
             this.tacGiaTab.Controls.Add(this.airSeparator3);
-            this.tacGiaTab.Controls.Add(this.foreverLabel15);
             this.tacGiaTab.Controls.Add(this.tacGiaGridView);
             this.tacGiaTab.Controls.Add(this.searchButtonTG);
             this.tacGiaTab.Controls.Add(this.searchBoxTG);
@@ -1081,7 +1060,7 @@
             this.tenTacGiaBoxTG.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.tenTacGiaBoxTG.FocusOnHover = false;
             this.tenTacGiaBoxTG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tenTacGiaBoxTG.Location = new System.Drawing.Point(175, 319);
+            this.tenTacGiaBoxTG.Location = new System.Drawing.Point(177, 264);
             this.tenTacGiaBoxTG.MaxLength = 32767;
             this.tenTacGiaBoxTG.Multiline = false;
             this.tenTacGiaBoxTG.Name = "tenTacGiaBoxTG";
@@ -1097,7 +1076,7 @@
             this.foreverLabel14.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel14.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel14.Location = new System.Drawing.Point(6, 319);
+            this.foreverLabel14.Location = new System.Drawing.Point(8, 264);
             this.foreverLabel14.Name = "foreverLabel14";
             this.foreverLabel14.Size = new System.Drawing.Size(124, 31);
             this.foreverLabel14.TabIndex = 73;
@@ -1110,7 +1089,7 @@
             this.maTacGiaBoxTG.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.maTacGiaBoxTG.FocusOnHover = false;
             this.maTacGiaBoxTG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.maTacGiaBoxTG.Location = new System.Drawing.Point(175, 258);
+            this.maTacGiaBoxTG.Location = new System.Drawing.Point(177, 319);
             this.maTacGiaBoxTG.MaxLength = 32767;
             this.maTacGiaBoxTG.Multiline = false;
             this.maTacGiaBoxTG.Name = "maTacGiaBoxTG";
@@ -1119,6 +1098,7 @@
             this.maTacGiaBoxTG.TabIndex = 72;
             this.maTacGiaBoxTG.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.maTacGiaBoxTG.UseSystemPasswordChar = false;
+            this.maTacGiaBoxTG.Visible = false;
             // 
             // airSeparator3
             // 
@@ -1134,18 +1114,6 @@
             this.airSeparator3.TabIndex = 71;
             this.airSeparator3.Text = "airSeparator3";
             this.airSeparator3.Transparent = false;
-            // 
-            // foreverLabel15
-            // 
-            this.foreverLabel15.AutoSize = true;
-            this.foreverLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel15.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foreverLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel15.Location = new System.Drawing.Point(6, 261);
-            this.foreverLabel15.Name = "foreverLabel15";
-            this.foreverLabel15.Size = new System.Drawing.Size(122, 31);
-            this.foreverLabel15.TabIndex = 70;
-            this.foreverLabel15.Text = "Mã tác giả";
             // 
             // tacGiaGridView
             // 
@@ -1309,7 +1277,6 @@
             this.nhaXuatBanTab.Controls.Add(this.foreverLabel21);
             this.nhaXuatBanTab.Controls.Add(this.maNXBBoxNXB);
             this.nhaXuatBanTab.Controls.Add(this.airSeparator4);
-            this.nhaXuatBanTab.Controls.Add(this.foreverLabel22);
             this.nhaXuatBanTab.Controls.Add(this.nhaXuatBanGridView);
             this.nhaXuatBanTab.Controls.Add(this.searchButtonNXB);
             this.nhaXuatBanTab.Controls.Add(this.searchBoxNXB);
@@ -1464,7 +1431,7 @@
             this.DiaChiBoxNXB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.DiaChiBoxNXB.FocusOnHover = false;
             this.DiaChiBoxNXB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.DiaChiBoxNXB.Location = new System.Drawing.Point(136, 381);
+            this.DiaChiBoxNXB.Location = new System.Drawing.Point(148, 326);
             this.DiaChiBoxNXB.MaxLength = 32767;
             this.DiaChiBoxNXB.Multiline = false;
             this.DiaChiBoxNXB.Name = "DiaChiBoxNXB";
@@ -1492,7 +1459,7 @@
             this.foreverLabel20.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel20.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel20.Location = new System.Drawing.Point(6, 384);
+            this.foreverLabel20.Location = new System.Drawing.Point(18, 329);
             this.foreverLabel20.Name = "foreverLabel20";
             this.foreverLabel20.Size = new System.Drawing.Size(84, 31);
             this.foreverLabel20.TabIndex = 35;
@@ -1505,7 +1472,7 @@
             this.tenNXBBoxNXB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.tenNXBBoxNXB.FocusOnHover = false;
             this.tenNXBBoxNXB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tenNXBBoxNXB.Location = new System.Drawing.Point(136, 319);
+            this.tenNXBBoxNXB.Location = new System.Drawing.Point(148, 264);
             this.tenNXBBoxNXB.MaxLength = 32767;
             this.tenNXBBoxNXB.Multiline = false;
             this.tenNXBBoxNXB.Name = "tenNXBBoxNXB";
@@ -1521,7 +1488,7 @@
             this.foreverLabel21.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel21.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel21.Location = new System.Drawing.Point(6, 319);
+            this.foreverLabel21.Location = new System.Drawing.Point(18, 264);
             this.foreverLabel21.Name = "foreverLabel21";
             this.foreverLabel21.Size = new System.Drawing.Size(99, 31);
             this.foreverLabel21.TabIndex = 33;
@@ -1534,7 +1501,7 @@
             this.maNXBBoxNXB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.maNXBBoxNXB.FocusOnHover = false;
             this.maNXBBoxNXB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.maNXBBoxNXB.Location = new System.Drawing.Point(136, 261);
+            this.maNXBBoxNXB.Location = new System.Drawing.Point(148, 389);
             this.maNXBBoxNXB.MaxLength = 32767;
             this.maNXBBoxNXB.Multiline = false;
             this.maNXBBoxNXB.Name = "maNXBBoxNXB";
@@ -1543,6 +1510,7 @@
             this.maNXBBoxNXB.TabIndex = 32;
             this.maNXBBoxNXB.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.maNXBBoxNXB.UseSystemPasswordChar = false;
+            this.maNXBBoxNXB.Visible = false;
             // 
             // airSeparator4
             // 
@@ -1558,18 +1526,6 @@
             this.airSeparator4.TabIndex = 31;
             this.airSeparator4.Text = "airSeparator4";
             this.airSeparator4.Transparent = false;
-            // 
-            // foreverLabel22
-            // 
-            this.foreverLabel22.AutoSize = true;
-            this.foreverLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel22.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foreverLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel22.Location = new System.Drawing.Point(6, 261);
-            this.foreverLabel22.Name = "foreverLabel22";
-            this.foreverLabel22.Size = new System.Drawing.Size(97, 31);
-            this.foreverLabel22.TabIndex = 30;
-            this.foreverLabel22.Text = "Mã NXB";
             // 
             // nhaXuatBanGridView
             // 
@@ -1734,7 +1690,6 @@
             this.theLoaiTab.Controls.Add(this.foreverLabel24);
             this.theLoaiTab.Controls.Add(this.maTheLoaiBoxTL);
             this.theLoaiTab.Controls.Add(this.airSeparator5);
-            this.theLoaiTab.Controls.Add(this.foreverLabel27);
             this.theLoaiTab.Controls.Add(this.theLoaiGridView);
             this.theLoaiTab.Controls.Add(this.searchButtonTL);
             this.theLoaiTab.Controls.Add(this.searchBoxTL);
@@ -1843,7 +1798,7 @@
             this.tenTheLoaiBoxTL.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.tenTheLoaiBoxTL.FocusOnHover = false;
             this.tenTheLoaiBoxTL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tenTheLoaiBoxTL.Location = new System.Drawing.Point(743, 261);
+            this.tenTheLoaiBoxTL.Location = new System.Drawing.Point(487, 261);
             this.tenTheLoaiBoxTL.MaxLength = 32767;
             this.tenTheLoaiBoxTL.Multiline = false;
             this.tenTheLoaiBoxTL.Name = "tenTheLoaiBoxTL";
@@ -1859,7 +1814,7 @@
             this.foreverLabel24.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel24.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel24.Location = new System.Drawing.Point(579, 261);
+            this.foreverLabel24.Location = new System.Drawing.Point(323, 261);
             this.foreverLabel24.Name = "foreverLabel24";
             this.foreverLabel24.Size = new System.Drawing.Size(131, 31);
             this.foreverLabel24.TabIndex = 58;
@@ -1872,7 +1827,7 @@
             this.maTheLoaiBoxTL.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.maTheLoaiBoxTL.FocusOnHover = false;
             this.maTheLoaiBoxTL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.maTheLoaiBoxTL.Location = new System.Drawing.Point(166, 261);
+            this.maTheLoaiBoxTL.Location = new System.Drawing.Point(479, 332);
             this.maTheLoaiBoxTL.MaxLength = 32767;
             this.maTheLoaiBoxTL.Multiline = false;
             this.maTheLoaiBoxTL.Name = "maTheLoaiBoxTL";
@@ -1881,6 +1836,7 @@
             this.maTheLoaiBoxTL.TabIndex = 54;
             this.maTheLoaiBoxTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.maTheLoaiBoxTL.UseSystemPasswordChar = false;
+            this.maTheLoaiBoxTL.Visible = false;
             // 
             // airSeparator5
             // 
@@ -1896,18 +1852,6 @@
             this.airSeparator5.TabIndex = 53;
             this.airSeparator5.Text = "airSeparator5";
             this.airSeparator5.Transparent = false;
-            // 
-            // foreverLabel27
-            // 
-            this.foreverLabel27.AutoSize = true;
-            this.foreverLabel27.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel27.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foreverLabel27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel27.Location = new System.Drawing.Point(6, 261);
-            this.foreverLabel27.Name = "foreverLabel27";
-            this.foreverLabel27.Size = new System.Drawing.Size(129, 31);
-            this.foreverLabel27.TabIndex = 52;
-            this.foreverLabel27.Text = "Mã thể loại";
             // 
             // theLoaiGridView
             // 
@@ -2049,7 +1993,6 @@
             this.nhanVienTab.Controls.Add(this.addButtonNV);
             this.nhanVienTab.Controls.Add(this.maNhanVienBoxNV);
             this.nhanVienTab.Controls.Add(this.airSeparator7);
-            this.nhanVienTab.Controls.Add(this.foreverLabel36);
             this.nhanVienTab.Controls.Add(this.nhanVienGridView);
             this.nhanVienTab.Controls.Add(this.searchButtonNV);
             this.nhanVienTab.Controls.Add(this.searchBoxNV);
@@ -2134,7 +2077,7 @@
             this.tenNhanVienBoxNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.tenNhanVienBoxNV.FocusOnHover = false;
             this.tenNhanVienBoxNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tenNhanVienBoxNV.Location = new System.Drawing.Point(166, 321);
+            this.tenNhanVienBoxNV.Location = new System.Drawing.Point(168, 261);
             this.tenNhanVienBoxNV.MaxLength = 32767;
             this.tenNhanVienBoxNV.Multiline = false;
             this.tenNhanVienBoxNV.Name = "tenNhanVienBoxNV";
@@ -2150,7 +2093,7 @@
             this.foreverLabel34.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel34.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel34.Location = new System.Drawing.Point(6, 324);
+            this.foreverLabel34.Location = new System.Drawing.Point(8, 264);
             this.foreverLabel34.Name = "foreverLabel34";
             this.foreverLabel34.Size = new System.Drawing.Size(82, 31);
             this.foreverLabel34.TabIndex = 105;
@@ -2238,7 +2181,7 @@
             this.maNhanVienBoxNV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.maNhanVienBoxNV.FocusOnHover = false;
             this.maNhanVienBoxNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.maNhanVienBoxNV.Location = new System.Drawing.Point(166, 261);
+            this.maNhanVienBoxNV.Location = new System.Drawing.Point(168, 321);
             this.maNhanVienBoxNV.MaxLength = 32767;
             this.maNhanVienBoxNV.Multiline = false;
             this.maNhanVienBoxNV.Name = "maNhanVienBoxNV";
@@ -2247,6 +2190,7 @@
             this.maNhanVienBoxNV.TabIndex = 98;
             this.maNhanVienBoxNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.maNhanVienBoxNV.UseSystemPasswordChar = false;
+            this.maNhanVienBoxNV.Visible = false;
             // 
             // airSeparator7
             // 
@@ -2262,18 +2206,6 @@
             this.airSeparator7.TabIndex = 97;
             this.airSeparator7.Text = "airSeparator7";
             this.airSeparator7.Transparent = false;
-            // 
-            // foreverLabel36
-            // 
-            this.foreverLabel36.AutoSize = true;
-            this.foreverLabel36.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel36.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foreverLabel36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel36.Location = new System.Drawing.Point(6, 261);
-            this.foreverLabel36.Name = "foreverLabel36";
-            this.foreverLabel36.Size = new System.Drawing.Size(152, 31);
-            this.foreverLabel36.TabIndex = 96;
-            this.foreverLabel36.Text = "Mã nhân viên";
             // 
             // nhanVienGridView
             // 
@@ -2437,7 +2369,6 @@
             this.muonTraTab.Controls.Add(this.addButtonMT);
             this.muonTraTab.Controls.Add(this.maMuonTraBoxMT);
             this.muonTraTab.Controls.Add(this.airSeparator8);
-            this.muonTraTab.Controls.Add(this.foreverLabel40);
             this.muonTraTab.Controls.Add(this.muonTraGridView);
             this.muonTraTab.Controls.Add(this.searchButtonMT);
             this.muonTraTab.Controls.Add(this.searchBoxMT);
@@ -2534,7 +2465,7 @@
             // ngayTraDateMT
             // 
             this.ngayTraDateMT.Location = new System.Drawing.Point(739, 379);
-            this.ngayTraDateMT.MinimumSize = new System.Drawing.Size(4, 30);
+            this.ngayTraDateMT.MinimumSize = new System.Drawing.Size(0, 30);
             this.ngayTraDateMT.Name = "ngayTraDateMT";
             this.ngayTraDateMT.Size = new System.Drawing.Size(370, 30);
             this.ngayTraDateMT.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
@@ -2566,7 +2497,7 @@
             this.maSachComboMT.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.maSachComboMT.HoverFontColor = System.Drawing.Color.White;
             this.maSachComboMT.ItemHeight = 18;
-            this.maSachComboMT.Location = new System.Drawing.Point(166, 378);
+            this.maSachComboMT.Location = new System.Drawing.Point(168, 323);
             this.maSachComboMT.Name = "maSachComboMT";
             this.maSachComboMT.Size = new System.Drawing.Size(370, 24);
             this.maSachComboMT.TabIndex = 132;
@@ -2577,7 +2508,7 @@
             this.foreverLabel17.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel17.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel17.Location = new System.Drawing.Point(6, 378);
+            this.foreverLabel17.Location = new System.Drawing.Point(8, 323);
             this.foreverLabel17.Name = "foreverLabel17";
             this.foreverLabel17.Size = new System.Drawing.Size(99, 31);
             this.foreverLabel17.TabIndex = 131;
@@ -2596,7 +2527,7 @@
             this.soTheComboMT.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.soTheComboMT.HoverFontColor = System.Drawing.Color.White;
             this.soTheComboMT.ItemHeight = 18;
-            this.soTheComboMT.Location = new System.Drawing.Point(166, 324);
+            this.soTheComboMT.Location = new System.Drawing.Point(168, 269);
             this.soTheComboMT.Name = "soTheComboMT";
             this.soTheComboMT.Size = new System.Drawing.Size(370, 24);
             this.soTheComboMT.TabIndex = 130;
@@ -2604,7 +2535,7 @@
             // ngayMuonDateMT
             // 
             this.ngayMuonDateMT.Location = new System.Drawing.Point(739, 325);
-            this.ngayMuonDateMT.MinimumSize = new System.Drawing.Size(4, 30);
+            this.ngayMuonDateMT.MinimumSize = new System.Drawing.Size(0, 30);
             this.ngayMuonDateMT.Name = "ngayMuonDateMT";
             this.ngayMuonDateMT.Size = new System.Drawing.Size(370, 30);
             this.ngayMuonDateMT.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
@@ -2641,7 +2572,7 @@
             this.foreverLabel39.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel39.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel39.Location = new System.Drawing.Point(6, 324);
+            this.foreverLabel39.Location = new System.Drawing.Point(8, 269);
             this.foreverLabel39.Name = "foreverLabel39";
             this.foreverLabel39.Size = new System.Drawing.Size(78, 31);
             this.foreverLabel39.TabIndex = 124;
@@ -2729,7 +2660,7 @@
             this.maMuonTraBoxMT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.maMuonTraBoxMT.FocusOnHover = false;
             this.maMuonTraBoxMT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.maMuonTraBoxMT.Location = new System.Drawing.Point(166, 261);
+            this.maMuonTraBoxMT.Location = new System.Drawing.Point(168, 375);
             this.maMuonTraBoxMT.MaxLength = 32767;
             this.maMuonTraBoxMT.Multiline = false;
             this.maMuonTraBoxMT.Name = "maMuonTraBoxMT";
@@ -2738,6 +2669,7 @@
             this.maMuonTraBoxMT.TabIndex = 118;
             this.maMuonTraBoxMT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.maMuonTraBoxMT.UseSystemPasswordChar = false;
+            this.maMuonTraBoxMT.Visible = false;
             // 
             // airSeparator8
             // 
@@ -2753,18 +2685,6 @@
             this.airSeparator8.TabIndex = 117;
             this.airSeparator8.Text = "airSeparator8";
             this.airSeparator8.Transparent = false;
-            // 
-            // foreverLabel40
-            // 
-            this.foreverLabel40.AutoSize = true;
-            this.foreverLabel40.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel40.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foreverLabel40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel40.Location = new System.Drawing.Point(6, 261);
-            this.foreverLabel40.Name = "foreverLabel40";
-            this.foreverLabel40.Size = new System.Drawing.Size(148, 31);
-            this.foreverLabel40.TabIndex = 116;
-            this.foreverLabel40.Text = "Mã mượn trả";
             // 
             // muonTraGridView
             // 
@@ -2827,68 +2747,6 @@
             this.muonTraGridView.Theme = ReaLTaiizor.Enum.Poison.ThemeStyle.Dark;
             this.muonTraGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.muonTraGridView_CellContentClick);
             // 
-            // sttmt
-            // 
-            this.sttmt.HeaderText = "STT";
-            this.sttmt.MinimumWidth = 6;
-            this.sttmt.Name = "sttmt";
-            this.sttmt.ReadOnly = true;
-            // 
-            // maMuonTraMT
-            // 
-            this.maMuonTraMT.DataPropertyName = "Ma_muon_tra";
-            this.maMuonTraMT.HeaderText = "Mã mượn trả";
-            this.maMuonTraMT.MinimumWidth = 6;
-            this.maMuonTraMT.Name = "maMuonTraMT";
-            this.maMuonTraMT.ReadOnly = true;
-            // 
-            // soTheMT
-            // 
-            this.soTheMT.DataPropertyName = "So_the";
-            this.soTheMT.HeaderText = "Số thẻ";
-            this.soTheMT.MinimumWidth = 6;
-            this.soTheMT.Name = "soTheMT";
-            this.soTheMT.ReadOnly = true;
-            // 
-            // maNhanVienMT
-            // 
-            this.maNhanVienMT.DataPropertyName = "Ma_nhan_vien";
-            this.maNhanVienMT.HeaderText = "Mã nhân viên";
-            this.maNhanVienMT.MinimumWidth = 6;
-            this.maNhanVienMT.Name = "maNhanVienMT";
-            // 
-            // maSachMT
-            // 
-            this.maSachMT.DataPropertyName = "Ma_sach";
-            this.maSachMT.HeaderText = "Mã sách";
-            this.maSachMT.MinimumWidth = 6;
-            this.maSachMT.Name = "maSachMT";
-            this.maSachMT.ReadOnly = true;
-            // 
-            // ngayMuonMT
-            // 
-            this.ngayMuonMT.DataPropertyName = "Ngay_muon";
-            this.ngayMuonMT.HeaderText = "Ngày mượn";
-            this.ngayMuonMT.MinimumWidth = 6;
-            this.ngayMuonMT.Name = "ngayMuonMT";
-            this.ngayMuonMT.ReadOnly = true;
-            // 
-            // ngayTraMT
-            // 
-            this.ngayTraMT.DataPropertyName = "Ngay_tra";
-            this.ngayTraMT.HeaderText = "Ngày trả";
-            this.ngayTraMT.MinimumWidth = 6;
-            this.ngayTraMT.Name = "ngayTraMT";
-            this.ngayTraMT.ReadOnly = true;
-            // 
-            // daTraMT
-            // 
-            this.daTraMT.DataPropertyName = "Da_tra";
-            this.daTraMT.HeaderText = "Đã trả";
-            this.daTraMT.MinimumWidth = 6;
-            this.daTraMT.Name = "daTraMT";
-            this.daTraMT.ReadOnly = true;
-            // 
             // searchButtonMT
             // 
             this.searchButtonMT.BackColor = System.Drawing.Color.Transparent;
@@ -2950,7 +2808,6 @@
             this.docGiaTab.Controls.Add(this.foreverLabel11);
             this.docGiaTab.Controls.Add(this.maDocGiaBoxDG);
             this.docGiaTab.Controls.Add(this.airSeparator2);
-            this.docGiaTab.Controls.Add(this.foreverLabel12);
             this.docGiaTab.Controls.Add(this.docGiaGridView);
             this.docGiaTab.Controls.Add(this.searchButtonDG);
             this.docGiaTab.Controls.Add(this.searchBoxDG);
@@ -3118,7 +2975,7 @@
             this.tenDocGiaBoxDG.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.tenDocGiaBoxDG.FocusOnHover = false;
             this.tenDocGiaBoxDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tenDocGiaBoxDG.Location = new System.Drawing.Point(175, 319);
+            this.tenDocGiaBoxDG.Location = new System.Drawing.Point(187, 264);
             this.tenDocGiaBoxDG.MaxLength = 32767;
             this.tenDocGiaBoxDG.Multiline = false;
             this.tenDocGiaBoxDG.Name = "tenDocGiaBoxDG";
@@ -3134,7 +2991,7 @@
             this.foreverLabel11.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel11.Location = new System.Drawing.Point(6, 319);
+            this.foreverLabel11.Location = new System.Drawing.Point(18, 264);
             this.foreverLabel11.Name = "foreverLabel11";
             this.foreverLabel11.Size = new System.Drawing.Size(131, 31);
             this.foreverLabel11.TabIndex = 55;
@@ -3147,7 +3004,7 @@
             this.maDocGiaBoxDG.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.maDocGiaBoxDG.FocusOnHover = false;
             this.maDocGiaBoxDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.maDocGiaBoxDG.Location = new System.Drawing.Point(175, 258);
+            this.maDocGiaBoxDG.Location = new System.Drawing.Point(187, 327);
             this.maDocGiaBoxDG.MaxLength = 32767;
             this.maDocGiaBoxDG.Multiline = false;
             this.maDocGiaBoxDG.Name = "maDocGiaBoxDG";
@@ -3156,6 +3013,7 @@
             this.maDocGiaBoxDG.TabIndex = 54;
             this.maDocGiaBoxDG.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.maDocGiaBoxDG.UseSystemPasswordChar = false;
+            this.maDocGiaBoxDG.Visible = false;
             // 
             // airSeparator2
             // 
@@ -3171,18 +3029,6 @@
             this.airSeparator2.TabIndex = 53;
             this.airSeparator2.Text = "airSeparator2";
             this.airSeparator2.Transparent = false;
-            // 
-            // foreverLabel12
-            // 
-            this.foreverLabel12.AutoSize = true;
-            this.foreverLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foreverLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel12.Location = new System.Drawing.Point(6, 261);
-            this.foreverLabel12.Name = "foreverLabel12";
-            this.foreverLabel12.Size = new System.Drawing.Size(129, 31);
-            this.foreverLabel12.TabIndex = 52;
-            this.foreverLabel12.Text = "Mã độc giả";
             // 
             // docGiaGridView
             // 
@@ -3342,7 +3188,6 @@
             this.theThuVienTab.Controls.Add(this.foreverLabel44);
             this.theThuVienTab.Controls.Add(this.soTheBoxTTV);
             this.theThuVienTab.Controls.Add(this.airSeparator9);
-            this.theThuVienTab.Controls.Add(this.foreverLabel45);
             this.theThuVienTab.Controls.Add(this.theThuVienGridView);
             this.theThuVienTab.Controls.Add(this.searchButtonTTV);
             this.theThuVienTab.Controls.Add(this.searchBoxTTV);
@@ -3372,7 +3217,7 @@
             // ngayHetHanDateTTV
             // 
             this.ngayHetHanDateTTV.Location = new System.Drawing.Point(743, 261);
-            this.ngayHetHanDateTTV.MinimumSize = new System.Drawing.Size(4, 30);
+            this.ngayHetHanDateTTV.MinimumSize = new System.Drawing.Size(0, 30);
             this.ngayHetHanDateTTV.Name = "ngayHetHanDateTTV";
             this.ngayHetHanDateTTV.Size = new System.Drawing.Size(370, 30);
             this.ngayHetHanDateTTV.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
@@ -3381,8 +3226,8 @@
             // 
             // ngayBatDauDateTTV
             // 
-            this.ngayBatDauDateTTV.Location = new System.Drawing.Point(175, 320);
-            this.ngayBatDauDateTTV.MinimumSize = new System.Drawing.Size(4, 30);
+            this.ngayBatDauDateTTV.Location = new System.Drawing.Point(184, 262);
+            this.ngayBatDauDateTTV.MinimumSize = new System.Drawing.Size(0, 30);
             this.ngayBatDauDateTTV.Name = "ngayBatDauDateTTV";
             this.ngayBatDauDateTTV.Size = new System.Drawing.Size(370, 30);
             this.ngayBatDauDateTTV.Style = ReaLTaiizor.Enum.Poison.ColorStyle.Green;
@@ -3511,7 +3356,7 @@
             this.foreverLabel44.BackColor = System.Drawing.Color.Transparent;
             this.foreverLabel44.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foreverLabel44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel44.Location = new System.Drawing.Point(6, 319);
+            this.foreverLabel44.Location = new System.Drawing.Point(15, 261);
             this.foreverLabel44.Name = "foreverLabel44";
             this.foreverLabel44.Size = new System.Drawing.Size(153, 31);
             this.foreverLabel44.TabIndex = 73;
@@ -3524,7 +3369,7 @@
             this.soTheBoxTTV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.soTheBoxTTV.FocusOnHover = false;
             this.soTheBoxTTV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.soTheBoxTTV.Location = new System.Drawing.Point(175, 258);
+            this.soTheBoxTTV.Location = new System.Drawing.Point(184, 319);
             this.soTheBoxTTV.MaxLength = 32767;
             this.soTheBoxTTV.Multiline = false;
             this.soTheBoxTTV.Name = "soTheBoxTTV";
@@ -3533,6 +3378,7 @@
             this.soTheBoxTTV.TabIndex = 72;
             this.soTheBoxTTV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.soTheBoxTTV.UseSystemPasswordChar = false;
+            this.soTheBoxTTV.Visible = false;
             // 
             // airSeparator9
             // 
@@ -3548,18 +3394,6 @@
             this.airSeparator9.TabIndex = 71;
             this.airSeparator9.Text = "airSeparator9";
             this.airSeparator9.Transparent = false;
-            // 
-            // foreverLabel45
-            // 
-            this.foreverLabel45.AutoSize = true;
-            this.foreverLabel45.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel45.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foreverLabel45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foreverLabel45.Location = new System.Drawing.Point(6, 261);
-            this.foreverLabel45.Name = "foreverLabel45";
-            this.foreverLabel45.Size = new System.Drawing.Size(78, 31);
-            this.foreverLabel45.TabIndex = 70;
-            this.foreverLabel45.Text = "Số thẻ";
             // 
             // theThuVienGridView
             // 
@@ -3702,6 +3536,68 @@
             this.foreverLabel46.TabIndex = 66;
             this.foreverLabel46.Text = "Tìm kiếm:";
             // 
+            // sttmt
+            // 
+            this.sttmt.HeaderText = "STT";
+            this.sttmt.MinimumWidth = 6;
+            this.sttmt.Name = "sttmt";
+            this.sttmt.ReadOnly = true;
+            // 
+            // maMuonTraMT
+            // 
+            this.maMuonTraMT.DataPropertyName = "Ma_muon_tra";
+            this.maMuonTraMT.HeaderText = "Mã mượn trả";
+            this.maMuonTraMT.MinimumWidth = 6;
+            this.maMuonTraMT.Name = "maMuonTraMT";
+            this.maMuonTraMT.ReadOnly = true;
+            // 
+            // soTheMT
+            // 
+            this.soTheMT.DataPropertyName = "Sothe";
+            this.soTheMT.HeaderText = "Số thẻ";
+            this.soTheMT.MinimumWidth = 6;
+            this.soTheMT.Name = "soTheMT";
+            this.soTheMT.ReadOnly = true;
+            // 
+            // maNhanVienMT
+            // 
+            this.maNhanVienMT.DataPropertyName = "Ma_nhan_vien";
+            this.maNhanVienMT.HeaderText = "Mã nhân viên";
+            this.maNhanVienMT.MinimumWidth = 6;
+            this.maNhanVienMT.Name = "maNhanVienMT";
+            // 
+            // maSachMT
+            // 
+            this.maSachMT.DataPropertyName = "Ma_sach";
+            this.maSachMT.HeaderText = "Mã sách";
+            this.maSachMT.MinimumWidth = 6;
+            this.maSachMT.Name = "maSachMT";
+            this.maSachMT.ReadOnly = true;
+            // 
+            // ngayMuonMT
+            // 
+            this.ngayMuonMT.DataPropertyName = "Ngay_muon";
+            this.ngayMuonMT.HeaderText = "Ngày mượn";
+            this.ngayMuonMT.MinimumWidth = 6;
+            this.ngayMuonMT.Name = "ngayMuonMT";
+            this.ngayMuonMT.ReadOnly = true;
+            // 
+            // ngayTraMT
+            // 
+            this.ngayTraMT.DataPropertyName = "Ngay_tra";
+            this.ngayTraMT.HeaderText = "Ngày trả";
+            this.ngayTraMT.MinimumWidth = 6;
+            this.ngayTraMT.Name = "ngayTraMT";
+            this.ngayTraMT.ReadOnly = true;
+            // 
+            // daTraMT
+            // 
+            this.daTraMT.DataPropertyName = "Da_tra";
+            this.daTraMT.HeaderText = "Đã trả";
+            this.daTraMT.MinimumWidth = 6;
+            this.daTraMT.Name = "daTraMT";
+            this.daTraMT.ReadOnly = true;
+            // 
             // Sach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3762,7 +3658,6 @@
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel2;
         private ReaLTaiizor.Controls.ForeverTextBox maSachBoxS;
         private ReaLTaiizor.Controls.AirSeparator airSeparator1;
-        private ReaLTaiizor.Controls.ForeverLabel foreverLabel1;
         private System.Windows.Forms.TabPage nhaXuatBanTab;
         private System.Windows.Forms.TabPage theLoaiTab;
         private System.Windows.Forms.TabPage nhanVienTab;
@@ -3791,7 +3686,6 @@
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel11;
         private ReaLTaiizor.Controls.ForeverTextBox maDocGiaBoxDG;
         private ReaLTaiizor.Controls.AirSeparator airSeparator2;
-        private ReaLTaiizor.Controls.ForeverLabel foreverLabel12;
         private ReaLTaiizor.Controls.PoisonDataGridView docGiaGridView;
         private ReaLTaiizor.Controls.ForeverButton searchButtonDG;
         private ReaLTaiizor.Controls.ForeverTextBox searchBoxDG;
@@ -3809,7 +3703,6 @@
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel14;
         private ReaLTaiizor.Controls.ForeverTextBox maTacGiaBoxTG;
         private ReaLTaiizor.Controls.AirSeparator airSeparator3;
-        private ReaLTaiizor.Controls.ForeverLabel foreverLabel15;
         private ReaLTaiizor.Controls.PoisonDataGridView tacGiaGridView;
         private ReaLTaiizor.Controls.ForeverButton searchButtonTG;
         private ReaLTaiizor.Controls.ForeverTextBox searchBoxTG;
@@ -3829,7 +3722,6 @@
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel21;
         private ReaLTaiizor.Controls.ForeverTextBox maNXBBoxNXB;
         private ReaLTaiizor.Controls.AirSeparator airSeparator4;
-        private ReaLTaiizor.Controls.ForeverLabel foreverLabel22;
         private ReaLTaiizor.Controls.PoisonDataGridView nhaXuatBanGridView;
         private ReaLTaiizor.Controls.ForeverButton searchButtonNXB;
         private ReaLTaiizor.Controls.ForeverTextBox searchBoxNXB;
@@ -3844,7 +3736,6 @@
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel24;
         private ReaLTaiizor.Controls.ForeverTextBox maTheLoaiBoxTL;
         private ReaLTaiizor.Controls.AirSeparator airSeparator5;
-        private ReaLTaiizor.Controls.ForeverLabel foreverLabel27;
         private ReaLTaiizor.Controls.PoisonDataGridView theLoaiGridView;
         private ReaLTaiizor.Controls.ForeverButton searchButtonTL;
         private ReaLTaiizor.Controls.ForeverTextBox searchBoxTL;
@@ -3861,7 +3752,6 @@
         private ReaLTaiizor.Controls.ForeverButton addButtonNV;
         private ReaLTaiizor.Controls.ForeverTextBox maNhanVienBoxNV;
         private ReaLTaiizor.Controls.AirSeparator airSeparator7;
-        private ReaLTaiizor.Controls.ForeverLabel foreverLabel36;
         private ReaLTaiizor.Controls.PoisonDataGridView nhanVienGridView;
         private ReaLTaiizor.Controls.ForeverButton searchButtonNV;
         private ReaLTaiizor.Controls.ForeverTextBox searchBoxNV;
@@ -3878,7 +3768,6 @@
         private ReaLTaiizor.Controls.ForeverButton addButtonMT;
         private ReaLTaiizor.Controls.ForeverTextBox maMuonTraBoxMT;
         private ReaLTaiizor.Controls.AirSeparator airSeparator8;
-        private ReaLTaiizor.Controls.ForeverLabel foreverLabel40;
         private ReaLTaiizor.Controls.PoisonDataGridView muonTraGridView;
         private ReaLTaiizor.Controls.ForeverButton searchButtonMT;
         private ReaLTaiizor.Controls.ForeverTextBox searchBoxMT;
@@ -3896,7 +3785,6 @@
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel44;
         private ReaLTaiizor.Controls.ForeverTextBox soTheBoxTTV;
         private ReaLTaiizor.Controls.AirSeparator airSeparator9;
-        private ReaLTaiizor.Controls.ForeverLabel foreverLabel45;
         private ReaLTaiizor.Controls.PoisonDataGridView theThuVienGridView;
         private ReaLTaiizor.Controls.ForeverButton searchButtonTTV;
         private ReaLTaiizor.Controls.ForeverTextBox searchBoxTTV;
