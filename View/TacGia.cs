@@ -40,7 +40,11 @@ namespace View
 
         private void editButtonTG_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tenTacGiaBoxTG.Text))
+            if(string.IsNullOrWhiteSpace(maTacGiaBoxTG.Text))
+            {
+                EasyMessageBox("Bạn cần chọn 1 thông tin để sửa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrWhiteSpace(tenTacGiaBoxTG.Text))
             {
                 EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenTacGiaBoxTG.Focus();
@@ -128,10 +132,10 @@ namespace View
             addButtonTG.Enabled = false;
             int i;
             i = e.RowIndex;
-            maTacGiaBoxTG.Text = sachDataGridView.Rows[i].Cells[1].Value.ToString();
-            tenTacGiaBoxTG.Text = sachDataGridView.Rows[i].Cells[2].Value.ToString();
-            websiteBoxTG.Text = sachDataGridView.Rows[i].Cells[3].Value.ToString();
-            noteBoxTG.Text = sachDataGridView.Rows[i].Cells[4].Value.ToString();
+            maTacGiaBoxTG.Text = tacGiaGridView.Rows[i].Cells[1].Value.ToString();
+            tenTacGiaBoxTG.Text = tacGiaGridView.Rows[i].Cells[2].Value.ToString();
+            websiteBoxTG.Text = tacGiaGridView.Rows[i].Cells[3].Value.ToString();
+            noteBoxTG.Text = tacGiaGridView.Rows[i].Cells[4].Value.ToString();
         }
         private void tacGiaTab_Layout(object sender, LayoutEventArgs e)
         {

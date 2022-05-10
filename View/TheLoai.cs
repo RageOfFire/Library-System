@@ -39,7 +39,11 @@ namespace View
         }
         private void editButtonTL_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tenTheLoaiBoxTL.Text))
+            if (string.IsNullOrWhiteSpace(maTheLoaiBoxTL.Text))
+            {
+                EasyMessageBox("Bạn cần chọn 1 thông tin để sửa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrWhiteSpace(tenTheLoaiBoxTL.Text))
             {
                 EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenTheLoaiBoxTL.Focus();

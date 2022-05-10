@@ -14,12 +14,12 @@ namespace Controller
         Database db = new Database();
         public void InsertS(string tensach, string matacgia, string matheloai, string maNXB, int namXB)
         {
-            string sql_add = "INSERT INTO Sach (Ten_sach, Ma_tac_gia, Ma_the_loai, Ma_NXB, Nam_XB) VALUES(N'" + tensach + "',N'" + matacgia + "',N'" + matheloai + "',N'" + maNXB + "',N'" + namXB + "')";
+            string sql_add = "INSERT INTO Sach (Ten_sach, Ma_tac_gia, Ma_the_loai, Ma_NXB, Nam_Xuat_Ban) VALUES(N'" + tensach + "',N'" + matacgia + "',N'" + matheloai + "',N'" + maNXB + "',N'" + namXB + "')";
             db.ExecuteNonQuery(sql_add);
         }
         public void UpdateS(string masach, string tensach, string matacgia, string matheloai, string maNXB, int namXB)
         {
-            string sql_update = "UPDATE Sach SET Ten_sach = N'" + tensach + "',Ma_tac_gia = N'" + matacgia + "', Ma_the_loai = '" + matheloai + "',Ma_NXB = N'" + maNXB + "'',Nam_XB = N'"+ namXB +"' WHERE Ma_sach = N'" + masach + "'";
+            string sql_update = "UPDATE Sach SET Ten_sach = N'" + tensach + "',Ma_tac_gia = N'" + matacgia + "', Ma_the_loai = '" + matheloai + "',Ma_NXB = N'" + maNXB + "'',Nam_Xuat_Ban = N'"+ namXB +"' WHERE Ma_sach = N'" + masach + "'";
             db.ExecuteNonQuery(sql_update);
         }
         public void DeleteS(string masach)

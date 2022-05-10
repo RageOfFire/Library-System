@@ -59,6 +59,10 @@ namespace View
 
         private void editButtonS_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(maSachBoxS.Text))
+            {
+                EasyMessageBox("Bạn cần chọn 1 thông tin để sửa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             if (!int.TryParse(namXuatBanBoxS.Text, out value))
             {
                 EasyMessageBox("Năm xuất bản không phải là số", MessageBoxButtons.OK, MessageBoxIcon.Warning);

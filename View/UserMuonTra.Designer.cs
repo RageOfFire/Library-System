@@ -41,6 +41,7 @@
             this.TheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foreverMaximize1 = new ReaLTaiizor.Controls.ForeverMaximize();
             this.foreverMinimize1 = new ReaLTaiizor.Controls.ForeverMinimize();
             this.closeButton = new ReaLTaiizor.Controls.ForeverClose();
@@ -133,7 +134,8 @@
             this.TenSach,
             this.TheLoai,
             this.TacGia,
-            this.NXB});
+            this.NXB,
+            this.MaSach});
             this.MuonTraUserGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -201,6 +203,15 @@
             this.NXB.HeaderText = "Nhà xuất bản";
             this.NXB.MinimumWidth = 6;
             this.NXB.Name = "NXB";
+            // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "Ma_sach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            this.MaSach.Visible = false;
             // 
             // foreverMaximize1
             // 
@@ -283,5 +294,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn NXB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
     }
 }

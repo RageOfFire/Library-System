@@ -44,6 +44,10 @@ namespace View
         }
         private void editButtonDG_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(maDocGiaBoxDG.Text))
+            {
+                EasyMessageBox("Bạn cần chọn 1 thông tin để sửa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             if (string.IsNullOrWhiteSpace(tenDocGiaBoxDG.Text))
             {
                 EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);

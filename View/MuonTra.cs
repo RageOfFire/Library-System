@@ -47,6 +47,12 @@ namespace View
         private void editButtonMT_Click(object sender, EventArgs e)
         {
             CheckRadio();
+            if (string.IsNullOrWhiteSpace(maMuonTraBoxMT.Text))
+            {
+                EasyMessageBox("Bạn cần chọn 1 thông tin để sửa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
             try
             {
                 mt.UpdateMT(this.maMuonTraBoxMT.Text, Convert.ToInt32(this.soTheComboMT.Text), this.maSachComboMT.Text, this.maNhanVienComboMT.Text, this.ngayMuonDateMT.Value.ToShortDateString(), this.ngayTraDateMT.Value.ToShortTimeString(), this.radioData);
@@ -57,6 +63,7 @@ namespace View
             catch (Exception ex)
             {
                 EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             }
         }
         private void deleteButtonMT_Click(object sender, EventArgs e)

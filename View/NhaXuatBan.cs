@@ -40,7 +40,11 @@ namespace View
         }
         private void editButtonNXB_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tenNXBBoxNXB.Text))
+            if (string.IsNullOrWhiteSpace(maNXBBoxNXB.Text))
+            {
+                EasyMessageBox("Bạn cần chọn 1 thông tin để sửa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrWhiteSpace(tenNXBBoxNXB.Text))
             {
                 EasyMessageBox("Chưa nhập tên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tenNXBBoxNXB.Focus();

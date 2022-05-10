@@ -42,6 +42,7 @@ namespace View
             string theloai = MuonTraUserGridView.Rows[i].Cells[2].Value.ToString();
             string tacgia = MuonTraUserGridView.Rows[i].Cells[3].Value.ToString();
             string nxb = MuonTraUserGridView.Rows[i].Cells[4].Value.ToString();
+            string masach = MuonTraUserGridView.Rows[i].Cells[5].Value.ToString();
             string info = 
                 "Thông tin của sách là: " +
                 "\nTên sách: " + sach +
@@ -51,7 +52,8 @@ namespace View
             DialogResult rs = PoisonMessageBox.Show(this, info, "Quản lý thư viện", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
-                PoisonMessageBox.Show(this, "Thông tin của bạn đã được lưu lại\nHãy tới thư viện và nhận sách", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                user.InsertData(masach);
+                PoisonMessageBox.Show(this, "Thông tin của bạn đã được lưu lại\nHãy tới thư viện dể đăng ký mượn sách", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

@@ -38,7 +38,13 @@ namespace View
         }
         private void editButtonTTV_Click(object sender, EventArgs e)
         {
-                try
+            if (string.IsNullOrWhiteSpace(soTheBoxTTV.Text))
+            {
+                EasyMessageBox("Bạn cần chọn 1 thông tin để sửa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+            try
                 {
                     ttv.UpdateTTV(Convert.ToInt32(this.soTheBoxTTV.Text), this.ngayBatDauDateTTV.Value.ToShortDateString(), this.ngayHetHanDateTTV.Value.ToShortDateString(), this.ghiChuBoxTTV.Text);
                     EasyMessageBox("Sửa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -49,6 +55,7 @@ namespace View
                 {
                     EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
         }
         private void deleteButtonTTV_Click(object sender, EventArgs e)
         {

@@ -43,7 +43,11 @@ namespace View
         }
         private void editButtonNV_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(sdtBoxNV.Text, out value))
+            if (string.IsNullOrWhiteSpace(maNhanVienBoxNV.Text))
+            {
+                EasyMessageBox("Bạn cần chọn 1 thông tin để sửa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (!int.TryParse(sdtBoxNV.Text, out value))
             {
                 EasyMessageBox("Năm xuất bản không phải là số", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 sdtBoxNV.Focus();

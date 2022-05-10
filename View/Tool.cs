@@ -49,9 +49,9 @@ namespace View
             worksheet = workbook.Sheets["Sheet1"];
             worksheet = workbook.ActiveSheet;
             worksheet.Name = "Xuất dữ liệu";
-            for (int i = 1; i < table.Columns.Count; i++)
+            for (int i = 1; i < table.Columns.Count + 1; i++)
             {
-                worksheet.Cells[1, i] = table.Columns[i].HeaderText;
+                worksheet.Cells[1, i] = table.Columns[i - 1].HeaderText;
             }
             for (int i = 0; i < table.Rows.Count; i++)
             {
