@@ -1,13 +1,5 @@
 ﻿using ReaLTaiizor.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TabPage = System.Windows.Forms.TabPage;
 
@@ -20,22 +12,19 @@ namespace View
         {
             foreach (Control control in page.Controls)
             {
-                if (control is ReaLTaiizor.Controls.ForeverTextBox)
+                if (control is ForeverTextBox textBox)
                 {
-                    ReaLTaiizor.Controls.ForeverTextBox textBox = (ReaLTaiizor.Controls.ForeverTextBox)control;
                     textBox.Text = null;
                 }
 
-                if (control is ComboBox)
+                if (control is ComboBox comboBox)
                 {
-                    ComboBox comboBox = (ComboBox)control;
                     if (comboBox.Items.Count > 0)
                         comboBox.SelectedIndex = -1;
                 }
 
-                if (control is DateTimePicker)
+                if (control is DateTimePicker dateTime)
                 {
-                    DateTimePicker dateTime = (DateTimePicker)control;
                     dateTime.Value = DateTime.UtcNow;
                 }
             }
@@ -78,6 +67,13 @@ namespace View
         {
             DialogResult rs = PoisonMessageBox.Show(this, text, "Quản lý thư viện", button, icon);
             return rs;
+        }
+        public void Exit()
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+            this.Close();
         }
     }
 }

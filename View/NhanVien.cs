@@ -105,7 +105,7 @@ namespace View
             DialogResult rs = EasyMessageBox("Bạn có muốn thoát khỏi ứng dụng ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.OK)
             {
-                this.Close();
+                Exit();
             }
         }
         private void nhanVienTab_Layout(object sender, LayoutEventArgs e)

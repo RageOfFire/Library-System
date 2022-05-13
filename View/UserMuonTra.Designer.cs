@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.UserThuVien = new ReaLTaiizor.Forms.ForeverForm();
+            this.ExitButton = new ReaLTaiizor.Controls.ForeverButton();
             this.userStatus = new ReaLTaiizor.Controls.ForeverStatusBar();
             this.foreverNotification1 = new ReaLTaiizor.Controls.ForeverNotification();
             this.MuonTraUserGridView = new ReaLTaiizor.Controls.PoisonDataGridView();
@@ -54,6 +55,7 @@
             this.UserThuVien.BackColor = System.Drawing.Color.White;
             this.UserThuVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.UserThuVien.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.UserThuVien.Controls.Add(this.ExitButton);
             this.UserThuVien.Controls.Add(this.userStatus);
             this.UserThuVien.Controls.Add(this.foreverNotification1);
             this.UserThuVien.Controls.Add(this.MuonTraUserGridView);
@@ -78,6 +80,21 @@
             this.UserThuVien.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.UserThuVien.TextLight = System.Drawing.Color.SeaGreen;
             this.UserThuVien.Layout += new System.Windows.Forms.LayoutEventHandler(this.UserThuVien_Layout);
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExitButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ExitButton.Location = new System.Drawing.Point(668, 74);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Rounded = true;
+            this.ExitButton.Size = new System.Drawing.Size(120, 40);
+            this.ExitButton.TabIndex = 15;
+            this.ExitButton.Text = "Thoát";
+            this.ExitButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // userStatus
             // 
@@ -105,9 +122,10 @@
             this.foreverNotification1.Kind = ReaLTaiizor.Controls.ForeverNotification._Kind.Success;
             this.foreverNotification1.Location = new System.Drawing.Point(12, 72);
             this.foreverNotification1.Name = "foreverNotification1";
-            this.foreverNotification1.Size = new System.Drawing.Size(778, 42);
+            this.foreverNotification1.Size = new System.Drawing.Size(606, 42);
             this.foreverNotification1.TabIndex = 13;
             this.foreverNotification1.Text = "Ấn vào sách cần mượn";
+            this.foreverNotification1.Visible = false;
             // 
             // MuonTraUserGridView
             // 
@@ -150,6 +168,7 @@
             this.MuonTraUserGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.MuonTraUserGridView.Location = new System.Drawing.Point(6, 142);
             this.MuonTraUserGridView.Name = "MuonTraUserGridView";
+            this.MuonTraUserGridView.ReadOnly = true;
             this.MuonTraUserGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
@@ -175,6 +194,7 @@
             this.STT.HeaderText = "STT";
             this.STT.MinimumWidth = 6;
             this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
             // 
             // TenSach
             // 
@@ -182,6 +202,7 @@
             this.TenSach.HeaderText = "Tên sách";
             this.TenSach.MinimumWidth = 6;
             this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
             // 
             // TheLoai
             // 
@@ -189,6 +210,7 @@
             this.TheLoai.HeaderText = "Thể loại";
             this.TheLoai.MinimumWidth = 6;
             this.TheLoai.Name = "TheLoai";
+            this.TheLoai.ReadOnly = true;
             // 
             // TacGia
             // 
@@ -196,6 +218,7 @@
             this.TacGia.HeaderText = "Tác giả";
             this.TacGia.MinimumWidth = 6;
             this.TacGia.Name = "TacGia";
+            this.TacGia.ReadOnly = true;
             // 
             // NXB
             // 
@@ -203,6 +226,7 @@
             this.NXB.HeaderText = "Nhà xuất bản";
             this.NXB.MinimumWidth = 6;
             this.NXB.Name = "NXB";
+            this.NXB.ReadOnly = true;
             // 
             // MaSach
             // 
@@ -295,5 +319,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn NXB;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private ReaLTaiizor.Controls.ForeverButton ExitButton;
     }
 }

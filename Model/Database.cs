@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model
 {
@@ -23,18 +18,6 @@ namespace Model
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
             conn.Dispose();
-        }
-        public DataTableReader Login(string sql)
-        {
-            SqlConnection conn = Connection();
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(sql,conn);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            DataTableReader sqlDataReader = dt.CreateDataReader();
-            return sqlDataReader;
-
         }
         public DataTable GetTable(string sql)
         {

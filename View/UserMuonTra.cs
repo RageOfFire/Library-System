@@ -56,5 +56,17 @@ namespace View
                 PoisonMessageBox.Show(this, "Thông tin của bạn đã được lưu lại\nHãy tới thư viện dể đăng ký mượn sách", "Quản lý thư viện", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = PoisonMessageBox.Show(this, "Bạn có muốn thoát khỏi ứng dụng ?", "Quản lý thư viện", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.OK)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+                this.Close();
+            }
+        }
     }
 }

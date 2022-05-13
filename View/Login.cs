@@ -1,13 +1,7 @@
 ﻿using Controller;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ReaLTaiizor.Controls;
 
@@ -23,6 +17,7 @@ namespace View
             InitializeComponent();
         }
 
+        //Khi người dùng ấn nút đăng nhập
         private void loginButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(userTextbox.Text))
@@ -80,6 +75,7 @@ namespace View
             }
         }
 
+        //Khi người dùng ấn nút đăng ký
         private void RegButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(UserRegBox.Text))
