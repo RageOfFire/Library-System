@@ -74,24 +74,31 @@ namespace View
         }
         private void deleteButtonNV_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(maNhanVienBoxNV.Text))
             {
-                DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (rs == DialogResult.OK)
+                EasyMessageBox("Bạn cần chọn 1 thông tin để xóa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
                 {
-                    DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (rs2 == DialogResult.OK)
+                    DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (rs == DialogResult.OK)
                     {
-                        nv.DeleteNV(this.maNhanVienBoxNV.Text);
-                        EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        maNhanVienBoxNV.Enabled = true;
-                        addButtonNV.Enabled = true;
+                        DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (rs2 == DialogResult.OK)
+                        {
+                            nv.DeleteNV(this.maNhanVienBoxNV.Text);
+                            EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            maNhanVienBoxNV.Enabled = true;
+                            addButtonNV.Enabled = true;
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void resetButtonNV_Click(object sender, EventArgs e)

@@ -87,7 +87,7 @@
             this.ExitButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ExitButton.Location = new System.Drawing.Point(668, 74);
+            this.ExitButton.Location = new System.Drawing.Point(654, 74);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Rounded = true;
             this.ExitButton.Size = new System.Drawing.Size(120, 40);
@@ -125,7 +125,6 @@
             this.foreverNotification1.Size = new System.Drawing.Size(606, 42);
             this.foreverNotification1.TabIndex = 13;
             this.foreverNotification1.Text = "Ấn vào sách cần mượn";
-            this.foreverNotification1.Visible = false;
             // 
             // MuonTraUserGridView
             // 

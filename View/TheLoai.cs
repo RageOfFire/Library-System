@@ -65,24 +65,31 @@ namespace View
         }
         private void deleteButtonTL_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(maTheLoaiBoxTL.Text))
             {
-                DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (rs == DialogResult.OK)
+                EasyMessageBox("Bạn cần chọn 1 thông tin để xóa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
                 {
-                    DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (rs2 == DialogResult.OK)
+                    DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (rs == DialogResult.OK)
                     {
-                        tl.DeleteTL(this.maTheLoaiBoxTL.Text);
-                        EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        maTheLoaiBoxTL.Enabled = true;
-                        addButtonTL.Enabled = true;
+                        DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (rs2 == DialogResult.OK)
+                        {
+                            tl.DeleteTL(this.maTheLoaiBoxTL.Text);
+                            EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            maTheLoaiBoxTL.Enabled = true;
+                            addButtonTL.Enabled = true;
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void resetButtonTL_Click(object sender, EventArgs e)

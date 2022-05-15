@@ -68,24 +68,31 @@ namespace View
         }
         private void deleteButtonMT_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(maMuonTraBoxMT.Text))
             {
-                DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (rs == DialogResult.OK)
+                EasyMessageBox("Bạn cần chọn 1 thông tin để xóa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
                 {
-                    DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (rs2 == DialogResult.OK)
+                    DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (rs == DialogResult.OK)
                     {
-                        mt.DeleteMT(this.maMuonTraBoxMT.Text);
-                        EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        maMuonTraBoxMT.Enabled = true;
-                        addButtonMT.Enabled = true;
+                        DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (rs2 == DialogResult.OK)
+                        {
+                            mt.DeleteMT(this.maMuonTraBoxMT.Text);
+                            EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            maMuonTraBoxMT.Enabled = true;
+                            addButtonMT.Enabled = true;
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void resetButtonMT_Click(object sender, EventArgs e)

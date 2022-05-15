@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ReaLTaiizor.Controls;
 using Controller;
 
 namespace View
@@ -91,24 +84,31 @@ namespace View
 
         private void deleteButtonS_Click(object sender, EventArgs e)
         {
-            try
+            if(string.IsNullOrWhiteSpace(maSachBoxS.Text))
             {
-                DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (rs == DialogResult.OK)
+                EasyMessageBox("Bạn cần chọn 1 thông tin để xóa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
                 {
-                    DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (rs2 == DialogResult.OK)
+                    DialogResult rs = EasyMessageBox("Bạn có thực sự muốn xóa không ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (rs == DialogResult.OK)
                     {
-                        sach.DeleteS(this.maSachBoxS.Text);
-                        EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        maSachBoxS.Enabled = true;
-                        addButtonS.Enabled = true;
+                        DialogResult rs2 = EasyMessageBox("Bạn chắc chưa ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (rs2 == DialogResult.OK)
+                        {
+                            sach.DeleteS(this.maSachBoxS.Text);
+                            EasyMessageBox("Xóa thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            maSachBoxS.Enabled = true;
+                            addButtonS.Enabled = true;
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                EasyMessageBox("Error" + ex, MessageBoxButtons.OK,MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    EasyMessageBox("Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
