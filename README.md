@@ -2,26 +2,21 @@
 
 * Chương trình quản lý thư viênj sử dụng C# + MSSQL.
 
-![GitHub language count](https://img.shields.io/github/languages/count/RageOfFire/Library-System)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/RageOfFire/Library-System)
-![GitHub last commit](https://img.shields.io/github/last-commit/RageOfFire/Library-System)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/RageOfFire/Library-System)
-![GitHub repo size](https://img.shields.io/github/repo-size/RageOfFire/Library-System)
+![GitHub language count](https://img.shields.io/github/languages/count/RageOfFire/KoraBot)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/RageOfFire/KoraBot)
+![GitHub last commit](https://img.shields.io/github/last-commit/RageOfFire/KoraBot)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/RageOfFire/KoraBot)
+![GitHub repo size](https://img.shields.io/github/repo-size/RageOfFire/KoraBot)
 ![GitHub followers](https://img.shields.io/github/followers/RageOfFire)
-![GitHub Repo stars](https://img.shields.io/github/stars/RageOfFire/Library-System)
+![GitHub Repo stars](https://img.shields.io/github/stars/RageOfFire/KoraBot)
 
 ## Mô tả
 
 * Giao diện đăng ký:
+![Giao diện đăng ký](/IMG/DangKy.png?raw=true "Giao diện đăng ký")
 
-<div align="center">
-<img src="/IMG/DangKy.png" width="1000" height="1000">
-</div>
 * Giao diện quản lý:
-
-<div align="center">
-<img src="/IMG/QuanLy.png" width="1000" height="1000">
-</div>
+![Giao diện quản lý](/IMG/QuanLy.png?raw=true "Giao diện quản lý")
 
 ## Bắt đầu
 
@@ -55,8 +50,8 @@ Install-Package ReaLTaiizor
 
 ## Hỗ trợ
 
-![GitHub issues](https://img.shields.io/github/issues/RageOfFire/Library-System)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/RageOfFire/Library-System)
+![GitHub issues](https://img.shields.io/github/issues/RageOfFire/KoraBot)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/RageOfFire/KoraBot)
 
 ## Tác giả
 
@@ -64,4 +59,4 @@ Install-Package ReaLTaiizor
 
 ## License
 
-![GitHub](https://img.shields.io/github/license/RageOfFire/Library-System)
+![GitHub](https://img.shields.io/github/license/RageOfFire/KoraBot)
