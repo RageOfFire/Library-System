@@ -2,13 +2,13 @@
 
 * Chương trình quản lý thư viện sử dụng C# + MSSQL.
 
-![GitHub language count](https://img.shields.io/github/languages/count/RageOfFire/KoraBot)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/RageOfFire/KoraBot)
-![GitHub last commit](https://img.shields.io/github/last-commit/RageOfFire/KoraBot)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/RageOfFire/KoraBot)
-![GitHub repo size](https://img.shields.io/github/repo-size/RageOfFire/KoraBot)
+![GitHub language count](https://img.shields.io/github/languages/count/RageOfFire/Library-System)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/RageOfFire/Library-System)
+![GitHub last commit](https://img.shields.io/github/last-commit/RageOfFire/Library-System)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/RageOfFire/Library-System)
+![GitHub repo size](https://img.shields.io/github/repo-size/RageOfFire/Library-System)
 ![GitHub followers](https://img.shields.io/github/followers/RageOfFire)
-![GitHub Repo stars](https://img.shields.io/github/stars/RageOfFire/KoraBot)
+![GitHub Repo stars](https://img.shields.io/github/stars/RageOfFire/Library-System)
 
 ## Mô tả
 
@@ -50,8 +50,8 @@ Install-Package ReaLTaiizor
 
 ## Hỗ trợ
 
-![GitHub issues](https://img.shields.io/github/issues/RageOfFire/KoraBot)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/RageOfFire/KoraBot)
+![GitHub issues](https://img.shields.io/github/issues/RageOfFire/Library-System)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/RageOfFire/Library-System)
 
 ## Tác giả
 
@@ -59,4 +59,4 @@ Install-Package ReaLTaiizor
 
 ## License
 
-![GitHub](https://img.shields.io/github/license/RageOfFire/KoraBot)
+![GitHub](https://img.shields.io/github/license/RageOfFire/Library-System)
