@@ -14,10 +14,10 @@
 
 * Giao diện đăng ký:
 
-![Giao diện đăng ký](/IMG/DangKy.png =250x250)
+<img src="/IMG/DangKy.png" width="250" height="250">
 
 * Giao diện quản lý:
-![Giao diện quản lý](/IMG/QuanLy.png =250x250)
+<img src="/IMG/QuanLy.png" width="250" height="250">
 
 ## Bắt đầu
 
