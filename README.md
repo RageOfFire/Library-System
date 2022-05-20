@@ -14,10 +14,14 @@
 
 * Giao diện đăng ký:
 
-<img src="/IMG/DangKy.png" width="250" height="250">
-
+<div align="center">
+<img src="/IMG/DangKy.png" width="500" height="500">
+</div>
 * Giao diện quản lý:
-<img src="/IMG/QuanLy.png" width="250" height="250">
+
+<div align="center">
+<img src="/IMG/QuanLy.png" width="500" height="500">
+</div>
 
 ## Bắt đầu
 
