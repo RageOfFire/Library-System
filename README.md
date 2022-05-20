@@ -1,6 +1,6 @@
 # Quản lý thư viện
 
-* Chương trình quản lý thư viênj sử dụng C# + MSSQL.
+* Chương trình quản lý thư viện sử dụng C# + MSSQL.
 
 ![GitHub language count](https://img.shields.io/github/languages/count/RageOfFire/KoraBot)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/RageOfFire/KoraBot)
