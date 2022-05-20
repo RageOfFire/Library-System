@@ -15,12 +15,12 @@
 * Giao diện đăng ký:
 
 <div align="center">
-<img src="/IMG/DangKy.png" width="500" height="500">
+<img src="/IMG/DangKy.png" width="1000" height="1000">
 </div>
 * Giao diện quản lý:
 
 <div align="center">
-<img src="/IMG/QuanLy.png" width="500" height="500">
+<img src="/IMG/QuanLy.png" width="1000" height="1000">
 </div>
 
 ## Bắt đầu
