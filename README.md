@@ -13,10 +13,11 @@
 ## Mô tả
 
 * Giao diện đăng ký:
-![Giao diện đăng ký](/IMG/DangKy.png?raw=true "Giao diện đăng ký")
+
+![Giao diện đăng ký](/IMG/DangKy.png =250x250)
 
 * Giao diện quản lý:
-![Giao diện quản lý](/IMG/QuanLy.png?raw=true "Giao diện quản lý")
+![Giao diện quản lý](/IMG/QuanLy.png =250x250)
 
 ## Bắt đầu
 
