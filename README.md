@@ -56,7 +56,3 @@ Install-Package ReaLTaiizor
 ## Tác giả
 
 * [RageOfFire](https://github.com/RageOfFire)
-
-## License
-
-![GitHub](https://img.shields.io/github/license/RageOfFire/Library-System)
